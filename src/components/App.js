@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Share from './Share';
-import '.././stylesheets/index.css';
 
 class App extends Component {
   render() {

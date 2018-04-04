@@ -47,8 +47,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "build-css": "node-sass src/ -o src/",
-    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+    "build-css": "node-sass src/stylesheets/styles.scss public/stylesheets/styles.css",
+    "watch-css": "nodemon -e src/stylesheets -x \"npm run build-css\"",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
@@ -96,6 +96,6 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "postcss-loader": "^2.0.8"
+    "nodemon": "^1.17.3"
   }
 }
