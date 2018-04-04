@@ -1,0 +1,54 @@
+// =======================
+// Colors
+// =======================
+
+$white: #fff;
+$black: #333;
+$link: #007a86;
+
+$pink: #B7259D;
+$gray: #F2F2F2;
+$dark-gray: #222222;
+$text-color: #1F1724;
+$gray: #2B2B2B;
+$light-gray: #9B9B9B;
+
+$aqua: #45ADA8;
+$lime: #E5FCC2;
+$green: #9DE0AD;
+
+//new colors from mockup - maybe
+$coral: #FF6B6B;
+$yellow: #FFCB05;
+$green: #009C89;
+$blue: #56C0EE;
+
+
+
+// =======================
+// Fonts
+// =======================
+
+$roboto: 'Roboto', sans-serif;
+$varela: 'Varela Round', sans-serif;
+$georgia: Georgia, sans-serif;
+
+.varela {
+  font-family: $varela;
+}
+
+.roboto {
+  font-family: $roboto;
+}
+
+.georgia {
+  font-family: $georgia;
+  font-weight: 400;
+}
+
+// =======================
+// Breakpoints
+// =======================
+$sm-breakpoint: 544px;
+$md-breakpoint: 992px;
+$lg-breakpoint: 1200px;
