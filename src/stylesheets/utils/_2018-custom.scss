@@ -1,0 +1,36 @@
+$blue: #56C0EE;
+$coral: #FF6B6B;
+$teal: #009C89;
+
+.border--yellow {
+  border: $yellow solid 2px;
+}
+
+.border--teal {
+  border: $teal solid 2px;
+}
+
+.border--blue {
+  border: $blue solid 2px;
+}
+
+.font--yellow {
+  color: $yellow;
+}
+
+.font--teal {
+  color: $teal;
+}
+
+.font--blue {
+  color: $blue;
+}
+
+.font--coral {
+  color: $coral;
+}
+
+.montserrat-text, %montserrat-text {
+  font-family: $montserrat;
+  font-weight: 500;
+}
