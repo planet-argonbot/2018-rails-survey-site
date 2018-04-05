@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Share from './Share';
 import Header from './Header';
+import RailsUpdates from './RailsUpdates';
 
 class App extends Component {
   render() {
@@ -62,6 +63,10 @@ class App extends Component {
               <p class="border--teal margin-xs background--black">More working in Rails for more than 10+ years</p>
             </div>
           </div>
+        </div>
+
+        <div class="container">
+          <RailsUpdates/>
         </div>
       </div>
     );
