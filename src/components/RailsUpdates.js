@@ -20,20 +20,25 @@ class RailsUpdates extends React.Component {
       }]
     ];
 
-    const simplePieChartData = {
-      labels: ['All', 'Most', 'Some', 'None'],
+    const releasesPieChartData = {
+      labels: ['ALL', 'MOST', 'SOME', 'NONE'],
       series: [13, 37, 35, 13]
+    };
+
+    const notUpdatedPieChartData = {
+      labels: ['TIME', 'BUDGET', 'DEPENDENCIES ON GEMS', 'MANAGEMENT', 'OTHER'],
+      series: [47, 20, 12, 10, 20]
     };
 
     return (
       <div class="row">
         <div class="col">
-          <p class="h4">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
-          <ChartistGraph data={simplePieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart1' type={'Pie'} />
+          <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
+          <ChartistGraph data={releasesPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart1' type={'Pie'} />
         </div>
         <div class="col">
-          <p class="h4">If not all, why not?</p>
-          <ChartistGraph data={simplePieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart2' type={'Pie'} />
+          <p class="h6">If not all, why not?</p>
+          <ChartistGraph data={notUpdatedPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart2' type={'Pie'} />
         </div>
       </div>
     );

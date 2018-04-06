@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import quote from '../assets/images/orange-quote-50.png';
 import Share from './Share';
 import Header from './Header';
 import RailsUpdates from './RailsUpdates';
 import RailsVersions from './RailsVersions';
+import ApplicationExceptions from './ApplicationExceptions';
+import Airbrake from './Airbrake';
+import NewRelic from './NewRelic';
+import RailsServers from './RailsServers';
+import Databases from './Databases';
 
 class App extends Component {
   render() {
@@ -49,20 +55,20 @@ class App extends Component {
           <p>Between developers in agencies, product shops, and freelancer/contractors, we noticed a few interesting trends.</p>
           <div class="row margin-md">
             <div class="col-md-3 margin-xs">
-              <p class="h6 text-left font--yellow">Agencies</p>
-              <p class="border--yellow margin-xs background--black">More authored gems</p>
-              <p class="border--yellow margin-xs background--black">More active in the community*</p>
-              <p class="border--yellow margin-xs background--black">More monolith, less microsite</p>
+              <p class="h6 text-left margin-xs font--yellow">Agencies</p>
+              <p class="border--yellow  padding-xs margin-xs background--black">More authored gems</p>
+              <p class="border--yellow  padding-xs margin-xs background--black">More active in the community*</p>
+              <p class="border--yellow padding-xs margin-xs background--black">More monolith, less microsite</p>
             </div>
             <div class="col-md-3 margin-xs">
-              <p class="h6 text-left font--blue">Product shops</p>
-              <p class="border--blue margin-xs background--black">Tend to be on larger teams</p>
-              <p class="border--blue margin-xs background--black">Better test coverage</p>
+              <p class="h6 text-left font--blue margin-xs">Product shops</p>
+              <p class="border--blue margin-xs  padding-xs background--black">Tend to be on larger teams</p>
+              <p class="border--blue margin-xs  padding-xs background--black">Better test coverage</p>
             </div>
             <div class="col-md-3 margin-xs">
-              <p class="h6 text-left font--teal">Freelancers</p>
-              <p class="border--teal margin-xs background--black">More likely to be self-taught</p>
-              <p class="border--teal margin-xs background--black">More working in Rails for more than 10+ years</p>
+              <p class="h6 text-left font--teal margin-xs">Freelancers</p>
+              <p class="border--teal margin-xs  padding-xs background--black">More likely to be self-taught</p>
+              <p class="border--teal margin-xs  padding-xs background--black">More working in Rails for more than 10+ years</p>
             </div>
           </div>
         </div>
@@ -70,6 +76,82 @@ class App extends Component {
         <div class="container">
           <RailsUpdates/>
           <RailsVersions/>
+          <p class="margin-xl">Less than half of respondents felt that most or all of their apps were updated to most recent rails. Why not? Time. Over 30% responded that time was the only issue holding them back. Include content about how x% of the community can benefit from ongoing security updates/core team support while that means that y% are on their own. (We have 38%..so tack on content about the unsupported folks).</p>
+        </div>
+
+        <div class="container background--light-gray padding-xl">
+          <img src={quote} alt="speech bubble with quotation marks" />
+          <div class="margin-lg">
+            <p class="h1 montserrat">45%</p>
+            <p>of respondents felt that most or all of their apps <span class="font--yellow">were updated</span> to the most recent version of Ruby in Rails.</p>
+          </div>
+          <div class="margin-lg">
+            <p class="h1 montserrat">43%</p>
+            <p>responded <span class="font--yellow">time</span> was the only issue holding them back.</p>
+          </div>
+        </div>
+
+        <div class="container padding-xl">
+          <div class="h2">Ruby Gems</div>
+          <div class="h5">Which Rubygems do you love? And which frustrate you the most?</div>
+          <p>Here’s a chart of all the gems that were named as the most loved and most frustrating, respectively – the size of the text correlates to how often it showed up in our results.</p>
+          <div class="row margin-top-md">
+            <div class="col-6">
+              <p class="h5">Top 5 Gems</p>
+              <ol>
+                <li>devise</li>
+                <li>sidekiq</li>
+                <li>pry</li>
+                <li>rspec</li>
+                <li>rubocop</li>
+              </ol>
+            </div>
+            <div class="col-6">
+              <p class="h5">Top 5 Gems</p>
+              <ol>
+                <li>nokogiri</li>
+                <li>devise</li>
+                <li>activeadmin</li>
+                <li>activerecord</li>
+                <li>rspect</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="container padding-xl">
+          <div class="h2 margin-bottom-md">Application Exceptions</div>
+          <div class="h5">Which Application Exception tracking tools do you use in production?</div>
+          <ApplicationExceptions/>
+          <p>We included 11 options in this question and still had several choose “other”. There are a lot of options out there! And of course, there are a few using no tool at all.</p>
+        </div>
+
+        <div class="container padding-xl">
+          <div class="h5">With this increase in tools, Airbrake seems to be losing ground</div>
+          <Airbrake/>
+          <p>Airbrake (formerly Hoptoad) was at 53% back in 2012 and fell to 28% in 2014, 21% in 2016, and has continued to fall to 11% in 2018. One possible reason? The application exception tracking space has become more saturated over the years.</p>
+        </div>
+
+        <div class="container padding-xl">
+          <div class="h2 margin-bottom-md">New Relics Hold on the Market</div>
+          <div class="h5">Which Application Exception tracking tools do you use in production?</div>
+          <NewRelic/>
+          <p>New Relic seems to have taken over in the app exception tracking space in the last few years. We have a few (unproven) ideas as to why that is. They’re the most frequently used choice in this survey for both performance tracking and uptime monitoring as well. As they offered exception tracking tools, perhaps companies decided to streamline and keep their monitoring tools all in one place.</p>
+          <button class="btn-yellow montserrat h6 font--black margin-md">READ MORE ABOUT APPLICATION TRACKING</button>
+        </div>
+
+        <div class="container padding-xl">
+          <div class="h2 margin-bottom-md">Ruby Web Servers</div>
+          <div class="h5">Which Rails Servers are you using in production?</div>
+          <RailsServers/>
+          <p>Puma has continued its upward climb as the Rails server of choice. Usage grew from 17% in 2014 to 35% in 2016 to 48% this year. While Unicorn was on par with Puma in 2016 (at 34% to Puma’s 35%), it has fallen below Passenger this year. Farewell, Unicorn in the coming years? We’ll have to wait and see.</p>
+        </div>
+
+        <div class="container padding-xl">
+          <div class="h2 margin-bottom-md">Databases</div>
+          <div class="h5">Which databases do you prefer to use in production?</div>
+          <Databases/>
+          <p>PostgreSQL continues to lead in terms of usage and preference</p>
         </div>
       </div>
     );

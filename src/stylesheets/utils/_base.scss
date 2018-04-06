@@ -10,8 +10,8 @@ body {
   font-size: 12px;
   line-height: 1.5;
   @extend %georgia;
-  background-color: $mid-dark-gray;
-  color: #FFF;
+  background-color: $dark-gray;
+  color: $white;
   font-smoothing: antialiased;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

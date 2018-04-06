@@ -2,28 +2,23 @@ import React from 'react';
 import ChartistGraph from 'react-chartist';
 
 
-class RailsVersions extends React.Component {
+class ApplicationExceptions extends React.Component {
   render() {
 
     const data = {
-      labels: ['5.2', '5.1', '5.0', '4.2', '4.1', '4.0', '3.2', '3.1', '3.0 or earlier'],
+      labels: ['New Relic', 'Rollbar', 'Sentry', 'Airbrake', 'Honeybadger', 'None', 'Bugsnag', 'ExceptionNotifier plugin', 'Errbit', 'AppSignal', 'Other', 'Raygun', 'Exceptional'],
       series: [
-        [16, 24, 15, 23, 6, 3, 7, 1, 3]
+        [20, 14, 14, 11, 8, 8, 8, 6, 4, 4, 2, 1, 0]
       ]
     };
 
     const options = {
-      fullWidth: true,
-      chartPadding: {
-        right: 100
-      },
-      high: 30,
-      low: 5,
+      seriesBarDistance: 10,
+      reverseData: true,
+      horizontalBars: true,
       axisY: {
-        labelInterpolationFnc: function(value) {
-          return value + ' %';
-        },
-      },
+        offset: 70
+      }
       // plugins: [
       //   Chartist.plugins.tooltip({
       //     transformTooltipTextFnc: function(value) {
@@ -34,7 +29,7 @@ class RailsVersions extends React.Component {
     };
 
     const responsiveOptions = [
-      ['screen and (max-width: 544px)', {
+      ['screen and (min-width: 544px)', {
         seriesBarDistance: 10,
         fullWidth: true,
         height: '500px',
@@ -53,11 +48,10 @@ class RailsVersions extends React.Component {
 
     return (
       <div>
-        <div class="h6">Which versions of Rails are you using? </div>
         <ChartistGraph data={data} options={options} responsiveOptions={responsiveOptions} type={type} />
       </div>
     );
   }
 }
 
-export default RailsVersions;
+export default ApplicationExceptions;
