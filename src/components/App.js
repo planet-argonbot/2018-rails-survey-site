@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Share from './Share';
 import Header from './Header';
 import RailsUpdates from './RailsUpdates';
+import RailsVersions from './RailsVersions';
 
 class App extends Component {
   render() {
@@ -37,7 +38,7 @@ class App extends Component {
             </div>
             <div class="col-md-3 margin-xs text-center background--black padding-sm">
               <p class="h1 montserrat">49%</p>
-              <p class="montserrat-text">of respondents have 7+ years of experience working with Rails 
+              <p class="montserrat-text">of respondents have 7+ years of experience working with Rails
 (79% with 4+)</p>
             </div>
           </div>
@@ -68,6 +69,7 @@ class App extends Component {
 
         <div class="container">
           <RailsUpdates/>
+          <RailsVersions/>
         </div>
       </div>
     );

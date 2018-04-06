@@ -5,7 +5,7 @@ class RailsUpdates extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 20,
+      donutWidth: 60,
       donutSolid: true,
       labelOffset: 10,
       chartPadding: 20,
@@ -16,7 +16,7 @@ class RailsUpdates extends React.Component {
         labelOffset: 0,
         labelDirection: 'explode',
         fullWidth: true,
-        height: '300px',
+        height: '400px',
       }]
     ];
 
@@ -26,8 +26,15 @@ class RailsUpdates extends React.Component {
     };
 
     return (
-      <div>
-        <ChartistGraph data={simplePieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart1' type={'Pie'} />
+      <div class="row">
+        <div class="col">
+          <p class="h4">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
+          <ChartistGraph data={simplePieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart1' type={'Pie'} />
+        </div>
+        <div class="col">
+          <p class="h4">If not all, why not?</p>
+          <ChartistGraph data={simplePieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart2' type={'Pie'} />
+        </div>
       </div>
     );
   }

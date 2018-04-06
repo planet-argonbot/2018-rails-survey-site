@@ -7232,6 +7232,10 @@ a {
 .results-chart__2009 {
   padding: 10px 5px; }
 
+body {
+  text-align: center;
+  color: white; }
+
 .border--yellow {
   border: #FFCB05 solid 2px; }
 
