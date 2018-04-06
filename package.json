@@ -51,7 +51,8 @@
     "watch-css": "nodemon -e src/stylesheets -x \"npm run build-css\"",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "lint": "eslint src/** src/**/**; exit 0"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -96,8 +97,17 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "eslint": "^4.10.0",
+    "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
     "nodemon": "^1.17.3"
-  }
+  },
+  "description": "## Setup Instructions * Clone this repository: # * cd into repository * run 'npm install' in your terminal * run 'npm run start' in your terminal * Open up http://localhost:3000/ in the browser of your choice",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/planetargon/2018-rails-survey-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/planetargon/2018-rails-survey-site#readme"
 }
