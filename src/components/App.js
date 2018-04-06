@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div class="position--relative">
 
-      <Header />
+        <Header />
         <div class="position--relative">
           <div class="container border--left">
             <div class="row margin-top-lg margin-bottom-md position--relative z-index-1">
@@ -22,7 +22,7 @@ class App extends Component {
         </div>
 
 
-          <Share/>
+        <Share/>
         <div class="container text-center">
           <h2>Demographics</h2>
           <p>Here are some stats examples if we want to do quick stats. </p>
@@ -37,7 +37,8 @@ class App extends Component {
             </div>
             <div class="col-md-3 margin-xs text-center background--black padding-sm">
               <p class="h1 montserrat">49%</p>
-              <p class="montserrat-text">of respondents have 7+ years of experience working with Rails  (79% with 4+)</p>
+              <p class="montserrat-text">of respondents have 7+ years of experience working with Rails 
+(79% with 4+)</p>
             </div>
           </div>
         </div>
