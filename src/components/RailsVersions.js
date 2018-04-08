@@ -52,9 +52,11 @@ class RailsVersions extends React.Component {
     const type = 'Bar';
 
     return (
-      <div>
-        <div class="h6">Which versions of Rails are you using? </div>
-        <ChartistGraph data={data} options={options} responsiveOptions={responsiveOptions} type={type} />
+      <div class="row justify-content-center margin-top-xl">
+        <div class="col-md-10">
+          <div class="h6">Which versions of Rails are you using? </div>
+          <ChartistGraph data={data} options={options} responsiveOptions={responsiveOptions} type={type} />
+        </div>
       </div>
     );
   }

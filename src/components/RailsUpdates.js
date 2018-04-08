@@ -16,7 +16,7 @@ class RailsUpdates extends React.Component {
         labelOffset: 0,
         labelDirection: 'explode',
         fullWidth: true,
-        height: '400px',
+        height: '300px',
       }]
     ];
 
@@ -31,12 +31,12 @@ class RailsUpdates extends React.Component {
     };
 
     return (
-      <div class="row">
-        <div class="col">
+      <div class="row margin-top-xl justify-content-center">
+        <div class="col-md-6">
           <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
           <ChartistGraph data={releasesPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart1' type={'Pie'} />
         </div>
-        <div class="col">
+        <div class="col-md-6">
           <p class="h6">If not all, why not?</p>
           <ChartistGraph data={notUpdatedPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart2' type={'Pie'} />
         </div>

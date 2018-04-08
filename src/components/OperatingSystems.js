@@ -6,11 +6,11 @@ class OperatingSystems extends React.Component {
   render() {
 
     const data = {
-      labels: ['2014', '2016', '2018'],
+      labels: ['2009', '2012', '2014', '2016', '2018'],
       series: [
-        [17, 35, 49],
-        [41, 34, 24],
-        [36, 30, 25]
+        [7, 2, 2, 2, 1],
+        [68, 73, 76, 77, 76],
+        [25, 25, 26, 21, 23]
       ]
     };
 

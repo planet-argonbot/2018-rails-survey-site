@@ -2,18 +2,18 @@ import React from 'react';
 import ChartistGraph from 'react-chartist';
 
 
-class ApplicationExceptions extends React.Component {
+class ActiveJob extends React.Component {
   render() {
 
     const data = {
-      labels: ['New Relic', 'Rollbar', 'Sentry', 'Airbrake', 'Honeybadger', 'None', 'Bugsnag', 'ExceptionNotifier plugin', 'Errbit', 'AppSignal', 'Other', 'Raygun', 'Exceptional'],
+      labels: ['SIDEKIQ', 'DELAYED JOB', 'RESQUE', 'ACTIVE ASYNC JOB', 'SUCKER PUNCH', 'ACTIVE JOB INLINE', 'SNEAKERS', 'QUE', 'BACKBURNER', 'QUEUE CLASSIC', 'QU', 'OTHER'],
       series: [
-        [20, 14, 14, 11, 8, 8, 8, 6, 4, 4, 2, 1, 0]
+        [50, 50, 21, 13, 5, 3, 2, 1, 1, 0, 0, 3]
       ]
     };
 
     const options = {
-      seriesBarDistance: 15,
+      seriesBarDistance: 10,
       reverseData: true,
       horizontalBars: true,
       axisY: {
@@ -32,7 +32,7 @@ class ApplicationExceptions extends React.Component {
       ['screen and (min-width: 544px)', {
         seriesBarDistance: 10,
         fullWidth: true,
-        height: '700px',
+        height: '500px',
         reverseData: true,
         horizontalBars: true,
         axisY: {
@@ -54,4 +54,4 @@ class ApplicationExceptions extends React.Component {
   }
 }
 
-export default ApplicationExceptions;
+export default ActiveJob;

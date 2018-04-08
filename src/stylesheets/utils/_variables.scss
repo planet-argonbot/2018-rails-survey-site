@@ -33,6 +33,12 @@ $lato: "Lato", sans-serif;
   text-transform: uppercase;
 }
 
+.montserrat-lc, %montserrat {
+  font-family: $montserrat;
+  font-weight: 400;
+}
+
+
 .montserrat-black, %montserrat-black {
   font-family: $montserrat;
   font-weight: 700;
