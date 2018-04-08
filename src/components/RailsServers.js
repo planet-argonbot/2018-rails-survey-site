@@ -1,5 +1,6 @@
 import React from 'react';
 import ChartistGraph from 'react-chartist';
+import ChartistPluginLegend from 'chartist-plugin-legend';
 
 
 class OperatingSystems extends React.Component {
@@ -15,7 +16,16 @@ class OperatingSystems extends React.Component {
     };
 
     const options = {
-      width: '500px',
+      fullWidth: true,
+      chartPadding: {
+        right: 60
+      },
+      plugins: [
+        ChartistPluginLegend({
+          legendNames: ['Puma', 'Unicorn', 'Passenger'],
+          clickable: true,
+        })
+      ]
     };
 
     const type = 'Line';

@@ -1,5 +1,6 @@
 import React from 'react';
 import ChartistGraph from 'react-chartist';
+import ChartistPluginLegend from 'chartist-plugin-legend';
 
 
 class Databases extends React.Component {
@@ -15,7 +16,15 @@ class Databases extends React.Component {
     };
 
     const options = {
-      width: '500px',
+      fullWidth: true,
+      chartPadding: {
+        right: 60
+      },
+      plugins: [
+        ChartistPluginLegend({
+          legendNames: ['PostgreSQL', 'MySQL', 'Other'],
+        })
+      ]
     };
 
     const type = 'Line';
