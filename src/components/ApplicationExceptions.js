@@ -13,7 +13,6 @@ class ApplicationExceptions extends React.Component {
         [20, 14, 14, 11, 8, 8, 8, 6, 4, 4, 2, 1, 0]
       ]
     };
-    console.log(Chartist.plugins);
 
     const options = {
       seriesBarDistance: 15,
