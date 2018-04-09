@@ -1,5 +1,8 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-tooltips';
 
 
 class NewRelic extends React.Component {
@@ -15,7 +18,19 @@ class NewRelic extends React.Component {
     };
 
     const options = {
-      width: '500px',
+      // width: '500px',
+      height: '350px',
+      plugins: [
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        }),
+        ChartistPluginLegend({
+          legendNames: ['Performance Monitoring', 'Uptime Monitoring', 'Application Exception Tracking'],
+          clickable: true,
+        })
+      ]
     };
 
     const type = 'Line';
