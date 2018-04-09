@@ -1,5 +1,7 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import 'chartist-plugin-tooltips';
 import ChartistPluginLegend from 'chartist-plugin-legend';
 
 class OperatingSystems extends React.Component {
@@ -21,6 +23,11 @@ class OperatingSystems extends React.Component {
       plugins: [
         ChartistPluginLegend({
           clickable: true
+        }),
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
         })
       ]
     };
