@@ -7880,6 +7880,11 @@ a {
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 500; }
 
+ol li {
+  font-size: 22px;
+  text-align: left;
+  list-style-type: decimal; }
+
 .ct-label {
   fill: #fff;
   color: #fff;
@@ -7887,9 +7892,14 @@ a {
 
 .ct-grid {
   stroke: #393939;
-  stroke-width: 1px;
-  stroke-dasharray: 2px;
-  background-color: #000; }
+  stroke-width: 2px;
+  stroke-dasharray: 2px; }
+
+.ct-horizontal-bar .ct-bar {
+  stroke-width: 25px; }
+
+.ct-vertical-bar .ct-bar {
+  stroke-width: 50px; }
 
 .ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
   stroke: #FFCB05; }
@@ -7921,21 +7931,14 @@ a {
 .ct-series-e .ct-slice-pie, .ct-series-e .ct-slice-donut-solid, .ct-series-e .ct-area {
   fill: #605e5e; }
 
-ol li {
-  font-size: 22px;
-  text-align: left;
-  list-style-type: decimal; }
-
-.ct-bar {
-  stroke-width: 30px; }
-
 .ct-legend {
-  margin-bottom: 5px; }
+  position: relative;
+  z-index: 10; }
   .ct-legend li {
     display: inline-block;
     position: relative;
     padding-left: 17px;
-    margin: 0 5px;
+    margin: 0 5px 7px 0px;
     color: #fff;
     font-size: 12px;
     font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
@@ -7968,5 +7971,46 @@ ol li {
     background-color: #56C0EE;
     border-color: #56C0EE; }
   .ct-legend .ct-series-4:before {
+    background-color: #605e5e;
+    border-color: #605e5e; }
+
+.ct-custom-donut .ct-legend {
+  position: absolute;
+  z-index: 10;
+  text-align: left; }
+  .ct-custom-donut .ct-legend li {
+    display: block;
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  .ct-custom-donut .ct-legend li:before {
+    position: relative;
+    left: -2px;
+    margin-right: 5px;
+    content: '';
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-radius: 100%; }
+  .ct-custom-donut .ct-legend li.inactive:before {
+    background: transparent; }
+  .ct-custom-donut .ct-legend.ct-legend-inside {
+    position: absolute;
+    top: 20%; }
+  .ct-custom-donut .ct-legend .ct-series-0:before {
+    background-color: #FFCB05;
+    border-color: #FFCB05; }
+  .ct-custom-donut .ct-legend .ct-series-1:before {
+    background-color: #FF6B6B;
+    border-color: #FF6B6B; }
+  .ct-custom-donut .ct-legend .ct-series-2:before {
+    background-color: #009C89;
+    border-color: #009C89; }
+  .ct-custom-donut .ct-legend .ct-series-3:before {
+    background-color: #56C0EE;
+    border-color: #56C0EE; }
+  .ct-custom-donut .ct-legend .ct-series-4:before {
     background-color: #605e5e;
     border-color: #605e5e; }

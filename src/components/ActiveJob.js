@@ -19,13 +19,6 @@ class ActiveJob extends React.Component {
       axisY: {
         offset: 70
       }
-      // plugins: [
-      //   Chartist.plugins.tooltip({
-      //     transformTooltipTextFnc: function(value) {
-      //       return value + '%';
-      //     }
-      //   })
-      // ]
     };
 
     const responsiveOptions = [
@@ -48,7 +41,7 @@ class ActiveJob extends React.Component {
 
     return (
       <div>
-        <ChartistGraph data={data} options={options} responsiveOptions={responsiveOptions} type={type} />
+        <ChartistGraph className={'ct-horizontal-bar'} data={data} options={options} responsiveOptions={responsiveOptions} type={type} />
       </div>
     );
   }

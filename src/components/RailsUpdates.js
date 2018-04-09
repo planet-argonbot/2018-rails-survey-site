@@ -1,5 +1,6 @@
 import React from 'react';
 import ChartistGraph from 'react-chartist';
+import ChartistPluginLegend from 'chartist-plugin-legend';
 
 class RailsUpdates extends React.Component {
   render() {
@@ -7,15 +8,16 @@ class RailsUpdates extends React.Component {
       donut: true,
       donutWidth: 60,
       donutSolid: true,
-      labelOffset: 10,
+      showLabel: false,
       chartPadding: 20,
+      height: '400px',
+      plugins: [
+        ChartistPluginLegend()
+      ]
     };
 
     const pieResponsiveOptions = [
-      ['screen and (min-width: 544px)', {
-        labelOffset: 0,
-        labelDirection: 'explode',
-        fullWidth: true,
+      ['screen and (max-width: 544px)', {
         height: '300px',
       }]
     ];
@@ -34,11 +36,11 @@ class RailsUpdates extends React.Component {
       <div class="row margin-top-xl justify-content-center">
         <div class="col-md-6">
           <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
-          <ChartistGraph data={releasesPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart1' type={'Pie'} />
+          <ChartistGraph className={'ct-custom-donut'} data={releasesPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} type={'Pie'} />
         </div>
         <div class="col-md-6">
           <p class="h6">If not all, why not?</p>
-          <ChartistGraph data={notUpdatedPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart2' type={'Pie'} />
+          <ChartistGraph className={'ct-custom-donut'} data={notUpdatedPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} type={'Pie'} />
         </div>
       </div>
     );
