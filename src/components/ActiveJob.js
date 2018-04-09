@@ -1,5 +1,7 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import 'chartist-plugin-tooltips';
 
 
 class ActiveJob extends React.Component {
@@ -18,14 +20,14 @@ class ActiveJob extends React.Component {
       horizontalBars: true,
       axisY: {
         offset: 70
-      }
-      // plugins: [
-      //   Chartist.plugins.tooltip({
-      //     transformTooltipTextFnc: function(value) {
-      //       return value + '%';
-      //     }
-      //   })
-      // ]
+      },
+      plugins: [
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        })
+      ]
     };
 
     const responsiveOptions = [
