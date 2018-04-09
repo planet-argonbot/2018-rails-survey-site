@@ -14,6 +14,7 @@ class Airbrake extends React.Component {
       ]
     };
     const options = {
+      
       plugins: [
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {

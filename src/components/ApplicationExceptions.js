@@ -3,7 +3,6 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 
-
 class ApplicationExceptions extends React.Component {
   render() {
 
@@ -15,12 +14,10 @@ class ApplicationExceptions extends React.Component {
     };
 
     const options = {
+      fullWidth: true,
       seriesBarDistance: 15,
-      reverseData: true,
+
       horizontalBars: true,
-      axisY: {
-        offset: 70
-      },
       plugins: [
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {
@@ -33,7 +30,6 @@ class ApplicationExceptions extends React.Component {
     const responsiveOptions = [
       ['screen and (min-width: 544px)', {
         seriesBarDistance: 10,
-        fullWidth: true,
         height: '700px',
         reverseData: true,
         horizontalBars: true,

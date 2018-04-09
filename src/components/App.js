@@ -129,42 +129,62 @@ class App extends Component {
             <p>WordCloud to go here</p>
           </div>
 
-          <div class="padding-xl">
+          <div class="padding-top-xl container">
             <div class="h2 margin-bottom-md">Application Exceptions</div>
             <div class="h5">Which Application Exception tracking tools do you use in production?</div>
-            <ApplicationExceptions/>
+            <div class="row">
+              <div class="col-12">
+                <ApplicationExceptions/>
+              </div>
+            </div>
             <p>We included 11 options in this question and still had several choose “other”. There are a lot of options out there! And of course, there are a few using no tool at all.</p>
           </div>
 
-          <div class="padding-xl">
+          <div class="padding-top-xl container">
             <div class="h5">With this increase in tools, Airbrake seems to be losing ground</div>
-            <Airbrake/>
+            <div class="row">
+              <div class="col-12">
+                <Airbrake/>
+              </div>
+            </div>
             <p>Airbrake (formerly Hoptoad) was at 53% back in 2012 and fell to 28% in 2014, 21% in 2016, and has continued to fall to 11% in 2018. One possible reason? The application exception tracking space has become more saturated over the years.</p>
           </div>
 
-          <div class="padding-xl">
+          <div class="padding-top-xl container">
             <div class="h2 margin-bottom-md">New Relics Hold on the Market</div>
-            <div class="h5">Which Application Exception tracking tools do you use in production?</div>
-            <NewRelic/>
+            <div class="h5">Respondents use New Relic in the following tools</div>
+            <div class="row">
+              <div class="col-12">
+                <NewRelic/>
+              </div>
+            </div>
             <p>New Relic seems to have taken over in the app exception tracking space in the last few years. We have a few (unproven) ideas as to why that is. They’re the most frequently used choice in this survey for both performance tracking and uptime monitoring as well. As they offered exception tracking tools, perhaps companies decided to streamline and keep their monitoring tools all in one place.</p>
             <button class="btn-yellow montserrat h6 font--black margin-md">READ MORE ABOUT APPLICATION TRACKING</button>
           </div>
 
-          <div class="padding-xl">
+          <div class="padding-top-xl container">
             <div class="h2 margin-bottom-md">Ruby Web Servers</div>
             <div class="h5">Which Rails Servers are you using in production?</div>
-            <RailsServers/>
+            <div class="row">
+              <div class="col-12">
+                <RailsServers/>
+              </div>
+            </div>
             <p>Puma has continued its upward climb as the Rails server of choice. Usage grew from 17% in 2014 to 35% in 2016 to 48% this year. While Unicorn was on par with Puma in 2016 (at 34% to Puma’s 35%), it has fallen below Passenger this year. Farewell, Unicorn in the coming years? We’ll have to wait and see.</p>
           </div>
 
-          <div class="padding-xl">
+          <div class="padding-top-xl container">
             <div class="h2 margin-bottom-md">Databases</div>
             <div class="h5">Which databases do you prefer to use in production?</div>
-            <Databases/>
+            <div class="row">
+              <div class="col-12">
+                <Databases/>
+              </div>
+            </div>
             <p>PostgreSQL continues to lead in terms of usage and preference</p>
           </div>
 
-          <div class="padding-xl">
+          <div class="padding-top-xl">
             <div class="h2 margin-bottom-md">Tools</div>
             <div class="h5">What code quality tools do you use?</div>
             <CodeQuality/>
