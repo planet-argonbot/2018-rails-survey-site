@@ -42,12 +42,13 @@ $teal: #009C89;
 }
 
 .ct-grid {
-  stroke: $white;
+  stroke: $lightest-gray;
   stroke-width: 1px;
   stroke-dasharray: 2px;
+  background-color: $black;
 }
 
-.ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut, .ct-series-1 .ct-legend{
+.ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
   stroke: $yellow; }
 
 .ct-series-a .ct-slice-pie, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-area {
@@ -99,13 +100,13 @@ ol li {
 
 //default legend plugin styling
 .ct-legend {
-  display: inline-block;
+    position: relative;
+    z-index: 10;
 
     li {
         position: relative;
         padding-left: 23px;
         margin-bottom: 3px;
-        font-family: $montserrat;
     }
 
     li:before {

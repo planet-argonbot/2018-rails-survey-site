@@ -7886,7 +7886,7 @@ a {
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
 .ct-grid {
-  stroke: #fff;
+  stroke: #605e5e;
   stroke-width: 1px;
   stroke-dasharray: 2px; }
 
@@ -7929,12 +7929,12 @@ ol li {
   stroke-width: 30px; }
 
 .ct-legend {
-  display: inline-block; }
+  position: relative;
+  z-index: 10; }
   .ct-legend li {
     position: relative;
     padding-left: 23px;
-    margin-bottom: 3px;
-    font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+    margin-bottom: 3px; }
   .ct-legend li:before {
     width: 12px;
     height: 12px;
