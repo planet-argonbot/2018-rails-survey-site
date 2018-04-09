@@ -1,5 +1,7 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import 'chartist-plugin-tooltips';
 
 
 class RailsVersions extends React.Component {
@@ -24,13 +26,13 @@ class RailsVersions extends React.Component {
           return value + ' %';
         },
       },
-      // plugins: [
-      //   Chartist.plugins.tooltip({
-      //     transformTooltipTextFnc: function(value) {
-      //       return value + '%';
-      //     }
-      //   })
-      // ]
+      plugins: [
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        })
+      ]
     };
 
     const responsiveOptions = [

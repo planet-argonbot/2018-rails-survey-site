@@ -7973,6 +7973,7 @@ ol li {
     border-color: #605e5e; }
 
 .chartist-tooltip {
+  position: absolute;
   display: inline-block;
   opacity: 0;
   min-width: 5em;
