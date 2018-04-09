@@ -1,17 +1,19 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import 'chartist-plugin-tooltips';
 import ChartistPluginLegend from 'chartist-plugin-legend';
 
 
-class OperatingSystems extends React.Component {
+class RailsServers extends React.Component {
   render() {
 
     const data = {
       labels: ['2014', '2016', '2018'],
       series: [
-        [17, 35, 49],
-        [41, 34, 24],
-        [36, 30, 25]
+        {'name': 'Puma', 'data': [17, 35, 49] },
+        {'name': 'Unicorn', 'data': [41, 34, 24] },
+        {'name': 'Passenger', 'data': [36, 30, 25] }
       ]
     };
 
@@ -24,6 +26,11 @@ class OperatingSystems extends React.Component {
         ChartistPluginLegend({
           legendNames: ['Puma', 'Unicorn', 'Passenger'],
           clickable: true,
+        }),
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
         })
       ]
     };
@@ -38,4 +45,4 @@ class OperatingSystems extends React.Component {
   }
 }
 
-export default OperatingSystems;
+export default RailsServers;
