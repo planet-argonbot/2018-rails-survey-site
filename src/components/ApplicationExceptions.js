@@ -1,5 +1,7 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import 'chartist-plugin-tooltips';
 
 
 class ApplicationExceptions extends React.Component {
@@ -11,6 +13,7 @@ class ApplicationExceptions extends React.Component {
         [20, 14, 14, 11, 8, 8, 8, 6, 4, 4, 2, 1, 0]
       ]
     };
+    console.log(Chartist.plugins);
 
     const options = {
       seriesBarDistance: 15,
@@ -18,14 +21,14 @@ class ApplicationExceptions extends React.Component {
       horizontalBars: true,
       axisY: {
         offset: 70
-      }
-      // plugins: [
-      //   Chartist.plugins.tooltip({
-      //     transformTooltipTextFnc: function(value) {
-      //       return value + '%';
-      //     }
-      //   })
-      // ]
+      },
+      plugins: [
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        })
+      ]
     };
 
     const responsiveOptions = [
