@@ -7930,7 +7930,8 @@ ol li {
   stroke-width: 30px; }
 
 .ct-legend {
-  margin-bottom: 5px; }
+  position: relative;
+  z-index: 10; }
   .ct-legend li {
     display: inline-block;
     position: relative;
