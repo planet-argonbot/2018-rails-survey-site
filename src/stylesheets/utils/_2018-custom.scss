@@ -3,6 +3,7 @@
 $blue: #56C0EE;
 $coral: #FF6B6B;
 $teal: #009C89;
+$lime: #59922b;
 
 .border--yellow {
   border: $yellow solid 2px;
@@ -75,7 +76,8 @@ $ct-series-colors:
   $coral,
   $teal,
   $blue,
-  $lightest-gray);
+  $lightest-gray,
+  $lime);
 
 //setting the color values for chart series
 .ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
@@ -107,6 +109,12 @@ $ct-series-colors:
 
 .ct-series-e .ct-slice-pie, .ct-series-e .ct-slice-donut-solid, .ct-series-e .ct-area {
   fill: $lightest-gray; }
+
+.ct-series-f .ct-point, .ct-series-f .ct-line, .ct-series-f .ct-bar, .ct-series-f .ct-slice-donut {
+  stroke: $lime; }
+
+.ct-series-f .ct-slice-pie, .ct-series-f .ct-slice-donut-solid, .ct-series-f .ct-area {
+  fill: $lime; }
 
 //legend styles
 .ct-legend {

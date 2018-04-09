@@ -7931,6 +7931,12 @@ ol li {
 .ct-series-e .ct-slice-pie, .ct-series-e .ct-slice-donut-solid, .ct-series-e .ct-area {
   fill: #605e5e; }
 
+.ct-series-f .ct-point, .ct-series-f .ct-line, .ct-series-f .ct-bar, .ct-series-f .ct-slice-donut {
+  stroke: #59922b; }
+
+.ct-series-f .ct-slice-pie, .ct-series-f .ct-slice-donut-solid, .ct-series-f .ct-area {
+  fill: #59922b; }
+
 .ct-legend {
   position: relative;
   z-index: 10; }
@@ -7973,6 +7979,9 @@ ol li {
   .ct-legend .ct-series-4:before {
     background-color: #605e5e;
     border-color: #605e5e; }
+  .ct-legend .ct-series-5:before {
+    background-color: #59922b;
+    border-color: #59922b; }
 
 .ct-custom-donut .ct-legend {
   position: absolute;
@@ -8014,3 +8023,6 @@ ol li {
   .ct-custom-donut .ct-legend .ct-series-4:before {
     background-color: #605e5e;
     border-color: #605e5e; }
+  .ct-custom-donut .ct-legend .ct-series-5:before {
+    background-color: #59922b;
+    border-color: #59922b; }

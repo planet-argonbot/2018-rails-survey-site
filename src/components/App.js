@@ -164,10 +164,14 @@ class App extends Component {
             <p>PostgreSQL continues to lead in terms of usage and preference</p>
           </div>
 
-          <div class="padding-xl">
+          <div class="container padding-xl">
             <div class="h2 margin-bottom-md">Tools</div>
             <div class="h5">What code quality tools do you use?</div>
-            <CodeQuality/>
+            <div class="row">
+              <div class="col-12">
+                <CodeQuality/>
+              </div>
+            </div>
             <p>After having code quality tools show up more frequently in conversations with peers and potential partners over the last year, we wanted to research what tools are being used most by our community.</p>
             <div class="row margin-top-xl justify-content-center">
               <p class="h5">Which Active Job adapters do you use to use to process background</p>
