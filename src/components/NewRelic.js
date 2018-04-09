@@ -1,5 +1,6 @@
 import React from 'react';
 import ChartistGraph from 'react-chartist';
+import ChartistPluginLegend from 'chartist-plugin-legend';
 
 
 class NewRelic extends React.Component {
@@ -15,7 +16,16 @@ class NewRelic extends React.Component {
     };
 
     const options = {
-      width: '500px',
+      fullWidth: true,
+      chartPadding: 40,
+      height: '300px',
+      low: 0,
+      plugins: [
+        ChartistPluginLegend({
+          clickable: true,
+          legendNames: ['Application Exception', 'Performance Monitoring', 'Uptime Monitoring'],
+        })
+      ]
     };
 
     const type = 'Line';

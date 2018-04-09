@@ -19,13 +19,6 @@ class ApplicationExceptions extends React.Component {
       axisY: {
         offset: 70
       }
-      // plugins: [
-      //   Chartist.plugins.tooltip({
-      //     transformTooltipTextFnc: function(value) {
-      //       return value + '%';
-      //     }
-      //   })
-      // ]
     };
 
     const responsiveOptions = [

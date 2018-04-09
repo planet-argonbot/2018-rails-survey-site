@@ -143,7 +143,7 @@ class App extends Component {
           </div>
 
           <div class="padding-xl">
-            <div class="h2 margin-bottom-md">New Relics Hold on the Market</div>
+            <div class="h2 margin-bottom-md">New {'Relic\'s'} Hold on the Market</div>
             <div class="h5">Which Application Exception tracking tools do you use in production?</div>
             <NewRelic/>
             <p>New Relic seems to have taken over in the app exception tracking space in the last few years. We have a few (unproven) ideas as to why that is. They’re the most frequently used choice in this survey for both performance tracking and uptime monitoring as well. As they offered exception tracking tools, perhaps companies decided to streamline and keep their monitoring tools all in one place.</p>
@@ -174,7 +174,7 @@ class App extends Component {
             </div>
             <p>After having code quality tools show up more frequently in conversations with peers and potential partners over the last year, we wanted to research what tools are being used most by our community.</p>
             <div class="row margin-top-xl justify-content-center">
-              <p class="h5">Which Active Job adapters do you use to use to process background</p>
+              <p class="h5">Which Active Job adapters do you use to use to process background?</p>
               <div class="col-8 margin-top-md">
                 <ActiveJob/>
                 <p>Sidekiq accounted for more than half of the active job adapters used to process background jobs. Delayed job came in second with 20%. This is one category with several players, with 11 options receiving at least a handful of votes.</p>

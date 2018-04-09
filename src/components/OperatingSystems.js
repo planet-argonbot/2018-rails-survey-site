@@ -16,8 +16,7 @@ class OperatingSystems extends React.Component {
 
     const options = {
       fullWidth: true,
-      width: '80%',
-      chartPadding: 20,
+      chartPadding: 40,
       plugins: [
         ChartistPluginLegend({
           clickable: true

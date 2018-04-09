@@ -1,7 +1,6 @@
 import React from 'react';
 import ChartistGraph from 'react-chartist';
 
-
 class Airbrake extends React.Component {
   render() {
 
@@ -12,11 +11,18 @@ class Airbrake extends React.Component {
       ]
     };
 
+    const options = {
+      fullWidth: true,
+      chartPadding: 40,
+      height: '300px',
+      low: 0,
+    };
+
     const type = 'Line';
 
     return (
       <div>
-        <ChartistGraph data={data} type={type} />
+        <ChartistGraph data={data} options={options} type={type} />
       </div>
     );
   }
