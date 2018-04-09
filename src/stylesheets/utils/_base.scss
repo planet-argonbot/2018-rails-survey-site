@@ -1,296 +1,237 @@
-// ======================
-// Overview Styles
-// ======================
+@import "reset";
+@import "variables";
+@import "utilities";
+
+html {
+  overflow-y: scroll;
+}
+
 body {
-  font-family: $roboto;
-  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  line-height: 1.5;
+  @extend %georgia;
   background-color: $dark-gray;
   color: $white;
+  font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
 
-// ======================
+.container {
+  width: 1400px;
+  max-width: 95%;
+}
+// =====================
 // Typography
-// ======================
+// =====================
+
 h1, .h1 {
-  font-family: $georgia;
-  font-size: 50px;
-  text-align: center;
-  color: $white;
+  font-size: 36px;
 }
+
 h2, .h2 {
-  font-family: $georgia;
-  font-family: 40px;
+ font-size: 32px;
 }
+
 h3, .h3 {
-  font-family: $georgia;
-  font-size: 32px;
+  font-size: 28px;
 }
+
 h4, .h4 {
-  font-family: $georgia;
-  font-size: 24px;
-  line-height:1.4;
+  font-size:26px;
 }
+
 h5, .h5 {
-  font-family: $georgia;
+  font-size: 24px;
+}
+
+h6, .h6 {
   font-size: 22px;
 }
-h6, .h6 {
-  font-family: $georgia;
-  font-size: 20px;
-}
-p {
+
+p, .p {
   font-size: 18px;
 }
+
 .small {
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.varela {
-  font-family: $varela;
+.font--headline {
+  font-size: 58px;
 }
 
-.roboto {
-  font-family: $roboto;
+.font--sub-headline {
+  font-size: 54px;
 }
 
-.roboto-thin {
-  font-family: $roboto;
-  font-weight: 300;
+.line-height-1 {
+  line-height: 1;
 }
+
+// =====================
+// Links + Buttons
+// =====================
 
 a {
-  @include transition(color, 0.2s, linear);
-  color: $black;
-  &:hover {
+  color: #FFF;
+  &:focus, &:active, &:hover,  {
+    @include transition(all, 0.3s, linear);
+    color: $yellow;
     text-decoration: none;
-    color: lighten($black, 10%);
   }
 }
 
-.white-link {
-  color: $white;
-  &:hover {
-    color: $white;
-  }
-}
-// ======================
-// Buttons
-// ======================
-.btn-pink {
-  background-color: $pink;
-  color: $white;
-  @include transition(background-color, 0.2s, linear);
-  &:hover {
-    background-color: darken($pink, 10%);
-  }
-}
-// ======================
-// Page Styles
-// ======================
-.background--gray {
-  background-color: $gray;
-}
-.background--pink {
-  background-color: $pink;
+.btn {
+  @extend %montserrat;
+  border-radius: 3px;
+  color: $black;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px 40px;
 }
 
-svg:not(:root) {
-  overflow: visible;
+.btn-yellow {
+  background-color: $yellow;
+  border: 2px solid $yellow;
+  @include transition(all, 0.1s, linear);
+  &:hover, &:focus, &:active {
+    background-color: transparent;
+    border-color: $yellow;
+    color: $yellow;
+  }
 }
 
-.navigation {
-  a {
-    font-family: $varela;
-    text-transform: uppercase;
+.btn-small {
+  @include transition(all, 0.1s, linear);
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 10px;
+  line-height: 1;
+}
+
+.btn-small--inline {
+  padding: 5px;
+}
+
+
+.btn-small--white {
+  background-color: $white;
+  border-top: 1px solid $white;
+  border-left: 1px solid $white;
+  border-right: 1px solid $white;
+  border-bottom: 1px solid #ccc;
+  color: $black;
+  &:hover, &:active, &:focus {
+    background-color: $off-white;
+    border-color: $black;
     color: $black;
   }
-  img {
-    max-width: 350px;
-    @media only screen and (max-width: $sm-breakpoint) {
-      max-width: none;
-      width: 100%;
-    }
-  }
-  .btn {
-    color: $white;
-    padding: 8px 15px;
-    border-radius: 0px;
-  }
-  @media only screen and (max-width: $md-breakpoint) {
-    .btn {
-      background-color: transparent;
-      color: $black;
-      padding: 0;
-    }
-  }
 }
-.diversity-headline {
-  background: url('/images/portland-waterfront.jpg');
-  background-size: cover;
-  min-height: 300px;
-  padding: 120px 0px 0px;
-  @media only screen and (max-width: $sm-breakpoint) {
-    padding: 20px 0;
-    min-height: inherit;
-    h1 {
-      font-size: 42px;
-    }
-  }
-}
-.quote {
-  position: relative;
-  &:before {
-    content: '“';
-    position: absolute;
-    font-size: 100px;
-    font-family: Georgia, serif;
-    top: -47px;
-    left: 25px;
-  }
-}
-.filter-list {
-  font-size: 0;
-  li {
-    display: inline-block;
-    font-size: 16px;
-  }
-  a {
-    padding: 5px 10px;
-    background-color: $gray;
-    &.active {
-      color: $white;
-      background-color: $pink;
-    }
-    &:active, &:focus {
-      text-decoration: none;
-    }
-  }
-}
-.new-hires {
-  background: url('/images/portland-blur.jpg');
-  background-size: cover;
-  background-repeat: none;
-}
-.chart-key {
-  li {
-    display: inline-block;
-    position: relative;
-    padding-left: 17px;
-    margin: 0 5px;
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 14px;
-    &:before {
-      content: "";
-      width:13px;
-      height: 13px;
-      background-color: $aqua;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      margin-top: -6px;
-    }
-    &:nth-child(2) {
-      &:before {
-        background-color: $lime;
-      }
-    }
-  }
-}
-// ==============
-// Chart styles
-// ==============
-.ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
-  stroke: $aqua;
-}
-.ct-series-b .ct-point, .ct-series-b .ct-line, .ct-series-b .ct-bar, .ct-series-b .ct-slice-donut {
-  stroke: $lime;
-}
-.ct-series-c .ct-point, .ct-series-c .ct-line, .ct-series-c .ct-bar, .ct-series-c .ct-slice-donut {
-  stroke: $green;
-}
-.ct-chart-bar .ct-label.ct-horizontal.ct-end, .ct-label {
-  font-size: 13px;
-  @media only screen and (max-width: $sm-breakpoint) {
-    font-size: 12px;
-  }
-}
-.chartist-tooltip {
-  background: $dark-gray;
+
+.btn-small--gray {
+  background-color: $lightest-gray;
+  border-top: 1px solid $lightest-gray;
+  border-left: 1px solid $lightest-gray;
+  border-right: 1px solid $lightest-gray;
+  border-bottom: 1px solid $black;
   color: $white;
-  &:before {
-    border-top-color: $dark-gray;
-  }
-}
-.chartist-tooltip-meta {
-  font-size: 12px;
-}
-.ct-bar {
-  stroke-width: 20px;
-  -webkit-animation:slideCharts 0.5s 1 alternate;
-  animation:slideCharts 0.5s 1 alternate;
-  transform-origin: 0% 77%;
-  -webkit-transform-origin: 0% 100%;
-  @media only screen and (max-width: $sm-breakpoint) {
-    stroke-width: 25px;
-    -webkit-animation:slideChartsHorizontal 0.5s 1 alternate;
-    animation:slideChartsHorizontal 0.5s 1 alternate;
+  &:hover, &:active, &:focus {
+    background-color: transparent;
+    border-color: $black;
+    color: $white;
   }
 }
 
-@-webkit-keyframes slideCharts {
-  0% {
-    transform: scaleY(0);
-    -ms-transform: scaleY(0);
-    -webkit-transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-    -ms-transform: scaleY(1);
-    -webkit-transform: scaleY(1);
+// =====================
+// Custom Styles
+// =====================
+
+.pa-logo {
+  font-size: 40px;
+}
+
+.proudly-presents {
+  background-color: $mid-dark-gray;
+  padding: 0 10px;
+  position: absolute;
+    bottom: -16px;
+    left: 50px;
+  p {
+    font-size: 14px;
+    line-height: 1.2;
   }
 }
 
-@keyframes slideCharts {
-  0% {
-    transform: scaleY(0);
-    -ms-transform: scaleY(0);
-    -webkit-transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-    -ms-transform: scaleY(1);
-    -webkit-transform: scaleY(1);
-  }
-}
-
-@-webkit-keyframes slideChartsHorizontal {
-  0% {
-    transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -webkit-transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    -webkit-transform: scaleX(1);
+.sliced-background {
+  position: relative;
+  &:after {
+    background-color: $darkest-gray;
+    height: 450px;
+    width: 120%;
+    content: "";
+    -ms-transform: rotate(-5deg); /* IE 9 */
+    -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+    transform: rotate(-5deg);
+    position: absolute;
+      bottom: -135px;
+      left: -63px;
+    z-index: 0;
   }
 }
 
-@keyframes slideChartsHorizontal {
-  0% {
-    transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -webkit-transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    -webkit-transform: scaleX(1);
-  }
+.absolute-results {
+  position: absolute;
+  background-color: $yellow;
+  top: 0;
+  right: 0;
+  color: $black;
+  height: 100%;
+  padding: 25px;
 }
 
-.footer__text {
-  @media only screen and (min-width: $lg-breakpoint) {
-    margin-top: 10px;
-  }
+.absolute-results--text {
+  position: relative;
+  top: 50%;
+  margin-top: -42px;
+  text-align: center;
+}
+.absolute-results--2014 {
+  right: 30px;
+}
+.absolute-results--2012 {
+  right: 50px;
+}
+
+.absolute-results--2009 {
+  right: 80px;
+}
+
+.absolute-photo {
+  position: absolute;
+  left: 0;
+}
+
+.results-chart__bar {
+  display: inline-block;
+  background-color: $yellow;
+  color: $black;
+  text-align: center;
+  margin: 1px 1px;
+  padding: 25px 5px;
+  vertical-align: bottom;
+}
+
+.results-chart__2014 {
+  padding: 20px 5px;
+}
+
+.results-chart__2012 {
+  padding: 15px 5px;
+}
+
+.results-chart__2009 {
+  padding: 10px 5px;
 }

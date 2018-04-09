@@ -1,4 +1,4 @@
-// =======================
+//======================
 // Typography
 // =======================
 
@@ -17,15 +17,6 @@ b {
   // font-weight: 700;
   font-weight: bold;
 }
-.small {
-  font-size: 16px;
-}
-.font--italic {
-  font-style: italic;
-}
-.font--white {
-  color: $white;
-}
 .font--black {
   color: $black;
 }
@@ -41,14 +32,12 @@ b {
 .display--block {
   display: block;
 }
+
 .display--none {
   display: none;
 }
 .position--fixed {
   position: fixed;
-}
-.position--absolute {
-  position: absolute;
 }
 .position--relative {
   position: relative;
@@ -57,9 +46,6 @@ b {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-}
-.nowrap {
-  white-space: nowrap;
 }
 .cursor--pointer {
   cursor: pointer;
@@ -118,10 +104,6 @@ b {
 .clearfix:after {
   clear: both;
 }
-.col-centered {
-  float: none;
-  margin:0 auto;
-}
 .full-width {
   width: 100%;
 }
@@ -149,26 +131,76 @@ b {
 .text-justify {
   text-align: justify
 }
-.align-top {
-  top: 0;
+.col-centered {
+  float: none;
+  margin:0 auto;
+}
+.z-index-1 {
+  z-index: 1;
+}
+
+// Backgrounds
+
+.background--black {
+  background: $black;
+}
+
+.background--off-white {
+  background: $off-white;
+}
+
+.background--white {
+  background: #FFF;
+}
+
+.background--darkest-gray {
+  background: $darkest-gray;
+}
+
+.background--dark-gray {
+  background: $dark-gray;
+}
+
+.background--light-gray {
+  background: $light-gray;
+}
+
+.background--lighter-gray {
+  background: $lighter-gray;
+}
+
+.background--lightest-gray {
+  background: $lightest-gray;
+}
+
+.background--mid-gray {
+  background: $mid-gray;
+}
+
+.background--mid-dark-gray {
+  background: $mid-dark-gray;
+}
+
+.background--yellow {
+  background: $yellow;
 }
 
 // Borders
 
 .border--all {
-  border: 1px solid #ccc;
+  border: 1px solid rgba($white, 0.3);
 }
 .border--bottom {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba($white, 0.3);
 }
 .border--top {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba($white, 0.3);
 }
 .border--right {
-  border-right: 1px solid #ccc;
+  border-right: 1px solid rgba($white, 0.3);
 }
 .border--left {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid rgba($white, 0.3);
 }
 
 // Spacing Utilities
@@ -234,6 +266,7 @@ $md-margin:    30px;
 $lg-margin:    40px;
 $xl-margin:    50px;
 $xxl-margin:   60px;
+$grand-margin: 100px;
 
 .margin-0           { margin: 0                       }
 .margin-xxs         { margin: $xxs-margin             }
@@ -252,11 +285,7 @@ $xxl-margin:   60px;
 .margin-top-lg      { margin-top: $lg-margin          }
 .margin-top-xl      { margin-top: $xl-margin          }
 .margin-top-xxl     { margin-top: $xxl-margin         }
-@media only screen and (max-width: $sm-breakpoint)    {
-  .small-margin-top-0 {
-    margin-top: 0;
-  }
-}
+.margin-top-grand   { margin-top: $grand-margin       }
 
 .margin-right-0     { margin-right: 0                 }
 .margin-right-xxs   { margin-right: $xxs-margin       }

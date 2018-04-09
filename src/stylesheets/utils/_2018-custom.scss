@@ -1,0 +1,143 @@
+$blue: #56C0EE;
+$coral: #FF6B6B;
+$teal: #009C89;
+
+.border--yellow {
+  border: $yellow solid 2px;
+}
+
+.border--teal {
+  border: $teal solid 2px;
+}
+
+.border--blue {
+  border: $blue solid 2px;
+}
+
+.font--yellow {
+  color: $yellow;
+}
+
+.font--teal {
+  color: $teal;
+}
+
+.font--blue {
+  color: $blue;
+}
+
+.font--coral {
+  color: $coral;
+}
+
+.montserrat-text, %montserrat-text {
+  font-family: $montserrat;
+  font-weight: 500;
+}
+
+.ct-label {
+  fill: $white;
+  color: $white;
+  font-family: $montserrat;
+}
+
+.ct-grid {
+  stroke: $light-gray;
+  stroke-width: 1px;
+  stroke-dasharray: 2px;
+  background-color: $black;
+}
+
+//setting the color series values for the legend to be the same as the custom colors used for the charts
+$ct-series-colors:
+  ($yellow,
+  $coral,
+  $teal,
+  $blue,
+  $lightest-gray);
+
+//setting the custom color values for chart series
+.ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
+  stroke: $yellow; }
+
+.ct-series-a .ct-slice-pie, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-area {
+  fill: $yellow; }
+
+.ct-series-b .ct-point, .ct-series-b .ct-line, .ct-series-b .ct-bar, .ct-series-b .ct-slice-donut{
+  stroke: $coral; }
+
+.ct-series-b .ct-slice-pie, .ct-series-b .ct-slice-donut-solid, .ct-series-b .ct-area {
+  fill: $coral; }
+
+.ct-series-c .ct-point, .ct-series-c .ct-line, .ct-series-c .ct-bar, .ct-series-c .ct-slice-donut {
+  stroke: $teal; }
+
+.ct-series-c .ct-slice-pie, .ct-series-c .ct-slice-donut-solid, .ct-series-c .ct-area {
+  fill: $teal; }
+
+.ct-series-d .ct-point, .ct-series-d .ct-line, .ct-series-d .ct-bar, .ct-series-d .ct-slice-donut {
+  stroke: $blue; }
+
+.ct-series-d .ct-slice-pie, .ct-series-d .ct-slice-donut-solid {
+  fill: $blue; }
+
+.ct-series-e .ct-point, .ct-series-e .ct-line, .ct-series-e .ct-bar, .ct-series-e .ct-slice-donut {
+  stroke: $lightest-gray; }
+
+.ct-series-e .ct-slice-pie, .ct-series-e .ct-slice-donut-solid, .ct-series-e .ct-area {
+  fill: $lightest-gray; }
+
+ol li {
+  font-size: 22px;
+  text-align: left;
+  list-style-type: decimal;
+}
+
+.ct-bar {
+  stroke-width: 30px;
+}
+
+//default legend plugin styling
+.ct-legend {
+    position: relative;
+    z-index: 10;
+
+    li {
+      display: inline-block;
+      position: relative;
+      padding-left: 17px;
+      margin: 0 5px;
+      color: $white;
+      font-size: 12px;
+      font-family: $montserrat;
+    }
+
+    li:before {
+        position: relative;
+        left: -2px;
+        margin-right: 5px;
+        content: '';
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 0px;
+        border-top: 0px;
+        border-radius: 100%;
+    }
+
+    li.inactive:before {
+        background: transparent;
+    }
+
+    &.ct-legend-inside {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @for $i from 0 to length($ct-series-colors) {
+        .ct-series-#{$i}:before {
+            background-color: nth($ct-series-colors, $i + 1);
+            border-color: nth($ct-series-colors, $i + 1);
+        }
+    }
+}

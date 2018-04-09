@@ -3,52 +3,109 @@
 // =======================
 
 $white: #fff;
-$black: #333;
-$link: #007a86;
+$off-white: #F6F6F6;
+$black: #000;
 
-$pink: #B7259D;
-$gray: #F2F2F2;
-$dark-gray: #222222;
-$text-color: #1F1724;
-$gray: #2B2B2B;
-$light-gray: #9B9B9B;
+$darkest-gray: #232323;
+$dark-gray: #2b2b2b;
+$mid-dark-gray: #292929;
+$mid-gray: #323333;
+$light-gray: #393939;
+$lighter-gray: #4d4d4d;
+$lightest-gray: #605e5e;
 
-$aqua: #45ADA8;
-$lime: #E5FCC2;
-$green: #9DE0AD;
-
-//new colors from mockup - maybe
-$coral: #FF6B6B;
 $yellow: #FFCB05;
-$green: #009C89;
-$blue: #56C0EE;
-
-
 
 // =======================
 // Fonts
 // =======================
 
-$roboto: 'Roboto', sans-serif;
-$varela: 'Varela Round', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400italic);
+
+// Google font "Lato" (Weights: regular - 400, bold - 700)
+$montserrat: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $georgia: Georgia, sans-serif;
+$lato: "Lato", sans-serif;
 
-.varela {
-  font-family: $varela;
+.montserrat, %montserrat {
+  font-family: $montserrat;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-.roboto {
-  font-family: $roboto;
+.montserrat-lc, %montserrat {
+  font-family: $montserrat;
+  font-weight: 400;
 }
 
-.georgia {
+
+.montserrat-black, %montserrat-black {
+  font-family: $montserrat;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.georgia, %georgia {
   font-family: $georgia;
   font-weight: 400;
 }
 
+.lato-italic, %lato-italic {
+  font-family: $lato;
+  font-style: italic;
+  font-weight: 400;
+}
+
 // =======================
-// Breakpoints
+// Icons
 // =======================
-$sm-breakpoint: 544px;
-$md-breakpoint: 992px;
-$lg-breakpoint: 1200px;
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.woff2') format('woff2'),
+      url('../fonts/icomoon.ttf') format('truetype'),
+      url('../fonts/icomoon.woff') format('woff'),
+      url('../fonts/icomoon.svg#icomoon') format('svg');
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pa-site-logo:before {
+  content: "\e902";
+}
+
+.icon-facebook:before {
+  content: "\ea8c";
+}
+
+.icon-twitter:before {
+  content: "\ea91";
+}
+
+.icon-hamburger:before {
+  content: "\f0c9";
+}
