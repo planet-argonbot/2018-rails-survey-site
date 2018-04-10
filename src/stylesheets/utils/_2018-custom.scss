@@ -132,33 +132,33 @@ $ct-series-colors:
     }
 
     li:before {
-        position: relative;
-        left: -2px;
-        margin-right: 5px;
-        content: '';
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 0px;
-        border-top: 0px;
-        border-radius: 100%;
-    }
+      position: relative;
+      left: -2px;
+      margin-right: 5px;
+      content: '';
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 0px;
+      border-top: 0px;
+      border-radius: 100%;
+  }
 
     li.inactive:before {
-        background: transparent;
+      background: transparent;
     }
 
     &.ct-legend-inside {
-        position: absolute;
-        top: 0;
-        right: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
 
     @for $i from 0 to length($ct-series-colors) {
-        .ct-series-#{$i}:before {
-            background-color: nth($ct-series-colors, $i + 1);
-            border-color: nth($ct-series-colors, $i + 1);
-        }
-    }
+      .ct-series-#{$i}:before {
+          background-color: nth($ct-series-colors, $i + 1);
+          border-color: nth($ct-series-colors, $i + 1);
+      }
+  }
 }
 
 //legend for donut charts
@@ -177,24 +177,26 @@ $ct-series-colors:
       }
 
       li:before {
-          position: relative;
-          left: -2px;
-          margin-right: 5px;
-          content: '';
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
-          border-bottom: 0px;
-          border-top: 0px;
-          border-radius: 100%;
+        position: relative;
+        left: -2px;
+        margin-right: 5px;
+        content: '';
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 0px;
+        border-top: 0px;
+        border-radius: 100%;
       }
 
       li.inactive:before {
-          background: transparent;
+        background: transparent;
       }
 
       &.ct-legend-inside {
-          position: absolute;
-          top: 20%;
+        position: absolute;
+        right: 20;
+        top: 20%;
+        width: 25%;
       }
 
       @for $i from 0 to length($ct-series-colors) {

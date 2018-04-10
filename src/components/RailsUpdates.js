@@ -6,11 +6,11 @@ class RailsUpdates extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 60,
+      donutWidth: 50,
+      chartPadding: 5,
       donutSolid: true,
       showLabel: false,
-      chartPadding: 20,
-      height: '400px',
+      height: '300px',
       plugins: [
         ChartistPluginLegend()
       ]
@@ -18,7 +18,13 @@ class RailsUpdates extends React.Component {
 
     const pieResponsiveOptions = [
       ['screen and (max-width: 544px)', {
-        height: '300px',
+        height: '200px',
+        donutWidth: 20,
+      }],
+
+      ['screen and (min-width: 545px)', {
+        height: '250px',
+        donutWidth: 30,
       }]
     ];
 
@@ -34,7 +40,7 @@ class RailsUpdates extends React.Component {
 
     return (
       <div class="row margin-top-xl justify-content-center">
-        <div class="col-md-6">
+        <div class="col-lg-6 margin-top-md">
           <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
           <ChartistGraph
             className={'ct-custom-donut'}
@@ -43,7 +49,7 @@ class RailsUpdates extends React.Component {
             responsiveOptions={pieResponsiveOptions}
             type={'Pie'} />
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6 margin-top-md">
           <p class="h6">If not all, why not?</p>
           <ChartistGraph
             className={'ct-custom-donut'}

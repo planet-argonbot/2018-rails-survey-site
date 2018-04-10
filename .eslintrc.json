@@ -16,7 +16,7 @@
     ],
     "rules": {
         "max-len": [
-          2, 100, 4,
+          1, 100, 4,
           {"ignoreUrls": true}
         ],
         "react/jsx-uses-vars": 2,

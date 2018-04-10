@@ -8007,7 +8007,9 @@ ol li {
     background: transparent; }
   .ct-custom-donut .ct-legend.ct-legend-inside {
     position: absolute;
-    top: 20%; }
+    right: 20;
+    top: 20%;
+    width: 25%; }
   .ct-custom-donut .ct-legend .ct-series-0:before {
     background-color: #FFCB05;
     border-color: #FFCB05; }
