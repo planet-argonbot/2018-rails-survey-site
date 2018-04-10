@@ -18,7 +18,11 @@ class Containers extends React.Component {
 
     return (
       <div>
-        <ChartistGraph data={pieChartData} options={pieOptions} class='ct-chart1' type={'Pie'} />
+        <ChartistGraph 
+          data={pieChartData}
+          options={pieOptions}
+          class='ct-chart1'
+          type={'Pie'} />
         <p class="montserrat-lc small">of developers are using tools like Docker and Kubermetes now</p>
       </div>
 

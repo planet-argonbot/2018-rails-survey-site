@@ -1,22 +1,30 @@
 import React from 'react';
 import ChartistGraph from 'react-chartist';
+import ChartistPluginLegend from 'chartist-plugin-legend';
 
 class RailsUpdates extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 60,
+      donutWidth: 50,
+      chartPadding: 5,
       donutSolid: true,
-      labelOffset: 10,
-      chartPadding: 20,
+      showLabel: false,
+      height: '300px',
+      plugins: [
+        ChartistPluginLegend()
+      ]
     };
 
     const pieResponsiveOptions = [
-      ['screen and (min-width: 544px)', {
-        labelOffset: 0,
-        labelDirection: 'explode',
-        fullWidth: true,
-        height: '300px',
+      ['screen and (max-width: 544px)', {
+        height: '200px',
+        donutWidth: 20,
+      }],
+
+      ['screen and (min-width: 545px)', {
+        height: '250px',
+        donutWidth: 30,
       }]
     ];
 
@@ -32,13 +40,23 @@ class RailsUpdates extends React.Component {
 
     return (
       <div class="row margin-top-xl justify-content-center">
-        <div class="col-md-6">
+        <div class="col-lg-6 margin-top-md">
           <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
-          <ChartistGraph data={releasesPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart1' type={'Pie'} />
+          <ChartistGraph
+            className={'ct-custom-donut'}
+            data={releasesPieChartData}
+            options={pieOptions}
+            responsiveOptions={pieResponsiveOptions}
+            type={'Pie'} />
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6 margin-top-md">
           <p class="h6">If not all, why not?</p>
-          <ChartistGraph data={notUpdatedPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} class='ct-chart2' type={'Pie'} />
+          <ChartistGraph
+            className={'ct-custom-donut'}
+            data={notUpdatedPieChartData}
+            options={pieOptions}
+            responsiveOptions={pieResponsiveOptions}
+            type={'Pie'} />
         </div>
       </div>
     );

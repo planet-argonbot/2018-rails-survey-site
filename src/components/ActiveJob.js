@@ -50,7 +50,12 @@ class ActiveJob extends React.Component {
 
     return (
       <div>
-        <ChartistGraph data={data} options={options} responsiveOptions={responsiveOptions} type={type} />
+        <ChartistGraph
+          className={'ct-horizontal-bar'}
+          data={data}
+          options={options}
+          responsiveOptions={responsiveOptions}
+          type={type} />
       </div>
     );
   }

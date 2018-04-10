@@ -151,7 +151,7 @@ class App extends Component {
           </div>
 
           <div class="padding-top-xl container">
-            <div class="h2 margin-bottom-md">New Relics Hold on the Market</div>
+            <div class="h2 margin-bottom-md">New {'Relic\'s'} Hold on the Market</div>
             <div class="h5">Respondents use New Relic in the following tools</div>
             <div class="row">
               <div class="col-12">
@@ -187,10 +187,14 @@ class App extends Component {
           <div class="padding-top-xl">
             <div class="h2 margin-bottom-md">Tools</div>
             <div class="h5">What code quality tools do you use?</div>
-            <CodeQuality/>
+            <div class="row">
+              <div class="col-12">
+                <CodeQuality/>
+              </div>
+            </div>
             <p>After having code quality tools show up more frequently in conversations with peers and potential partners over the last year, we wanted to research what tools are being used most by our community.</p>
             <div class="row margin-top-xl justify-content-center">
-              <p class="h5">Which Active Job adapters do you use to use to process background</p>
+              <p class="h5">Which Active Job adapters do you use to use to process background?</p>
               <div class="col-8 margin-top-md">
                 <ActiveJob/>
                 <p>Sidekiq accounted for more than half of the active job adapters used to process background jobs. Delayed job came in second with 20%. This is one category with several players, with 11 options receiving at least a handful of votes.</p>

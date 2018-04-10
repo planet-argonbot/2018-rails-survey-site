@@ -18,8 +18,7 @@ class OperatingSystems extends React.Component {
 
     const options = {
       fullWidth: true,
-      width: '80%',
-      chartPadding: 20,
+      chartPadding: 40,
       plugins: [
         ChartistPluginLegend({
           clickable: true
@@ -36,7 +35,11 @@ class OperatingSystems extends React.Component {
 
     return (
       <div>
-        <ChartistGraph className={'ct-double-octave'} data={data} type={type} options={options} />
+        <ChartistGraph
+          className={'ct-double-octave'}
+          data={data}
+          type={type}
+          options={options} />
       </div>
     );
   }

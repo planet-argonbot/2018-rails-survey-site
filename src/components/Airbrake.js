@@ -3,7 +3,6 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 
-
 class Airbrake extends React.Component {
   render() {
 
@@ -14,7 +13,7 @@ class Airbrake extends React.Component {
       ]
     };
     const options = {
-      
+
       plugins: [
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {
@@ -27,7 +26,10 @@ class Airbrake extends React.Component {
 
     return (
       <div>
-        <ChartistGraph data={data} options={options} type={type} />
+        <ChartistGraph
+          data={data}
+          options={options}
+          type={type} />
       </div>
     );
   }

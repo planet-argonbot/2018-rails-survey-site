@@ -37,7 +37,10 @@ class NewRelic extends React.Component {
 
     return (
       <div>
-        <ChartistGraph data={data} type={type} options={options} />
+        <ChartistGraph
+          data={data}
+          type={type}
+          options={options} />
       </div>
     );
   }

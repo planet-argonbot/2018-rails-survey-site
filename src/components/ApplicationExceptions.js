@@ -7,7 +7,20 @@ class ApplicationExceptions extends React.Component {
   render() {
 
     const data = {
-      labels: ['New Relic', 'Rollbar', 'Sentry', 'Airbrake', 'Honeybadger', 'None', 'Bugsnag', 'ExceptionNotifier plugin', 'Errbit', 'AppSignal', 'Other', 'Raygun', 'Exceptional'],
+      labels: [
+        'New Relic',
+        'Rollbar',
+        'Sentry',
+        'Airbrake',
+        'Honeybadger',
+        'None',
+        'Bugsnag',
+        'ExceptionNotifier plugin',
+        'Errbit',
+        'AppSignal',
+        'Other',
+        'Raygun',
+        'Exceptional'],
       series: [
         [20, 14, 14, 11, 8, 8, 8, 6, 4, 4, 2, 1, 0]
       ]
@@ -28,12 +41,12 @@ class ApplicationExceptions extends React.Component {
     };
 
     const responsiveOptions = [
-      ['screen and (min-width: 544px)', {
+      ['screen and (max-width: 544px)', {
         seriesBarDistance: 10,
-        height: '700px',
+        fullWidth: true,
         reverseData: true,
         horizontalBars: true,
-        axisY: {
+        axisX: {
           labelInterpolationFnc: function(value) {
             return value;
           },
@@ -46,7 +59,11 @@ class ApplicationExceptions extends React.Component {
 
     return (
       <div>
-        <ChartistGraph data={data} options={options} responsiveOptions={responsiveOptions} type={type} />
+        <ChartistGraph
+          className={'ct-horizontal-bar'}
+          data={data} options={options}
+          responsiveOptions={responsiveOptions}
+          type={type} />
       </div>
     );
   }

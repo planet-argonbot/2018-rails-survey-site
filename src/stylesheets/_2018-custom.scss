@@ -1,6 +1,9 @@
+//new colors/fonts for 2018
+
 $blue: #56C0EE;
 $coral: #FF6B6B;
 $teal: #009C89;
+$lime: #59922b;
 
 .border--yellow {
   border: $yellow solid 2px;
@@ -35,6 +38,14 @@ $teal: #009C89;
   font-weight: 500;
 }
 
+//general use styles
+ol li {
+  font-size: 22px;
+  text-align: left;
+  list-style-type: decimal;
+}
+
+//chart grid styles
 .ct-label {
   fill: $white;
   color: $white;
@@ -43,20 +54,32 @@ $teal: #009C89;
 
 .ct-grid {
   stroke: $light-gray;
-  stroke-width: 1px;
+  stroke-width: 2px;
   stroke-dasharray: 2px;
-  background-color: $black;
 }
 
-//setting the color series values for the legend to be the same as the custom colors used for the charts
+.ct-horizontal-bar {
+  .ct-bar {
+    stroke-width: 20px;
+  }
+}
+
+.ct-vertical-bar {
+  .ct-bar {
+    stroke-width: 50px;
+  }
+}
+
+//setting the color series values for chart legends
 $ct-series-colors:
   ($yellow,
   $coral,
   $teal,
   $blue,
-  $lightest-gray);
+  $lightest-gray,
+  $lime);
 
-//setting the custom color values for chart series
+//setting the color values for chart series
 .ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
   stroke: $yellow; }
 
@@ -87,17 +110,13 @@ $ct-series-colors:
 .ct-series-e .ct-slice-pie, .ct-series-e .ct-slice-donut-solid, .ct-series-e .ct-area {
   fill: $lightest-gray; }
 
-ol li {
-  font-size: 22px;
-  text-align: left;
-  list-style-type: decimal;
-}
+.ct-series-f .ct-point, .ct-series-f .ct-line, .ct-series-f .ct-bar, .ct-series-f .ct-slice-donut {
+  stroke: $lime; }
 
-.ct-bar {
-  stroke-width: 30px;
-}
+.ct-series-f .ct-slice-pie, .ct-series-f .ct-slice-donut-solid, .ct-series-f .ct-area {
+  fill: $lime; }
 
-//default legend plugin styling
+//legend styles
 .ct-legend {
     position: relative;
     z-index: 10;
@@ -106,13 +125,58 @@ ol li {
       display: inline-block;
       position: relative;
       padding-left: 17px;
-      margin: 0 5px;
+      margin: 7px 5px;
       color: $white;
       font-size: 12px;
       font-family: $montserrat;
     }
 
     li:before {
+      position: relative;
+      left: -2px;
+      margin-right: 5px;
+      content: '';
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 0px;
+      border-top: 0px;
+      border-radius: 100%;
+  }
+
+    li.inactive:before {
+      background: transparent;
+    }
+
+    &.ct-legend-inside {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    @for $i from 0 to length($ct-series-colors) {
+      .ct-series-#{$i}:before {
+          background-color: nth($ct-series-colors, $i + 1);
+          border-color: nth($ct-series-colors, $i + 1);
+      }
+  }
+}
+
+//legend for donut charts
+.ct-custom-donut {
+  .ct-legend {
+      position: absolute;
+      z-index: 10;
+      text-align: left;
+
+      li {
+        display: block;
+        position: relative;
+        color: $white;
+        font-size: 12px;
+        font-family: $montserrat;
+      }
+
+      li:before {
         position: relative;
         left: -2px;
         margin-right: 5px;
@@ -122,64 +186,24 @@ ol li {
         border-bottom: 0px;
         border-top: 0px;
         border-radius: 100%;
-    }
+      }
 
-    li.inactive:before {
+      li.inactive:before {
         background: transparent;
-    }
+      }
 
-    &.ct-legend-inside {
+      &.ct-legend-inside {
         position: absolute;
-        top: 0;
-        right: 0;
+        right: 20;
+        top: 20%;
+        width: 25%;
+      }
+
+      @for $i from 0 to length($ct-series-colors) {
+          .ct-series-#{$i}:before {
+              background-color: nth($ct-series-colors, $i + 1);
+              border-color: nth($ct-series-colors, $i + 1);
+          }
+      }
     }
-
-    @for $i from 0 to length($ct-series-colors) {
-        .ct-series-#{$i}:before {
-            background-color: nth($ct-series-colors, $i + 1);
-            border-color: nth($ct-series-colors, $i + 1);
-        }
-    }
-}
-
-
-//custom tooltip plugin styling
-// .chartist-tooltip {
-//   position: absolute;
-//   display: inline-block;
-//   opacity: 0;
-//   min-width: 5em;
-//   padding: .5em;
-//   background: #F4C63D;
-//   color: #453D3F;
-//   font-family: Oxygen,Helvetica,Arial,sans-serif;
-//   font-weight: 700;
-//   text-align: center;
-//   pointer-events: none;
-//   z-index: 1;
-//   -webkit-transition: opacity .2s linear;
-//   -moz-transition: opacity .2s linear;
-//   -o-transition: opacity .2s linear;
-//   transition: opacity .2s linear; }
-//   .chartist-tooltip:before {
-//     content: "";
-//     position: absolute;
-//     top: 100%;
-//     left: 50%;
-//     width: 0;
-//     height: 0;
-//     margin-left: -15px;
-//     border: 15px solid transparent;
-//     border-top-color: #F4C63D; }
-//   .chartist-tooltip.tooltip-show {
-//     opacity: 1; }
-//
-// .ct-area, .ct-line {
-//   pointer-events: none; }
-
-// notes on scss before styling
-// .chartist-tooltip {
-//   &:before {
-//    content: "";
-//   }
-// }
+  }

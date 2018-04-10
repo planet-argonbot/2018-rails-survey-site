@@ -19,6 +19,7 @@ class Databases extends React.Component {
 
     const options = {
       fullWidth: true,
+      height: '300px',
       chartPadding: {
         right: 60
       },
