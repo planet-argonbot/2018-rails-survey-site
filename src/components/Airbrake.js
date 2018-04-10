@@ -13,7 +13,8 @@ class Airbrake extends React.Component {
       ]
     };
     const options = {
-
+      fullWidth: true,
+      chartPadding: 20,
       plugins: [
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import quote from '../assets/images/orange-quote-50.png';
+import love from '../assets/images/rails-love.png';
+import hate from '../assets/images/ruby-hate.png';
 import Share from './Share';
 import Header from './Header';
 import RailsUpdates from './RailsUpdates';
@@ -20,9 +22,9 @@ class App extends Component {
       <div>
         <div class="position--relative">
           <Header />
-          <div class="background--light-gray position--relative">
+          <div class="position--relative">
             <div class="container border--left">
-              <div class="row margin-top-lg margin-bottom-md position--relative z-index-1">
+              <div class="row padding-top-lg padding-bottom-md position--relative z-index-1">
                 <div class="col-md-8 col-centered">
                   <h1 class="font--headline sm-text-left">2018 Ruby on Rails Developer<br/>
                   Community Survey</h1>
@@ -40,23 +42,27 @@ class App extends Component {
             <p>Here are some stats examples if we want to do quick stats. </p>
             <div class="row margin-top-md margin-bottom-xl justify-content-center">
               <div class="col-md-3 margin-xs background--darkest-gray padding-md">
-                <p class="h1 montserrat">48</p>
+                <p class="font--sub-headline montserrat">72</p>
                 <p class="montserrat-text">countries represented in the survey</p>
               </div>
               <div class="col-md-3 margin-xs background--darkest-gray padding-md">
-                <p class="h1 montserrat">60<span class="h5">%</span></p>
-                <p class="montserrat-text">% of respondents reported they work in a product shop </p>
+                <p class="font--sub-headline montserrat">65<span class="h4">%</span></p>
+                <p class="montserrat-text">of respondents reported they work in a product shop </p>
               </div>
               <div class="col-md-3 margin-xs background--darkest-gray padding-md">
-                <p class="h1 montserrat">49<span class="h5">%</span></p>
-                <p class="montserrat-text">of respondents have 7+ years of experience working with Rails (79% with 4+)</p>
+                <p class="font--sub-headline montserrat">45<span class="h4">%</span></p>
+                <p class="montserrat-text">of respondents have 7+ years of experience working with Rails (75% with 4+)</p>
               </div>
             </div>
 
-            <div class="margin-top-xl">
+            <div class="container margin-top-xl">
               <div class="h2">In the Community</div>
-              <p>Between developers in agencies, product shops, and freelancer/contractors, we noticed a few interesting trends.</p>
-              <div class="row margin-md justify-content-center">
+              <div class="row justify-content-center">
+                <div class="col-8">
+                  <p>Between developers in agencies, product shops, and freelancer/contractors, we noticed a few interesting trends.</p>
+                </div>
+              </div>
+              <div class="row margin-top-md justify-content-center">
                 <div class="col-md-3 text-left">
                   <p class="h6 margin-xs font--yellow">Agencies</p>
                   <p class="border--yellow padding-xs margin-xs background--darkest-gray">More authored gems</p>
@@ -65,24 +71,30 @@ class App extends Component {
                 </div>
                 <div class="col-md-3 text-left">
                   <p class="h6 font--blue margin-xs">Product shops</p>
-                  <p class="border--blue margin-xs  padding-xs background--darkest-gray">Tend to be on larger teams</p>
-                  <p class="border--blue margin-xs  padding-xs background--darkest-gray">Better test coverage</p>
+                  <p class="border--blue margin-xs padding-xs background--darkest-gray">Tend to be on larger teams</p>
+                  <p class="border--blue margin-xs padding-xs background--darkest-gray">Better test coverage</p>
                 </div>
                 <div class="col-md-3 text-left">
                   <p class="h6 text-left font--teal margin-xs">Freelancers</p>
-                  <p class="border--teal margin-xs  padding-xs background--darkest-gray">More likely to be self-taught</p>
-                  <p class="border--teal margin-xs  padding-xs background--darkest-gray">More working in Rails for more than 10+ years</p>
+                  <p class="border--teal margin-xs padding-xs background--darkest-gray">More likely to be self-taught</p>
+                  <p class="border--teal margin-xs padding-xs background--darkest-gray">More working in Rails for more than 10+ years</p>
                 </div>
-                <p>* ie. attending more conferences, authored more gem and attended more users groups.</p>
+                <div class="col-9">
+                  <p class="text-left">* ie. attending more conferences, authored more gems and attended more users groups.</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="background--dark-gray padding-md">
+          <div class="background--dark-gray padding-md container">
             <div class="h2">Keeping Rails Up-To-Date</div>
             <RailsUpdates/>
             <RailsVersions/>
-            <p class="margin-xl">Less than half of respondents felt that most or all of their apps were updated to most recent rails. Why not? Time. Over 30% responded that time was the only issue holding them back. Include content about how x% of the community can benefit from ongoing security updates/core team support while that means that y% are on their own. (We have 38%..so tack on content about the unsupported folks).</p>
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <p>Less than half of respondents felt that most or all of their apps were updated to most recent rails. Why not? Time. Over 30% responded that time was the only issue holding them back. Include content about how x% of the community can benefit from ongoing security updates/core team support while that means that y% are on their own. (We have 38%..so tack on content about the unsupported folks).</p>
+              </div>
+            </div>
           </div>
 
           <div class="padding-xl background--light-gray">
@@ -98,34 +110,38 @@ class App extends Component {
           </div>
 
           <div class="background--dark-gray padding-xl">
-            <p class="h2">Ruby Gems</p>
-            <p class="h5">Which Rubygems do you love? And which frustrate you the most?</p>
-            <p>Here’s a chart of all the gems that were named as the most loved and most frustrating, respectively – the size of the text correlates to how often it showed up in our results.</p>
+            <p class="h2 margin-md">Ruby Gems</p>
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <p class="h5 margin-sm">Which Rubygems do you love? And which frustrate you the most?</p>
+                <p>Here’s a chart of all the gems that were named as the most loved and most frustrating, respectively – the size of the text correlates to how often it showed up in our results.</p>
+              </div>
+            </div>
             <div class="row margin-top-md justify-content-center">
               <div class="col-4">
-                <p class="h5">Top 5 Gems</p>
-                <ol>
-                  <li>devise</li>
-                  <li>sidekiq</li>
-                  <li>pry</li>
-                  <li>rspec</li>
-                  <li>rubocop</li>
+                <p class="h5">Top <span class="h2 font--yellow">5 </span> <img src={love} class="icon align-middle" alt="smiley face icon with hearts for eyes" /> Gems</p>
+                <ol class="margin-top-sm">
+                  <li>1. devise</li>
+                  <li>2. sidekiq</li>
+                  <li>3. pry</li>
+                  <li>4. rspec</li>
+                  <li>5. rubocop</li>
                 </ol>
               </div>
               <div class="col-4">
-                <p class="h5">Top 5 Gems</p>
-                <ol>
-                  <li>nokogiri</li>
-                  <li>devise</li>
-                  <li>activeadmin</li>
-                  <li>activerecord</li>
-                  <li>rspect</li>
+                <p class="h5">Top <span class="h2 font--yellow">5 </span> <img src={hate} class="icon align-middle" alt="frowning face icon" /> Gems</p>
+                <ol class="margin-top-sm">
+                  <li>1. nokogiri</li>
+                  <li>2. devise</li>
+                  <li>3. activeadmin</li>
+                  <li>4. activerecord</li>
+                  <li>5. rspect</li>
                 </ol>
               </div>
             </div>
-            <div class="h4 margin-top-md">Most Loved Gems</div>
+            <div class="h4 margin-top-md">Most <span class="h2 font--yellow">Loved</span> Gems</div>
             <p>WordCloud to go here</p>
-            <div class="h4 margin-top-md">Most Frustrating Gems</div>
+            <div class="h4 margin-top-md">Most <span class="h2 font--coral">Frustrating</span> Gems</div>
             <p>WordCloud to go here</p>
           </div>
 
@@ -159,7 +175,7 @@ class App extends Component {
               </div>
             </div>
             <p>New Relic seems to have taken over in the app exception tracking space in the last few years. We have a few (unproven) ideas as to why that is. They’re the most frequently used choice in this survey for both performance tracking and uptime monitoring as well. As they offered exception tracking tools, perhaps companies decided to streamline and keep their monitoring tools all in one place.</p>
-            <button class="btn-yellow montserrat h6 font--black margin-md">READ MORE ABOUT APPLICATION TRACKING</button>
+            <button class="btn-yellow">READ MORE ABOUT APPLICATION TRACKING</button>
           </div>
 
           <div class="padding-top-xl container">

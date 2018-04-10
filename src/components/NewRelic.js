@@ -18,8 +18,9 @@ class NewRelic extends React.Component {
     };
 
     const options = {
-      // width: '500px',
+      fullWidth: true,
       height: '350px',
+      chartPadding: 30,
       plugins: [
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {

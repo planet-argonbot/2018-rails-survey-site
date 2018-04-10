@@ -24,12 +24,12 @@ class CodeQuality extends React.Component {
 
     const pieChartData = {
       labels: [
-        'RUBOCOP',
-        'SIMPLECOV',
-        'CODE CLIMATE',
-        'RUBYCRITIC', 
-        'COVERALLS',
-        'OTHER OPTION'
+        'RUBOCOP 49%',
+        'SIMPLECOV 25%',
+        'CODE CLIMATE 17%',
+        'RUBYCRITIC 4%',
+        'COVERALLS 3%',
+        'OTHER 2%'
       ],
       series: [49, 25, 17, 4, 3, 2]
     };

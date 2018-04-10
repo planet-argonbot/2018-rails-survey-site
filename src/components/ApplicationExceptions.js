@@ -29,6 +29,8 @@ class ApplicationExceptions extends React.Component {
     const options = {
       fullWidth: true,
       seriesBarDistance: 15,
+      height: '400px',
+      chartPadding: 40,
 
       horizontalBars: true,
       plugins: [
@@ -44,7 +46,7 @@ class ApplicationExceptions extends React.Component {
       ['screen and (max-width: 544px)', {
         seriesBarDistance: 10,
         fullWidth: true,
-        reverseData: true,
+        height: '300px',
         horizontalBars: true,
         axisX: {
           labelInterpolationFnc: function(value) {

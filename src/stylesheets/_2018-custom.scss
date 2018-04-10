@@ -33,16 +33,33 @@ $lime: #59922b;
   color: $coral;
 }
 
+.btn-yellow {
+  background-color: $yellow;
+  border: 2px solid $yellow;
+  padding: 5px;
+  margin: 10px;
+  font-size: 16px;
+  font-family: $montserrat;
+  @include transition(all, 0.1s, linear);
+  &:hover, &:focus, &:active {
+    background-color: transparent;
+    border-color: $yellow;
+    color: $yellow;
+  }
+}
 .montserrat-text, %montserrat-text {
   font-family: $montserrat;
-  font-weight: 500;
+  font-size: 14px;
 }
 
 //general use styles
 ol li {
   font-size: 22px;
-  text-align: left;
-  list-style-type: decimal;
+  list-style-type: none;
+}
+
+.icon {
+  width: 100px;
 }
 
 //chart grid styles

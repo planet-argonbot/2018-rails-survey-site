@@ -6561,7 +6561,7 @@ body {
   max-width: 95%; }
 
 h1, .h1 {
-  font-size: 36px; }
+  font-size: 40px; }
 
 h2, .h2 {
   font-size: 32px; }
@@ -6609,18 +6609,6 @@ a {
   text-align: center;
   font-size: 16px;
   padding: 5px 40px; }
-
-.btn-yellow {
-  background-color: #FFCB05;
-  border: 2px solid #FFCB05;
-  -webkit-transition: all 0.1s linear ;
-  -moz-transition: all 0.1s linear ;
-  -o-transition: all 0.1s linear ;
-  transition: all 0.1s linear ; }
-  .btn-yellow:hover, .btn-yellow:focus, .btn-yellow:active {
-    background-color: transparent;
-    border-color: #FFCB05;
-    color: #FFCB05; }
 
 .btn-small {
   -webkit-transition: all 0.1s linear ;
@@ -7407,14 +7395,32 @@ a {
 .font--coral {
   color: #FF6B6B; }
 
+.btn-yellow {
+  background-color: #FFCB05;
+  border: 2px solid #FFCB05;
+  padding: 5px;
+  margin: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  -webkit-transition: all 0.1s linear ;
+  -moz-transition: all 0.1s linear ;
+  -o-transition: all 0.1s linear ;
+  transition: all 0.1s linear ; }
+  .btn-yellow:hover, .btn-yellow:focus, .btn-yellow:active {
+    background-color: transparent;
+    border-color: #FFCB05;
+    color: #FFCB05; }
+
 .montserrat-text {
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: 500; }
+  font-size: 14px; }
 
 ol li {
   font-size: 22px;
-  text-align: left;
-  list-style-type: decimal; }
+  list-style-type: none; }
+
+.icon {
+  width: 100px; }
 
 .ct-label {
   fill: #fff;
@@ -7510,11 +7516,6 @@ ol li {
   .ct-legend .ct-series-4:before {
     background-color: #605e5e;
     border-color: #605e5e; }
-<<<<<<< HEAD
-
-.chartist-tooltip {
-  background: #fff; }
-=======
   .ct-legend .ct-series-5:before {
     background-color: #59922b;
     border-color: #59922b; }
@@ -7564,4 +7565,3 @@ ol li {
   .ct-custom-donut .ct-legend .ct-series-5:before {
     background-color: #59922b;
     border-color: #59922b; }
->>>>>>> remotes/origin/hw-pa-3443-legends
