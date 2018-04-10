@@ -7398,7 +7398,8 @@ a {
 .btn-yellow {
   background-color: #FFCB05;
   border: 2px solid #FFCB05;
-  padding: 5px;
+  border-radius: 3px;
+  padding: 5px 10px;
   margin: 10px;
   font-size: 16px;
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

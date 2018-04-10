@@ -36,7 +36,8 @@ $lime: #59922b;
 .btn-yellow {
   background-color: $yellow;
   border: 2px solid $yellow;
-  padding: 5px;
+  border-radius: 3px;
+  padding: 5px 10px;
   margin: 10px;
   font-size: 16px;
   font-family: $montserrat;

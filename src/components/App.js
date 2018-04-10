@@ -26,8 +26,7 @@ class App extends Component {
             <div class="container border--left">
               <div class="row padding-top-lg padding-bottom-md position--relative z-index-1">
                 <div class="col-md-8 col-centered">
-                  <h1 class="font--headline sm-text-left">2018 Ruby on Rails Developer<br/>
-                  Community Survey</h1>
+                  <h1 class="font--headline sm-text-left">2018 Ruby on Rails Developer Community Survey</h1>
                   <p class="margin-top-lg margin-bottom-lg">2002 members of the rails community gave us their thoughts on tools, frameworks, and workflows in order to see how the environment has changed. </p>
                 </div>
               </div>
