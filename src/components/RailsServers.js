@@ -17,6 +17,8 @@ class OperatingSystems extends React.Component {
 
     const options = {
       fullWidth: true,
+      height: '300px',
+      low: 0,
       chartPadding: {
         right: 60
       },
@@ -32,7 +34,10 @@ class OperatingSystems extends React.Component {
 
     return (
       <div>
-        <ChartistGraph data={data} type={type} options={options} />
+        <ChartistGraph
+          data={data}
+          type={type}
+          options={options} />
       </div>
     );
   }

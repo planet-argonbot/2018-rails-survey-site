@@ -36,11 +36,21 @@ class RailsUpdates extends React.Component {
       <div class="row margin-top-xl justify-content-center">
         <div class="col-md-6">
           <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
-          <ChartistGraph className={'ct-custom-donut'} data={releasesPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} type={'Pie'} />
+          <ChartistGraph
+            className={'ct-custom-donut'}
+            data={releasesPieChartData}
+            options={pieOptions}
+            responsiveOptions={pieResponsiveOptions}
+            type={'Pie'} />
         </div>
         <div class="col-md-6">
           <p class="h6">If not all, why not?</p>
-          <ChartistGraph className={'ct-custom-donut'} data={notUpdatedPieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} type={'Pie'} />
+          <ChartistGraph
+            className={'ct-custom-donut'}
+            data={notUpdatedPieChartData}
+            options={pieOptions}
+            responsiveOptions={pieResponsiveOptions}
+            type={'Pie'} />
         </div>
       </div>
     );

@@ -23,14 +23,25 @@ class CodeQuality extends React.Component {
     ];
 
     const pieChartData = {
-      labels: ['RUBOCOP', 'SIMPLECOV', 'CODE CLIMATE', 'RUBYCRITIC', 'COVERALLS', 'OTHER OPTION'
+      labels: [
+        'RUBOCOP',
+        'SIMPLECOV',
+        'CODE CLIMATE',
+        'RUBYCRITIC', 
+        'COVERALLS',
+        'OTHER OPTION'
       ],
       series: [49, 25, 17, 4, 3, 2]
     };
 
     return (
       <div>
-        <ChartistGraph className={'ct-custom-donut'} data={pieChartData} options={pieOptions} responsiveOptions={pieResponsiveOptions} type={'Pie'} />
+        <ChartistGraph
+          className={'ct-custom-donut'}
+          data={pieChartData}
+          options={pieOptions}
+          responsiveOptions={pieResponsiveOptions}
+          type={'Pie'} />
       </div>
 
     );

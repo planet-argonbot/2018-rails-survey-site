@@ -23,7 +23,10 @@ class NewRelic extends React.Component {
       plugins: [
         ChartistPluginLegend({
           clickable: true,
-          legendNames: ['Application Exception', 'Performance Monitoring', 'Uptime Monitoring'],
+          legendNames: [
+            'Application Exception',
+            'Performance Monitoring',
+            'Uptime Monitoring'],
         })
       ]
     };
@@ -32,7 +35,10 @@ class NewRelic extends React.Component {
 
     return (
       <div>
-        <ChartistGraph data={data} type={type} options={options} />
+        <ChartistGraph
+          data={data}
+          type={type}
+          options={options} />
       </div>
     );
   }
