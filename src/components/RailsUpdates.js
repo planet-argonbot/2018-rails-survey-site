@@ -1,6 +1,9 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-tooltips';
+
 
 class RailsUpdates extends React.Component {
   render() {
@@ -12,6 +15,11 @@ class RailsUpdates extends React.Component {
       showLabel: false,
       height: '300px',
       plugins: [
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        }),
         ChartistPluginLegend()
       ]
     };
@@ -29,12 +37,12 @@ class RailsUpdates extends React.Component {
     ];
 
     const releasesPieChartData = {
-      labels: ['ALL', 'MOST', 'SOME', 'NONE'],
+      labels: ['ALL: 13%', 'MOST: 37%', 'SOME: 35%', 'NONE: 13%'],
       series: [13, 37, 35, 13]
     };
 
     const notUpdatedPieChartData = {
-      labels: ['TIME', 'BUDGET', 'DEPENDENCIES ON GEMS', 'MANAGEMENT', 'OTHER'],
+      labels: ['TIME: 47%', 'BUDGET: 20%', 'DEPENDENCIES ON GEMS: 12%', 'MANAGEMENT: 10%', 'OTHER: 20%'],
       series: [47, 20, 12, 10, 20]
     };
 

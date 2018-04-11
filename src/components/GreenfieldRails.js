@@ -1,6 +1,8 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-tooltips';
 
 class GreenfieldRails extends React.Component {
   render() {
@@ -12,7 +14,12 @@ class GreenfieldRails extends React.Component {
       showLabel: false,
       height: '300px',
       plugins: [
-        ChartistPluginLegend()
+        ChartistPluginLegend(),
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        }),
       ]
     };
 
@@ -29,7 +36,7 @@ class GreenfieldRails extends React.Component {
     ];
 
     const pieChartData = {
-      labels: ['ASSET PIPELINE', 'YARN/WEBPACK', 'OTHER'],
+      labels: ['ASSET PIPELINE: 55%', 'YARN/WEBPACK: 44%', 'OTHER: 2%'],
       series: [55.5, 44.5, 2]
     };
 

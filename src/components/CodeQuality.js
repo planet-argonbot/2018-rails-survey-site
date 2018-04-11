@@ -1,6 +1,8 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-tooltips';
 
 class CodeQuality extends React.Component {
   render() {
@@ -12,7 +14,12 @@ class CodeQuality extends React.Component {
       showLabel: false,
       height: '300px',
       plugins: [
-        ChartistPluginLegend()
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        }),
+        ChartistPluginLegend(),
       ]
     };
 
