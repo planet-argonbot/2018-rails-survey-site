@@ -183,7 +183,7 @@ $ct-series-colors:
 .ct-custom-donut {
   .ct-legend {
       position: absolute;
-      z-index: 10;
+      z-index: 0;
       text-align: left;
 
       li {
@@ -230,3 +230,17 @@ $ct-series-colors:
   fill: $white;
   font-family: $montserrat;
 }
+
+.chartist-tooltip {
+  background: $lighter-gray;
+  color: $white;
+  font-family: $montserrat;
+  font-weight: 400;
+  &:before {
+    border-top-color: $lighter-gray;
+  }
+}
+// .chartist-tooltip-meta {
+//   font-size: 12px;
+//   font-family: $montserrat;
+// }

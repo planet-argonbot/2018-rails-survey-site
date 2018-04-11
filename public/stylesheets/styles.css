@@ -7523,7 +7523,7 @@ ol li {
 
 .ct-custom-donut .ct-legend {
   position: absolute;
-  z-index: 10;
+  z-index: 0;
   text-align: left; }
   .ct-custom-donut .ct-legend li {
     display: block;
@@ -7570,3 +7570,11 @@ ol li {
 .ct-axis-title {
   fill: #fff;
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+.chartist-tooltip {
+  background: #4d4d4d;
+  color: #fff;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400; }
+  .chartist-tooltip:before {
+    border-top-color: #4d4d4d; }
