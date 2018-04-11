@@ -5,7 +5,7 @@ import Share from './Share';
 import Header from './Header';
 import RailsUpdates from './RailsUpdates';
 import RailsVersions from './RailsVersions';
-import ApplicationExceptions from './ApplicationExceptions';
+import Airbrake from './Airbrake';
 import RailsServers from './RailsServers';
 import Databases from './Databases';
 import CodeQuality from './CodeQuality';
@@ -86,14 +86,16 @@ class App extends Component {
           </div>
         </div>
 
-        <div class="background--dark-gray padding-md container">
-          <div class="h2">Keeping Rails Up-To-Date</div>
-          <RailsUpdates/>
-          <RailsVersions/>
-          <div class="row justify-content-center">
-            <div class="col-8">
-              <p>Less than half of respondents felt that most or all of their apps were updated to most recent rails. Why not? Time. Over 30% responded that time was the only issue holding them back. Include content about how x% of the community can benefit from ongoing security updates/core team support while that means that y% are on their own. (We have 38%..so tack on content about the unsupported folks).</p>
+          <div class="padding-top-xl container">
+            <div class="h2 margin-bottom-md">Application Exceptions</div>
+            <div class="h5">Which Application Exception tracking tools do you use in production?</div>
+            <div class="row">
+              <div class="col-12">
+                <Airbrake />
+              </div>
             </div>
+            <p>Airbrake (formerly Hoptoad) was at 53% back in 2012 and fell to 28% in 2014, 21% in 2016, and has continued to fall to 11% in 2018. One possible reason? The application exception tracking space has become more saturated over the years.</p>
+            <button class="btn-yellow">READ MORE ABOUT APPLICATION TRACKING</button>
           </div>
           <GreenfieldRails/>
         </div>
