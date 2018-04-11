@@ -11,19 +11,23 @@ class Airbrake extends React.Component {
     const data = {
       labels: ['2009', '2012', '2014', '2016', '2018'],
       series: [
-        {'name': 'Airbrake', 'data': [36, 53, 28, 17, 11] },
+        {'name': 'Airbrake', 'data': [36, 53, 28, 21, 11] },
+        {'name': 'ExceptionNotifier plugin', 'data': [58, 34, 24, 15, 2] },
         {'name': 'NewRelic', 'data': [0, 2, 0, 0, 20] },
         {'name': 'Rollbar', 'data': [0, 0, 4, 18, 14] },
-        {'name': 'ExceptionNotifier plugin', 'data': [58, 34, 24, 15, 2] },
         {'name': 'Honeybadger', 'data': [0, 0, 13, 12, 8] }
       ]
     };
     const options = {
       fullWidth: true,
-      chartPadding: 20,
+      chartPadding: {
+        right: 60
+      },
+
+      height: '400px',
       plugins: [
         ChartistPluginLegend({
-          legendNames: ['Airbrake', 'NewRelic', 'Rollbar', 'ExceptionNotifier', 'Honeybadger'],
+          legendNames: ['Airbrake', 'ExceptionNotifier', 'NewRelic', 'Rollbar', 'Honeybadger'],
           clickable: true,
         }),
         Chartist.plugins.tooltip({
