@@ -3,6 +3,7 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-axistitle';
 
 
 class Databases extends React.Component {
@@ -30,6 +31,18 @@ class Databases extends React.Component {
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {
             return value + '%';
+          }
+        }),
+        Chartist.plugins.ctAxisTitle({
+          axisY: {
+            axisTitle: 'Percent',
+            axisClass: 'ct-axis-title',
+            textAnchor: 'middle',
+            offset: {
+              x: 0,
+              y: -1
+            },
+            flipTitle: false,
           }
         })
       ]

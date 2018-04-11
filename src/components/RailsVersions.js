@@ -2,6 +2,7 @@ import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
+import 'chartist-plugin-axistitle';
 
 
 class RailsVersions extends React.Component {
@@ -39,6 +40,18 @@ class RailsVersions extends React.Component {
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
+        }),
+        Chartist.plugins.ctAxisTitle({
+          axisY: {
+            axisTitle: 'Percent',
+            axisClass: 'ct-axis-title',
+            textAnchor: 'middle',
+            offset: {
+              x: 0,
+              y: -1
+            },
+            flipTitle: false,
+          }
         })
       ]
     };
@@ -46,7 +59,6 @@ class RailsVersions extends React.Component {
     const responsiveOptions = [
       ['screen and (max-width: 544px)', {
         seriesBarDistance: 10,
-        fullWidth: true,
         axisY: {
           labelInterpolationFnc: function(value) {
             return value;

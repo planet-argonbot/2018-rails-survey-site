@@ -7566,3 +7566,7 @@ ol li {
   .ct-custom-donut .ct-legend .ct-series-5:before {
     background-color: #59922b;
     border-color: #59922b; }
+
+.ct-axis-title {
+  fill: #fff;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }

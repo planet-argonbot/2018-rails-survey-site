@@ -3,7 +3,7 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 import ChartistPluginLegend from 'chartist-plugin-legend';
-
+import 'chartist-plugin-axistitle';
 
 class Airbrake extends React.Component {
   render() {
@@ -23,7 +23,6 @@ class Airbrake extends React.Component {
       chartPadding: {
         right: 60
       },
-
       height: '400px',
       plugins: [
         ChartistPluginLegend({
@@ -33,6 +32,18 @@ class Airbrake extends React.Component {
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {
             return value + '%';
+          }
+        }),
+        Chartist.plugins.ctAxisTitle({
+          axisY: {
+            axisTitle: 'Percent',
+            axisClass: 'ct-axis-title',
+            textAnchor: 'middle',
+            offset: {
+              x: 0,
+              y: -1
+            },
+            flipTitle: false,
           }
         })
       ]

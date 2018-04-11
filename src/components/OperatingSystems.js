@@ -3,6 +3,7 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-axistitle';
 
 class OperatingSystems extends React.Component {
   render() {
@@ -18,7 +19,10 @@ class OperatingSystems extends React.Component {
 
     const options = {
       fullWidth: true,
-      chartPadding: 40,
+      chartPadding: {
+        right: 60,
+        top: 40,
+      },
       plugins: [
         ChartistPluginLegend({
           clickable: true
@@ -26,6 +30,18 @@ class OperatingSystems extends React.Component {
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {
             return value + '%';
+          }
+        }),
+        Chartist.plugins.ctAxisTitle({
+          axisY: {
+            axisTitle: 'Percent',
+            axisClass: 'ct-axis-title',
+            textAnchor: 'middle',
+            offset: {
+              x: 0,
+              y: -1
+            },
+            flipTitle: false,
           }
         })
       ]

@@ -3,6 +3,7 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-axistitle';
 
 
 class RailsServers extends React.Component {
@@ -22,7 +23,7 @@ class RailsServers extends React.Component {
       height: '300px',
       low: 0,
       chartPadding: {
-        right: 60
+        right: 60,
       },
       plugins: [
         ChartistPluginLegend({
@@ -32,6 +33,18 @@ class RailsServers extends React.Component {
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {
             return value + '%';
+          }
+        }),
+        Chartist.plugins.ctAxisTitle({
+          axisY: {
+            axisTitle: 'Percent',
+            axisClass: 'ct-axis-title',
+            textAnchor: 'middle',
+            offset: {
+              x: 0,
+              y: -1
+            },
+            flipTitle: false,
           }
         })
       ]
