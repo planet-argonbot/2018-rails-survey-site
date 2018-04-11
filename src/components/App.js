@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import love from '../assets/images/rails-love.png';
-import hate from '../assets/images/ruby-hate.png';
+
 import Share from './Share';
 import Header from './Header';
 import RailsUpdates from './RailsUpdates';
@@ -9,11 +8,13 @@ import Airbrake from './Airbrake';
 import RailsServers from './RailsServers';
 import Databases from './Databases';
 import CodeQuality from './CodeQuality';
-import Containers from './Containers';
 import OperatingSystems from './OperatingSystems';
 import GreenfieldRails from './GreenfieldRails';
 import TestCoverage from './TestCoverage';
 
+import love from '../assets/images/rails-love.png';
+import hate from '../assets/images/ruby-hate.png';
+import containers from '../assets/images/containers.png';
 
 class App extends Component {
   render() {
@@ -204,8 +205,8 @@ class App extends Component {
         <div class="padding-xl">
           <div class="h2 margin-bottom-md">Containers</div>
           <div class="row justify-content-center">
-            <div class="col-10">
-              <Containers/>
+            <div class="col-8">
+              <img src={containers} class="align-middle" alt="56% of developers are using tools like Docker and Kubernetes now" />
             </div>
           </div>
         </div>

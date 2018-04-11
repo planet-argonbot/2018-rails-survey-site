@@ -5,7 +5,7 @@ function Share(){
   return (
     <div>
       <h4>Share the results with your community!</h4>
-      <button class="btn-yellow">Facebook</button><button class="btn-yellow">Twitter</button>
+      <button class="btn-yellow"><span class="icon-facebook"></span> Facebook</button><button class="btn-yellow">Twitter</button>
     </div>
   );
 }
