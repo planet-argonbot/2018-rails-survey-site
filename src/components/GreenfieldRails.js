@@ -2,7 +2,7 @@ import React from 'react';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
 
-class CodeQuality extends React.Component {
+class GreenfieldRails extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
@@ -29,29 +29,24 @@ class CodeQuality extends React.Component {
     ];
 
     const pieChartData = {
-      labels: [
-        'RUBOCOP 49%',
-        'SIMPLECOV 25%',
-        'CODE CLIMATE 17%',
-        'RUBYCRITIC 4%',
-        'COVERALLS 3%',
-        'OTHER 2%'
-      ],
-      series: [49, 25, 17, 4, 3, 2]
+      labels: ['ASSET PIPELINE', 'YARN/WEBPACK', 'OTHER'],
+      series: [55.5, 44.5, 2]
     };
 
     return (
-      <div>
-        <ChartistGraph
-          className={'ct-custom-donut'}
-          data={pieChartData}
-          options={pieOptions}
-          responsiveOptions={pieResponsiveOptions}
-          type={'Pie'} />
+      <div class="row margin-top-xl justify-content-center">
+        <div class="col-lg-10 margin-top-md">
+          <p class="h6">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
+          <ChartistGraph
+            className={'ct-custom-donut'}
+            data={pieChartData}
+            options={pieOptions}
+            responsiveOptions={pieResponsiveOptions}
+            type={'Pie'} />
+        </div>
       </div>
-
     );
   }
 }
 
-export default CodeQuality;
+export default GreenfieldRails;

@@ -2,7 +2,7 @@ import React from 'react';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
 
-class CodeQuality extends React.Component {
+class TestCoverage extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
@@ -29,15 +29,8 @@ class CodeQuality extends React.Component {
     ];
 
     const pieChartData = {
-      labels: [
-        'RUBOCOP 49%',
-        'SIMPLECOV 25%',
-        'CODE CLIMATE 17%',
-        'RUBYCRITIC 4%',
-        'COVERALLS 3%',
-        'OTHER 2%'
-      ],
-      series: [49, 25, 17, 4, 3, 2]
+      labels: ['ALL', 'MOST', 'SOME', 'NONE', 'HALF'],
+      series: [29, 25, 18, 18, 11]
     };
 
     return (
@@ -49,9 +42,8 @@ class CodeQuality extends React.Component {
           responsiveOptions={pieResponsiveOptions}
           type={'Pie'} />
       </div>
-
     );
   }
 }
 
-export default CodeQuality;
+export default TestCoverage;
