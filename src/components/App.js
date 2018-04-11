@@ -11,6 +11,7 @@ import CodeQuality from './CodeQuality';
 import GreenfieldRails from './GreenfieldRails';
 import TestCoverage from './TestCoverage';
 import ActiveJob from './ActiveJob';
+import CIServers from './CIServers';
 
 import love from '../assets/images/rails-love.png';
 import hate from '../assets/images/ruby-hate.png';
@@ -191,19 +192,23 @@ class App extends Component {
         <div class="padding-top-xl">
           <div class="h2 margin-bottom-md">Tools</div>
           <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-lg-6">
               <div class="h5 margin-lg">What code quality tools do you use?</div>
               <CodeQuality/>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
               <div class="h5 margin-lg">Of those apps how many have decent test coverage (80%)?</div>
               <TestCoverage/>
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-lg-6">
               <div class="h5 margin-lg">Which Active Job adapters do you use to use to process background jobs?</div>
               <ActiveJob/>
+            </div>
+            <div class="col-lg-6">
+              <div class="h5 margin-lg">Which Continuous Integration (CI) servers do you use?</div>
+              <CIServers/>
             </div>
           </div>
         </div>
@@ -218,10 +223,15 @@ class App extends Component {
         </div>
 
         <div class="padding-xl background--darkest-gray">
-          <div class="h2 margin-bottom-md">Conclusion</div>
-          <p>What overarching themes did we uncover through this survey? For one, there are a lot  more tools being used in the Rails community than during our original survey in 2009. There’s more parity and a wider range of options in areas like x, y, and z.</p>
-          <button class="btn-yellow montserrat h6 font--black margin-md">VIEW ALL RESPONSES FROM THE SURVEY</button>
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <div class="h2 margin-bottom-md">Conclusion</div>
+              <p>What overarching themes did we uncover through this survey? For one, there are a lot  more tools being used in the Rails community than during our original survey in 2009. There’s more parity and a wider range of options in areas like x, y, and z.</p>
+              <button class="btn-yellow montserrat h6 font--black margin-md">VIEW ALL RESPONSES FROM THE SURVEY</button>
+            </div>
+          </div>
         </div>
+
       </div>
 
     );
