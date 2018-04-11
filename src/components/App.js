@@ -8,9 +8,9 @@ import Airbrake from './Airbrake';
 import RailsServers from './RailsServers';
 import Databases from './Databases';
 import CodeQuality from './CodeQuality';
-import OperatingSystems from './OperatingSystems';
 import GreenfieldRails from './GreenfieldRails';
 import TestCoverage from './TestCoverage';
+import ActiveJob from './ActiveJob';
 
 import love from '../assets/images/rails-love.png';
 import hate from '../assets/images/ruby-hate.png';
@@ -200,6 +200,12 @@ class App extends Component {
               <TestCoverage/>
             </div>
           </div>
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <div class="h5 margin-lg">Which Active Job adapters do you use to use to process background jobs?</div>
+              <ActiveJob/>
+            </div>
+          </div>
         </div>
 
         <div class="padding-xl">
@@ -207,19 +213,6 @@ class App extends Component {
           <div class="row justify-content-center">
             <div class="col-8">
               <img src={containers} class="align-middle" alt="56% of developers are using tools like Docker and Kubernetes now" />
-            </div>
-          </div>
-        </div>
-
-        <div class="padding-xl">
-          <div class="h2 margin-bottom-md">Operating Systems</div>
-          <div class="h5">Which operating system do you primarily develop your applications on?</div>
-          <div class="row justify-content-center">
-            <div class="col-10">
-              <OperatingSystems/>
-            </div>
-            <div class="col-8">
-              <p>Puma has continued its upward climb as the Rails server of choice. Usage grew from 17% in 2014 to 35% in 2016 to 48% this year. While Unicorn was on par with Puma in 2016 (at 34% to Puma’s 35%), it has fallen below Passenger this year. Farewell, Unicorn in the coming years? We’ll have to wait and see.</p>
             </div>
           </div>
         </div>

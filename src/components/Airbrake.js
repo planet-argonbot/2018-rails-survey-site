@@ -48,6 +48,18 @@ class Airbrake extends React.Component {
         })
       ]
     };
+
+    // const responsiveOptions = [
+    //   ['screen and (max-width: 544px)', {
+    //     height: '200px',
+    //     donutWidth: 20,
+    //   }],
+    //
+    //   ['screen and (min-width: 545px)', {
+    //     height: '250px',
+    //     donutWidth: 30,
+    //   }]
+    // ];
     const type = 'Line';
 
     return (

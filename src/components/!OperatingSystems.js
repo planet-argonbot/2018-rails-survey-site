@@ -47,14 +47,12 @@ class OperatingSystems extends React.Component {
       ]
     };
 
-    const type = 'Line';
-
     return (
       <div>
         <ChartistGraph
           className={'ct-double-octave'}
           data={data}
-          type={type}
+          type={'Line'}
           options={options} />
       </div>
     );
