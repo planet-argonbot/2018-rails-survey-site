@@ -5,7 +5,7 @@ import Share from './Share';
 import Header from './Header';
 import RailsUpdates from './RailsUpdates';
 import RailsVersions from './RailsVersions';
-import ApplicationExceptions from './ApplicationExceptions';
+import Airbrake from './Airbrake';
 import RailsServers from './RailsServers';
 import Databases from './Databases';
 import CodeQuality from './CodeQuality';
@@ -145,10 +145,10 @@ class App extends Component {
             <div class="h5">Which Application Exception tracking tools do you use in production?</div>
             <div class="row">
               <div class="col-12">
-                <ApplicationExceptions/>
+                <Airbrake />
               </div>
             </div>
-            <p>We included 11 options in this question and still had several choose “other”. There are a lot of options out there! And of course, there are a few using no tool at all.</p>
+            <p>Airbrake (formerly Hoptoad) was at 53% back in 2012 and fell to 28% in 2014, 21% in 2016, and has continued to fall to 11% in 2018. One possible reason? The application exception tracking space has become more saturated over the years.</p>
             <button class="btn-yellow">READ MORE ABOUT APPLICATION TRACKING</button>
           </div>
 
