@@ -14,7 +14,3 @@ function Share(){
 }
 
 export default Share;
-
-//
-//
-// <button class="btn-yellow"><span class="icon-facebook h5 align-middle"></span> Facebook</button><button class="btn-yellow"><span class="icon-twitter h5 align-middle"></span> Twitter</button>
