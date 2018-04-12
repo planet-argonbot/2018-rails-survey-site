@@ -16,6 +16,7 @@ class RailsUpdates extends React.Component {
       plugins: [
         ChartistPluginLegend(),
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
@@ -42,17 +43,28 @@ class RailsUpdates extends React.Component {
         'SOME: 35%',
         'NONE: 13%'
       ],
-      series: [13, 37, 35, 13]
+      series: [
+        {meta: 'ALL', value: 13},
+        {meta: 'MOST', value: 37},
+        {meta: 'SOME', value: 35},
+        {meta: 'NONE', value: 13}
+      ]
     };
 
     const notUpdatedPieChartData = {
       labels: [
         'TIME: 47%',
         'BUDGET: 20%',
-        'DEPENDENCIES ON GEMS: 12%',
+        'GEM DEPENDENCIES: 12%',
         'MANAGEMENT: 10%',
         'OTHER: 20%'],
-      series: [47, 20, 12, 10, 20]
+      series: [
+        {meta: 'TIME', value: 47},
+        {meta: 'BUDGET', value: 20},
+        {meta: 'GEM DEPENDENCIES', value: 12},
+        {meta: 'MANAGEMENT', value: 10},
+        {meta: 'OTHER', value: 20}
+      ]
     };
 
     return (
