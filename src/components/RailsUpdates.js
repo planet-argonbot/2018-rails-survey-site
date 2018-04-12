@@ -10,9 +10,8 @@ class RailsUpdates extends React.Component {
     const pieOptions = {
       donut: true,
       donutWidth: 50,
-      chartPadding: 5,
       showLabel: false,
-      height: '300px',
+      height: '500px',
       plugins: [
         ChartistPluginLegend(),
         Chartist.plugins.tooltip({
@@ -72,7 +71,6 @@ class RailsUpdates extends React.Component {
         <div class="col-lg-6 margin-top-md">
           <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
           <ChartistGraph
-            className={'ct-custom-donut align-bottom'}
             data={releasesPieChartData}
             options={pieOptions}
             responsiveOptions={pieResponsiveOptions}
@@ -82,7 +80,6 @@ class RailsUpdates extends React.Component {
           <p class="h6">If not all, why not?</p>
           <br/>
           <ChartistGraph
-            className={'ct-custom-donut align-bottom'}
             data={notUpdatedPieChartData}
             options={pieOptions}
             responsiveOptions={pieResponsiveOptions}
