@@ -42,18 +42,18 @@ class RailsVersions extends React.Component {
             return value + '%';
           }
         }),
-        Chartist.plugins.ctAxisTitle({
-          axisY: {
-            axisTitle: 'Percent',
-            axisClass: 'ct-axis-title',
-            textAnchor: 'middle',
-            offset: {
-              x: 0,
-              y: -1
-            },
-            flipTitle: false,
-          }
-        })
+        // Chartist.plugins.ctAxisTitle({
+        //   axisY: {
+        //     axisTitle: 'Percent',
+        //     axisClass: 'ct-axis-title',
+        //     textAnchor: 'middle',
+        //     offset: {
+        //       x: 0,
+        //       y: -1
+        //     },
+        //     flipTitle: false,
+        //   }
+        // })
       ]
     };
 

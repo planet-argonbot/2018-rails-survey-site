@@ -15,12 +15,12 @@ class RailsUpdates extends React.Component {
       showLabel: false,
       height: '300px',
       plugins: [
+        ChartistPluginLegend(),
         Chartist.plugins.tooltip({
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
         }),
-        ChartistPluginLegend()
       ]
     };
 
@@ -37,12 +37,22 @@ class RailsUpdates extends React.Component {
     ];
 
     const releasesPieChartData = {
-      labels: ['ALL: 13%', 'MOST: 37%', 'SOME: 35%', 'NONE: 13%'],
+      labels: [
+        'ALL: 13%',
+        'MOST: 37%',
+        'SOME: 35%',
+        'NONE: 13%'
+      ],
       series: [13, 37, 35, 13]
     };
 
     const notUpdatedPieChartData = {
-      labels: ['TIME: 47%', 'BUDGET: 20%', 'DEPENDENCIES ON GEMS: 12%', 'MANAGEMENT: 10%', 'OTHER: 20%'],
+      labels: [
+        'TIME: 47%',
+        'BUDGET: 20%',
+        'DEPENDENCIES ON GEMS: 12%',
+        'MANAGEMENT: 10%',
+        'OTHER: 20%'],
       series: [47, 20, 12, 10, 20]
     };
 

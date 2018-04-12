@@ -3,7 +3,7 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 import ChartistPluginLegend from 'chartist-plugin-legend';
-import 'chartist-plugin-axistitle';
+// import 'chartist-plugin-axistitle';
 
 
 class Databases extends React.Component {
@@ -24,6 +24,11 @@ class Databases extends React.Component {
       chartPadding: {
         right: 60
       },
+      axisY: {
+        labelInterpolationFnc: function(value) {
+          return value + '%';
+        },
+      },
       plugins: [
         ChartistPluginLegend({
           legendNames: ['PostgreSQL', 'MySQL', 'Other'],
@@ -33,19 +38,20 @@ class Databases extends React.Component {
             return value + '%';
           }
         }),
-        Chartist.plugins.ctAxisTitle({
-          axisY: {
-            axisTitle: 'Percent',
-            axisClass: 'ct-axis-title',
-            textAnchor: 'middle',
-            offset: {
-              x: 0,
-              y: -1
-            },
-            flipTitle: false,
-          }
-        })
+        // Chartist.plugins.ctAxisTitle({
+        //   axisY: {
+        //     axisTitle: 'Percent',
+        //     axisClass: 'ct-axis-title',
+        //     textAnchor: 'middle',
+        //     offset: {
+        //       x: 0,
+        //       y: -1
+        //     },
+        //     flipTitle: false,
+        //   }
+        // })
       ]
+
     };
 
     const type = 'Line';
