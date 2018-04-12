@@ -42,17 +42,17 @@ class ActiveJob extends React.Component {
       ]
     };
 
-    const responsiveOptions = [
-      ['screen and (max-width: 544px)', {
-        height: '200px',
-        donutWidth: 20,
-      }],
-
-      ['screen and (min-width: 545px)', {
-        height: '250px',
-        donutWidth: 30,
-      }]
-    ];
+    // const responsiveOptions = [
+    //   ['screen and (max-width: 544px)', {
+    //     height: '200px',
+    //     donutWidth: 20,
+    //   }],
+    //
+    //   ['screen and (min-width: 545px)', {
+    //     height: '250px',
+    //     donutWidth: 30,
+    //   }]
+    // ];
 
     return (
       <div>
@@ -60,7 +60,7 @@ class ActiveJob extends React.Component {
           className={'ct-custom-donut align-bottom'}
           data={data}
           options={options}
-          responsiveOptions={responsiveOptions}
+
           type={'Pie'} />
       </div>
     );

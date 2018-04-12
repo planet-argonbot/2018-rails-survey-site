@@ -22,17 +22,17 @@ class GreenfieldRails extends React.Component {
       ]
     };
 
-    const pieResponsiveOptions = [
-      ['screen and (max-width: 544px)', {
-        height: '200px',
-        donutWidth: 20,
-      }],
-
-      ['screen and (min-width: 545px)', {
-        height: '250px',
-        donutWidth: 30,
-      }]
-    ];
+    // const pieResponsiveOptions = [
+    //   ['screen and (max-width: 544px)', {
+    //     height: '200px',
+    //     donutWidth: 20,
+    //   }],
+    //
+    //   ['screen and (min-width: 545px)', {
+    //     height: '250px',
+    //     donutWidth: 30,
+    //   }]
+    // ];
 
     const pieChartData = {
       labels: [
@@ -55,7 +55,7 @@ class GreenfieldRails extends React.Component {
             className={'ct-custom-donut'}
             data={pieChartData}
             options={pieOptions}
-            responsiveOptions={pieResponsiveOptions}
+
             type={'Pie'} />
         </div>
       </div>

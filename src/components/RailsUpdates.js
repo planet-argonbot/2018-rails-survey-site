@@ -9,9 +9,9 @@ class RailsUpdates extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 50,
       showLabel: false,
-      height: '500px',
+      donutWidth: 60,
+      height: '300px',
       plugins: [
         ChartistPluginLegend(),
         Chartist.plugins.tooltip({
@@ -24,14 +24,13 @@ class RailsUpdates extends React.Component {
     };
 
     const pieResponsiveOptions = [
-      ['screen and (max-width: 544px)', {
+      ['screen and (max-width: 498px)', {
         height: '200px',
         donutWidth: 20,
       }],
-
-      ['screen and (min-width: 545px)', {
+      ['screen and (min-width: 499px) and (max-width: 768px)', {
         height: '250px',
-        donutWidth: 30,
+        donutWidth: 40,
       }]
     ];
 
