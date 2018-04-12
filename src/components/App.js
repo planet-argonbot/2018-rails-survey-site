@@ -102,15 +102,20 @@ class App extends Component {
           <GreenfieldRails/>
         </div>
 
-        <div class="padding-xl background--light-gray">
-          <p class="font--sub-headline font--yellow">&ldquo;</p>
-          <div class="margin-lg">
-            <p class="h1 montserrat">45%</p>
-            <p>of respondents felt that most or all of their apps <span class="font--yellow">were updated</span> to the most recent version of Ruby in Rails.</p>
-          </div>
-          <div class="margin-lg">
-            <p class="h1 montserrat">43%</p>
-            <p>responded <span class="font--yellow">time</span> was the only issue holding them back.</p>
+        <div class="padding-xl background--light-gray row justify-content-center">
+          <div class="col-md-8">
+            <p class="font--sub-headline font--yellow">&ldquo;</p>
+            <p class="h1 montserrat">75%</p>
+            <p>agree that the Rails core team is shepherding the project in the <span class="font--yellow">right direction</span>.</p>
+            <div class="margin-lg">
+              <p class="h1 montserrat">43%</p>
+              <p>responded <span class="font--yellow">time</span> was the only issue holding them back.</p>
+            </div>
+            <div class="margin-lg">
+              <p class="h1 montserrat">45%</p>
+              <p>of respondents felt that most or all of their apps <span class="font--yellow">were updated</span> to the most recent version of Ruby in Rails.</p>
+            </div>
+            <a href='#' class="h4"><i class="fa fa-twitter-square font--yellow"></i></a>
           </div>
         </div>
 
