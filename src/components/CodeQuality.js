@@ -43,7 +43,14 @@ class CodeQuality extends React.Component {
         'COVERALLS: 3%',
         'OTHER: 2%'
       ],
-      series: [49, 25, 17, 4, 3, 2]
+      series: [
+        {meta: 'RUBOCOP', value: 49},
+        {meta: 'SIMPLECOV', value: 25},
+        {meta: 'CODE CLIMATE', value: 17},
+        {meta: 'RUBYCRITIC', value: 4},
+        {meta: 'COVERALLS', value: 3},
+        {meta: 'OTHER', value: 2},
+      ]
     };
 
     return (

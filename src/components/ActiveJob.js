@@ -16,8 +16,14 @@ class ActiveJob extends React.Component {
         'ACTIVE ASYNC JOB: 5%',
         'SUCKER PUNCH: 3%',
         'OTHER: 7%'],
-      series:
-        [50, 21, 13, 5, 3, 7]
+      series: [
+        {meta: 'SIDEKIQ', value: 50},
+        {meta: 'DELAYED JOB', value: 21},
+        {meta: 'RESQUE', value: 13},
+        {meta: 'ACTIVE ASYNC JOB', value: 5},
+        {meta: 'SUCKER PUNCH', value: 3},
+        {meta: 'OTHER', value: 7},
+      ]
     };
 
     const options = {

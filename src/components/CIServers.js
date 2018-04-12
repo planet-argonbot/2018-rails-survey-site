@@ -44,7 +44,15 @@ class CIServers extends React.Component {
         'CODESHIP: 8%',
         'OTHER: 16%'
       ],
-      series: [21, 17, 15, 13, 10, 8, 16]
+      series: [
+        {meta: 'CIRCLE CI', value: 21},
+        {meta: 'JENKINS', value: 17},
+        {meta: 'TRAVIS CI', value: 15},
+        {meta: 'NONE', value: 13},
+        {meta: 'GITLAB', value: 10},
+        {meta: 'CODESHIP', value: 8},
+        {meta: 'OTHER', value: 16},
+      ]
     };
 
     return (

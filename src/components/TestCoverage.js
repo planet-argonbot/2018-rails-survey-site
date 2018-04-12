@@ -43,7 +43,13 @@ class TestCoverage extends React.Component {
         'NONE: 18%',
         'HALF: 11%'
       ],
-      series: [29, 25, 18, 18, 11]
+      series: [
+        {meta: 'ALL', value: 29},
+        {meta: 'MOST', value: 25},
+        {meta: 'SOME', value: 18},
+        {meta: 'NONE', value: 18},
+        {meta: 'HALF', value: 11},
+      ]
     };
 
     return (

@@ -40,7 +40,11 @@ class GreenfieldRails extends React.Component {
         'YARN/WEBPACK: 44%',
         'OTHER: 2%'
       ],
-      series: [55.5, 44.5, 2]
+      series: [
+        {meta: 'ASSET PIPELINE', value: 55},
+        {meta: 'YARN/WEBPACK', value: 44},
+        {meta: 'OTHER', value: 2},
+      ]
     };
 
     return (
