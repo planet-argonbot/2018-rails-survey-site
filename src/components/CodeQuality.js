@@ -8,9 +8,7 @@ class CodeQuality extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 50,
       chartPadding: 5,
-      donutSolid: true,
       showLabel: false,
       height: '300px',
       plugins: [

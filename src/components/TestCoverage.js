@@ -1,6 +1,8 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-tooltips';
 
 class TestCoverage extends React.Component {
   render() {
@@ -8,11 +10,15 @@ class TestCoverage extends React.Component {
       donut: true,
       donutWidth: 50,
       chartPadding: 5,
-      donutSolid: true,
       showLabel: false,
       height: '300px',
       plugins: [
-        ChartistPluginLegend()
+        ChartistPluginLegend(),
+        Chartist.plugins.tooltip({
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        }),
       ]
     };
 
