@@ -89,8 +89,10 @@ class App extends Component {
         </div>
         <div class="background--dark-gray padding-md container">
           <div class="h2">Keeping Rails Up-To-Date</div>
+
           <RailsUpdates/>
           <RailsVersions/>
+
           <div class="row justify-content-center">
             <div class="col-8">
               <p>Less than half of respondents felt that most or all of their apps were updated to most recent rails. Why not? Time. Over 30% responded that time was the only issue holding them back. Include content about how x% of the community can benefit from ongoing security updates/core team support while that means that y% are on their own. (We have 38%..so tack on content about the unsupported folks).</p>

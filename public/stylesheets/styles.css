@@ -7475,12 +7475,6 @@ ol li {
 .ct-series-f .ct-slice-pie, .ct-series-f .ct-slice-donut-solid, .ct-series-f .ct-area {
   fill: #59922b; }
 
-.ct-series-g .ct-point, .ct-series-g .ct-line, .ct-series-g .ct-bar, .ct-series-g .ct-slice-donut {
-  stroke: #155AAD; }
-
-.ct-series-g .ct-slice-pie, .ct-series-g .ct-slice-donut-solid, .ct-series-g .ct-area {
-  fill: #155AAD; }
-
 .ct-legend {
   position: relative;
   z-index: 0; }
@@ -7526,9 +7520,6 @@ ol li {
   .ct-legend .ct-series-5:before {
     background-color: #59922b;
     border-color: #59922b; }
-  .ct-legend .ct-series-6:before {
-    background-color: #155AAD;
-    border-color: #155AAD; }
 
 .ct-custom-donut .ct-legend {
   position: absolute;
@@ -7575,9 +7566,6 @@ ol li {
   .ct-custom-donut .ct-legend .ct-series-5:before {
     background-color: #59922b;
     border-color: #59922b; }
-  .ct-custom-donut .ct-legend .ct-series-6:before {
-    background-color: #155AAD;
-    border-color: #155AAD; }
 
 .ct-axis-title {
   fill: #fff;

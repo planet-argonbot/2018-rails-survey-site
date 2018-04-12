@@ -69,6 +69,7 @@ class RailsUpdates extends React.Component {
         </div>
         <div class="col-lg-6 margin-top-md">
           <p class="h6">If not all, why not?</p>
+          <br/>
           <ChartistGraph
             className={'ct-custom-donut align-bottom'}
             data={notUpdatedPieChartData}
