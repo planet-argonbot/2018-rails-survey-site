@@ -34,14 +34,15 @@ class RailsVersions extends React.Component {
 
     const options = {
       fullWidth: true,
-      chartPadding: 30,
+      chartPadding: {
+        left: 10,
+        top: 20,
+        right: 10,
+      },
       high: 30,
       low: 0,
-      divisor: 5,
       axisY: {
-        labelInterpolationFnc: function(value) {
-          return value + '%';
-        },
+        onlyInteger: true,
       },
       plugins: [
         Chartist.plugins.tooltip({
@@ -49,31 +50,22 @@ class RailsVersions extends React.Component {
             return value + '%';
           }
         }),
-        // Chartist.plugins.ctAxisTitle({
-        //   axisY: {
-        //     axisTitle: 'Percent',
-        //     axisClass: 'ct-axis-title',
-        //     textAnchor: 'middle',
-        //     offset: {
-        //       x: 0,
-        //       y: -1
-        //     },
-        //     flipTitle: false,
-        //   }
-        // })
+        Chartist.plugins.ctAxisTitle({
+          axisY: {
+            axisTitle: 'Percent',
+            axisClass: 'ct-axis-title',
+            textAnchor: 'middle',
+            flipTitle: false,
+          }
+        })
       ]
     };
 
     const responsiveOptions = [
       ['screen and (max-width: 544px)', {
         seriesBarDistance: 10,
-        axisY: {
-          labelInterpolationFnc: function(value) {
-            return value;
-          },
-
-        }
-      }]
+      }
+      ]
     ];
 
     const type = 'Bar';
@@ -83,7 +75,7 @@ class RailsVersions extends React.Component {
         <div class="col-md-10">
           <div class="h6">Which versions of Rails are you using? </div>
           <ChartistGraph
-            className={'ct-vertical-bar ct-octave'}
+            className={'ct-octave'}
             data={data}
             options={options}
             responsiveOptions={responsiveOptions}

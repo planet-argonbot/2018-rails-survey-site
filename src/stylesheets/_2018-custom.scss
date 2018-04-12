@@ -79,17 +79,12 @@ ol li {
   stroke-dasharray: 2px;
 }
 
-.ct-horizontal-bar {
-  .ct-bar {
-    stroke-width: 20px;
-  }
+
+.ct-bar {
+  stroke-width: 50px;
 }
 
-.ct-vertical-bar {
-  .ct-bar {
-    stroke-width: 50px;
-  }
-}
+
 
 //setting the color series values for chart legends
 $ct-series-colors:
@@ -251,7 +246,91 @@ $ct-series-colors:
     border-top-color: $lighter-gray;
   }
 }
-// .chartist-tooltip-meta {
-//   font-size: 12px;
-//   font-family: $montserrat;
-// }
+
+@media (max-width: 1224px) {
+  .icon-pa-site-logo {
+    font-size: 33px;
+    padding: 0 12px;
+  }
+
+  .navigation {
+    .h4 {
+      font-size: 17px;
+    }
+    .padding-md {
+      padding: 30px 15px;
+    }
+  }
+  .xtra-large {
+    font-size: 50px;
+  }
+  .nav-list {
+    margin-left: 10px;
+  }
+  .ct-bar {
+    stroke-width: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .nav-list {
+    display: none;
+  }
+  .mobile-nav-trigger {
+    display: block;
+  }
+  .icon-pa-site-logo {
+    font-size: 41px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-trigger {
+    padding:40px 18px;
+  }
+  .ct-bar {
+    stroke-width: 20px;
+  }
+}
+
+@media (max-width: 489px) {
+  .display--none__mobile {
+    display: none;
+  }
+  .nav-list {
+    display: none;
+  }
+  .mobile-nav-trigger {
+    display: block;
+    padding: 10px;
+  }
+  .icon-pa-site-logo {
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
+  }
+  .icon-hamburger {
+    font-size: 30px;
+  }
+  .social-block {
+    display:none;
+  }
+  .proudly-presents {
+    display: none;
+  }
+  .navigation {
+    border-bottom: 3px solid $yellow;
+    .h4 {
+      font-size:12px;
+    }
+    .padding-md {
+      padding: 10px;
+    }
+  }
+  .xtra-large {
+    font-size: 20px;
+  }
+  .ct-bar {
+    stroke-width: 10px;
+  }
+}
