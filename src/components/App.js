@@ -103,7 +103,7 @@ class App extends Component {
         </div>
 
         <div class="padding-xl background--light-gray">
-          <p class="font--sub-headline font--yellow">"</p>
+          <p class="font--sub-headline font--yellow">&ldquo;</p>
           <div class="margin-lg">
             <p class="h1 montserrat">45%</p>
             <p>of respondents felt that most or all of their apps <span class="font--yellow">were updated</span> to the most recent version of Ruby in Rails.</p>
