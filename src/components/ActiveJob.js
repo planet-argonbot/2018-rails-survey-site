@@ -10,12 +10,12 @@ class ActiveJob extends React.Component {
 
     const data = {
       labels: [
-        'SIDEKIQ',
-        'DELAYED JOB',
-        'RESQUE',
-        'ACTIVE ASYNC JOB',
-        'SUCKER PUNCH',
-        'OTHER'],
+        'SIDEKIQ: 50%',
+        'DELAYED JOB: 21%',
+        'RESQUE: 13%',
+        'ACTIVE ASYNC JOB: 5%',
+        'SUCKER PUNCH: 3%',
+        'OTHER: 7%'],
       series:
         [50, 21, 13, 5, 3, 7]
     };

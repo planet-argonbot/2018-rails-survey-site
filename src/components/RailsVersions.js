@@ -18,7 +18,8 @@ class RailsVersions extends React.Component {
         '4.0',
         '3.2',
         '3.1',
-        '3.0 or earlier'],
+        '3.0 or earlier'
+      ],
       series: [
         [16, 24, 15, 23, 6, 3, 7, 1, 3]
       ]

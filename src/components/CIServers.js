@@ -29,7 +29,15 @@ class CIServers extends React.Component {
     ];
 
     const pieChartData = {
-      labels: ['CIRCLE CI', 'JENKINS', 'TRAVIS CI', 'NONE', 'GITLAB', 'CODESHIP', 'OTHER'],
+      labels: [
+        'CIRCLE CI: 21%',
+        'JENKINS: 17%',
+        'TRAVIS CI: 15%',
+        'NONE: 13%',
+        'GITLAB: 10%',
+        'CODESHIP: 8%',
+        'OTHER: 16%'
+      ],
       series: [21, 17, 15, 13, 10, 8, 16]
     };
 

@@ -27,7 +27,11 @@ class RailsServers extends React.Component {
       },
       plugins: [
         ChartistPluginLegend({
-          legendNames: ['Puma', 'Unicorn', 'Passenger'],
+          legendNames: [
+            'Puma',
+            'Unicorn',
+            'Passenger'
+          ],
           clickable: true,
         }),
         Chartist.plugins.tooltip({
