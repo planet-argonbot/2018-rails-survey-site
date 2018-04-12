@@ -36,7 +36,11 @@ class GreenfieldRails extends React.Component {
     ];
 
     const pieChartData = {
-      labels: ['ASSET PIPELINE: 55%', 'YARN/WEBPACK: 44%', 'OTHER: 2%'],
+      labels: [
+        'ASSET PIPELINE: 55%',
+        'YARN/WEBPACK: 44%',
+        'OTHER: 2%'
+      ],
       series: [55.5, 44.5, 2]
     };
 

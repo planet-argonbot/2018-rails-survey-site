@@ -29,7 +29,13 @@ class TestCoverage extends React.Component {
     ];
 
     const pieChartData = {
-      labels: ['ALL', 'MOST', 'SOME', 'NONE', 'HALF'],
+      labels: [
+        'ALL: 29%',
+        'MOST: 25%',
+        'SOME: 18%',
+        'NONE: 18%',
+        'HALF: 11%'
+      ],
       series: [29, 25, 18, 18, 11]
     };
 
