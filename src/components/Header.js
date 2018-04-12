@@ -8,11 +8,11 @@ function Header(){
           <p>proudly</p>
           <p>presents</p>
         </div>
-        <div class="row padding-top-md justify-content-between">
-          <div class="col-xs-6">
+        <div class="row padding-top-md">
+          <div class="col-6 text-left">
             <a href="http://www.planetargon.com"><span class="icon-pa-site-logo pa-logo"></span></a>
           </div>
-          <div class="col-xs-6 text-right">
+          <div class="col-6 text-right">
             <a href="http://www.planetargon.com/contact"><p class="montserrat-black">Contact</p></a>
           </div>
         </div>
