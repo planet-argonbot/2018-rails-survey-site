@@ -15,6 +15,7 @@ class TestCoverage extends React.Component {
       plugins: [
         ChartistPluginLegend(),
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

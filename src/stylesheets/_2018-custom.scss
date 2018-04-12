@@ -3,7 +3,9 @@
 $blue: #56C0EE;
 $coral: #FF6B6B;
 $teal: #009C89;
-$lime: #59922b;
+$dark-green: #00695C;
+$washed-gray: #A0ADB4;
+$purple: #865dab;
 
 .border--yellow {
   border: $yellow solid 2px;
@@ -93,10 +95,12 @@ ol li {
 $ct-series-colors:
   ($yellow,
   $coral,
-  $teal,
   $blue,
-  $lightest-gray,
-  $lime);
+  $dark-green,
+  $teal,
+  $washed-gray,
+  $purple
+  );
 
 //setting the color values for chart series
 .ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
@@ -112,28 +116,34 @@ $ct-series-colors:
   fill: $coral; }
 
 .ct-series-c .ct-point, .ct-series-c .ct-line, .ct-series-c .ct-bar, .ct-series-c .ct-slice-donut {
-  stroke: $teal; }
-
-.ct-series-c .ct-slice-pie, .ct-series-c .ct-slice-donut-solid, .ct-series-c .ct-area {
-  fill: $teal; }
-
-.ct-series-d .ct-point, .ct-series-d .ct-line, .ct-series-d .ct-bar, .ct-series-d .ct-slice-donut {
   stroke: $blue; }
 
-.ct-series-d .ct-slice-pie, .ct-series-d .ct-slice-donut-solid {
+.ct-series-c .ct-slice-pie, .ct-series-c .ct-slice-donut-solid, .ct-series-c .ct-area {
   fill: $blue; }
 
+.ct-series-d .ct-point, .ct-series-d .ct-line, .ct-series-d .ct-bar, .ct-series-d .ct-slice-donut {
+  stroke: $dark-green; }
+
+.ct-series-d .ct-slice-pie, .ct-series-d .ct-slice-donut-solid {
+  fill: $dark-green; }
+
 .ct-series-e .ct-point, .ct-series-e .ct-line, .ct-series-e .ct-bar, .ct-series-e .ct-slice-donut {
-  stroke: $lightest-gray; }
+  stroke: $teal; }
 
 .ct-series-e .ct-slice-pie, .ct-series-e .ct-slice-donut-solid, .ct-series-e .ct-area {
-  fill: $lightest-gray; }
+  fill: $teal; }
 
 .ct-series-f .ct-point, .ct-series-f .ct-line, .ct-series-f .ct-bar, .ct-series-f .ct-slice-donut {
-  stroke: $lime; }
+  stroke: $washed-gray; }
 
 .ct-series-f .ct-slice-pie, .ct-series-f .ct-slice-donut-solid, .ct-series-f .ct-area {
-  fill: $lime; }
+  fill: $washed-gray; }
+
+.ct-series-g .ct-point, .ct-series-g .ct-line, .ct-series-g .ct-bar, .ct-series-g .ct-slice-donut {
+  stroke: $purple; }
+
+.ct-series-g .ct-slice-pie, .ct-series-g .ct-slice-donut-solid, .ct-series-g .ct-area {
+  fill: $purple; }
 
 //legend styles
 .ct-legend {
@@ -213,7 +223,7 @@ $ct-series-colors:
 
       &.ct-legend-inside {
         position: absolute;
-        right: 20;
+        right: 20px;
         top: 20%;
         width: 25%;
       }
