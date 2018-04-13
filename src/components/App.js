@@ -12,10 +12,10 @@ import GreenfieldRails from './GreenfieldRails';
 import TestCoverage from './TestCoverage';
 import ActiveJob from './ActiveJob';
 import CIServers from './CIServers';
-
+import Containers from './Containers';
 import love from '../assets/images/rails-love.png';
 import hate from '../assets/images/ruby-hate.png';
-import containers from '../assets/images/containers.png';
+
 
 class App extends Component {
   render() {
@@ -225,7 +225,7 @@ class App extends Component {
           <div class="h2 margin-bottom-md">Containers</div>
           <div class="row justify-content-center">
             <div class="col-8">
-              <img src={containers} class="align-middle" alt="56% of developers are using tools like Docker and Kubernetes now" />
+              <Containers />
             </div>
           </div>
         </div>

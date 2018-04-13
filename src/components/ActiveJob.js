@@ -28,7 +28,6 @@ class ActiveJob extends React.Component {
 
     const options = {
       donut: true,
-      chartPadding: 5,
       showLabel: false,
       height: '300px',
       plugins: [
@@ -42,17 +41,17 @@ class ActiveJob extends React.Component {
       ]
     };
 
-    // const responsiveOptions = [
-    //   ['screen and (max-width: 544px)', {
-    //     height: '200px',
-    //     donutWidth: 20,
-    //   }],
-    //
-    //   ['screen and (min-width: 545px)', {
-    //     height: '250px',
-    //     donutWidth: 30,
-    //   }]
-    // ];
+    const pieResponsiveOptions = [
+      ['screen and (max-width: 498px)', {
+        height: '200px',
+        donutWidth: 20,
+      }],
+      ['screen and (min-width: 499px) and (max-width: 768px)', {
+        height: '250px',
+        donutWidth: 40,
+      }]
+    ];
+
 
     return (
       <div>
@@ -60,7 +59,7 @@ class ActiveJob extends React.Component {
           className={'ct-custom-donut align-bottom'}
           data={data}
           options={options}
-
+          responsiveOptions={pieResponsiveOptions}
           type={'Pie'} />
       </div>
     );

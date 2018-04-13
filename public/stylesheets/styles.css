@@ -7397,14 +7397,14 @@ a {
   color: #FF6B6B; }
 
 .btn-yellow {
-  color: #000;
   background-color: #FFCB05;
   border: 2px solid #FFCB05;
   border-radius: 3px;
-  padding: 5px 10px;
-  margin: 20px 5px;
+  color: #000;
   font-size: 16px;
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  margin: 20px 5px;
+  padding: 5px 10px;
   -webkit-transition: all 0.1s linear ;
   -moz-transition: all 0.1s linear ;
   -o-transition: all 0.1s linear ;
@@ -7525,6 +7525,13 @@ ol li {
   .ct-legend .ct-series-6:before {
     background-color: #865dab;
     border-color: #865dab; }
+
+.ct-gauge {
+  margin-bottom: -170px;
+  position: relative; }
+
+.gauge-label {
+  font-size: 75px; }
 
 .ct-axis-title {
   fill: #fff;

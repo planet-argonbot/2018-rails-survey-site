@@ -22,17 +22,16 @@ class CIServers extends React.Component {
       ]
     };
 
-    // const pieResponsiveOptions = [
-    //   ['screen and (max-width: 544px)', {
-    //     height: '200px',
-    //     donutWidth: 20,
-    //   }],
-    //
-    //   ['screen and (min-width: 545px)', {
-    //     height: '250px',
-    //     donutWidth: 30,
-    //   }]
-    // ];
+    const pieResponsiveOptions = [
+      ['screen and (max-width: 498px)', {
+        height: '200px',
+        donutWidth: 20,
+      }],
+      ['screen and (min-width: 499px) and (max-width: 768px)', {
+        height: '250px',
+        donutWidth: 40,
+      }]
+    ];
 
     const pieChartData = {
       labels: [
@@ -60,6 +59,7 @@ class CIServers extends React.Component {
         <ChartistGraph
           className={'ct-custom-donut'}
           data={pieChartData}
+          responsiveOptions={pieResponsiveOptions}
           options={pieOptions}
           type={'Pie'} />
       </div>

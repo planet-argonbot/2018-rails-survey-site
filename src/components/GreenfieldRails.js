@@ -8,8 +8,8 @@ class GreenfieldRails extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      chartPadding: 5,
       showLabel: false,
+      donutWidth: 60,
       height: '300px',
       plugins: [
         ChartistPluginLegend(),
@@ -22,17 +22,16 @@ class GreenfieldRails extends React.Component {
       ]
     };
 
-    // const pieResponsiveOptions = [
-    //   ['screen and (max-width: 544px)', {
-    //     height: '200px',
-    //     donutWidth: 20,
-    //   }],
-    //
-    //   ['screen and (min-width: 545px)', {
-    //     height: '250px',
-    //     donutWidth: 30,
-    //   }]
-    // ];
+    const pieResponsiveOptions = [
+      ['screen and (max-width: 498px)', {
+        height: '200px',
+        donutWidth: 20,
+      }],
+      ['screen and (min-width: 499px) and (max-width: 768px)', {
+        height: '250px',
+        donutWidth: 40,
+      }]
+    ];
 
     const pieChartData = {
       labels: [
@@ -53,6 +52,7 @@ class GreenfieldRails extends React.Component {
           <p class="h6">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
           <ChartistGraph
             className={'ct-custom-donut'}
+            responsiveOptions={pieResponsiveOptions}
             data={pieChartData}
             options={pieOptions}
 

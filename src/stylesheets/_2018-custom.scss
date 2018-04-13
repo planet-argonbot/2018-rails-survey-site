@@ -36,14 +36,14 @@ $purple: #865dab;
 }
 
 .btn-yellow {
-  color: $black;
   background-color: $yellow;
   border: 2px solid $yellow;
   border-radius: 3px;
-  padding: 5px 10px;
-  margin: 20px 5px;
+  color: $black;
   font-size: 16px;
   font-family: $montserrat;
+  margin: 20px 5px;
+  padding: 5px 10px;
   @include transition(all, 0.1s, linear);
   &:hover, &:focus, &:active {
     background-color: transparent;
@@ -178,6 +178,16 @@ $ct-series-colors:
           border-color: nth($ct-series-colors, $i + 1);
       }
   }
+}
+
+// gauge chart styles
+.ct-gauge {
+  margin-bottom: -170px;
+  position: relative;
+
+}
+.gauge-label {
+  font-size: 75px;
 }
 
 //y axis label
