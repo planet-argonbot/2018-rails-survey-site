@@ -13,6 +13,8 @@ import TestCoverage from './TestCoverage';
 import ActiveJob from './ActiveJob';
 import CIServers from './CIServers';
 import Containers from './Containers';
+import Footer from './Footer';
+
 import love from '../assets/images/rails-love.png';
 import hate from '../assets/images/ruby-hate.png';
 
@@ -239,6 +241,8 @@ class App extends Component {
             </div>
           </div>
         </div>
+
+        <Footer/>
       </div>
 
     );
