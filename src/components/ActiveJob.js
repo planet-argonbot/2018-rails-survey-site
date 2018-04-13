@@ -7,6 +7,34 @@ import ChartistPluginLegend from 'chartist-plugin-legend';
 
 class ActiveJob extends React.Component {
   render() {
+    const options = {
+      donut: true,
+      donutWidth: 80,
+      showLabel: false,
+      height: '300px',
+      plugins: [
+        Chartist.plugins.tooltip({
+          appendToBody: true,
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        }),
+        ChartistPluginLegend({
+          clickable: false
+        })
+      ]
+    };
+
+    const pieResponsiveOptions = [
+      ['screen and (max-width: 576px)', {
+        height: '200px',
+        donutWidth: 50,
+      }],
+      ['screen and (min-width: 577px) and (max-width: 768px)', {
+        height: '250px',
+        donutWidth: 60,
+      }]
+    ];
 
     const data = {
       labels: [
@@ -26,37 +54,10 @@ class ActiveJob extends React.Component {
       ]
     };
 
-    const options = {
-      donut: true,
-      showLabel: false,
-      height: '300px',
-      plugins: [
-        Chartist.plugins.tooltip({
-          appendToBody: true,
-          transformTooltipTextFnc: function(value) {
-            return value + '%';
-          }
-        }),
-        ChartistPluginLegend()
-      ]
-    };
-
-    const pieResponsiveOptions = [
-      ['screen and (max-width: 498px)', {
-        height: '200px',
-        donutWidth: 20,
-      }],
-      ['screen and (min-width: 499px) and (max-width: 768px)', {
-        height: '250px',
-        donutWidth: 40,
-      }]
-    ];
-
-
     return (
       <div>
         <ChartistGraph
-          className={'ct-custom-donut align-bottom'}
+          className={'ct-custom-donut'}
           data={data}
           options={options}
           responsiveOptions={pieResponsiveOptions}

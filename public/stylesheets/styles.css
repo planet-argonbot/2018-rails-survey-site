@@ -7425,6 +7425,12 @@ ol li {
 .icon {
   width: 100px; }
 
+.quote-mark {
+  font-size: 75px; }
+
+.quote {
+  margin-top: -30px; }
+
 .ct-label {
   fill: #fff;
   color: #fff;
@@ -7442,6 +7448,24 @@ ol li {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+
+.ct-gauge {
+  margin-bottom: -170px; }
+
+.gauge-label {
+  font-size: 75px; }
+
+.ct-axis-title {
+  fill: #fff;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+.chartist-tooltip {
+  background: #4d4d4d;
+  color: #fff;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400; }
+  .chartist-tooltip:before {
+    border-top-color: #4d4d4d; }
 
 .ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
   stroke: #FFCB05; }
@@ -7486,19 +7510,17 @@ ol li {
   fill: #865dab; }
 
 .ct-legend {
-  position: relative;
   z-index: 0;
-  line-height: 1; }
+  line-height: 1;
+  margin-bottom: 5px; }
   .ct-legend li {
     display: inline-block;
-    position: relative;
     padding-left: 17px;
     margin: 7px 5px;
     color: #fff;
     font-size: 12px;
     font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
   .ct-legend li:before {
-    position: relative;
     left: -2px;
     margin-right: 5px;
     content: '';
@@ -7506,7 +7528,7 @@ ol li {
     border-right: 8px solid transparent;
     border-bottom: 0px;
     border-top: 0px;
-    border-radius: 100%; }
+    border-radius: 50%; }
   .ct-legend li.inactive:before {
     background: transparent; }
   .ct-legend .ct-series-0:before {
@@ -7531,31 +7553,7 @@ ol li {
     background-color: #865dab;
     border-color: #865dab; }
 
-.quote-mark {
-  font-size: 75px; }
-
-.quote {
-  margin-top: -30px; }
-
-.ct-gauge {
-  margin-bottom: -170px; }
-
-.gauge-label {
-  font-size: 75px; }
-
-.ct-axis-title {
-  fill: #fff;
-  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.chartist-tooltip {
-  background: #4d4d4d;
-  color: #fff;
-  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: 400; }
-  .chartist-tooltip:before {
-    border-top-color: #4d4d4d; }
-
-@media (max-width: 1224px) {
+@media (max-width: 1200px) {
   .icon-pa-site-logo {
     font-size: 33px;
     padding: 0 12px; }
@@ -7593,7 +7591,7 @@ ol li {
   .gauge-label {
     font-size: 45px; } }
 
-@media (max-width: 489px) {
+@media (max-width: 576px) {
   .display--none__mobile {
     display: none; }
   .nav-list {

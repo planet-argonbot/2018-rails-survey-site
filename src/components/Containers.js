@@ -1,7 +1,6 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import ChartistPluginLegend from 'chartist-plugin-legend';
 import 'chartist-plugin-tooltips';
 
 
@@ -9,13 +8,12 @@ class Containers extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 60,
+      donutWidth: 40,
       startAngle: 270,
       total: 200,
       showLabel: false,
       height: '300px',
       plugins: [
-        ChartistPluginLegend(),
         Chartist.plugins.tooltip({
           appendToBody: true,
           transformTooltipTextFnc: function(value) {
@@ -28,12 +26,12 @@ class Containers extends React.Component {
 
     const pieChartData = {
       labels: [
-        'Using Containers: 56%',
-        'No Containers: 41%',
+        {name: 'Using Containers: 56%', className: 'ct-gauge-1'},
+        {name: 'No Containers: 41%', className: 'ct-gauge-2'}
       ],
       series: [
-        {meta: 'Using Containers', value: 56},
-        {meta: 'Not Using Containers', value: 44},
+        {meta: 'Using Containers', value: 56, className: 'ct-series-b'},
+        {meta: 'Not Using Containers', value: 44, className: 'ct-series-f'},
       ]
     };
 
@@ -44,7 +42,7 @@ class Containers extends React.Component {
       }],
       ['screen and (min-width: 499px) and (max-width: 768px)', {
         height: '250px',
-        donutWidth: 40,
+        donutWidth: 30,
       }]
     ];
 

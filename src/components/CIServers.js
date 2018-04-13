@@ -8,11 +8,13 @@ class CIServers extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      chartPadding: 5,
+      donutWidth: 80,
       showLabel: false,
       height: '300px',
       plugins: [
-        ChartistPluginLegend(),
+        ChartistPluginLegend({
+          clickable: false
+        }),
         Chartist.plugins.tooltip({
           appendToBody: true,
           transformTooltipTextFnc: function(value) {
@@ -23,13 +25,13 @@ class CIServers extends React.Component {
     };
 
     const pieResponsiveOptions = [
-      ['screen and (max-width: 498px)', {
+      ['screen and (max-width: 576px)', {
         height: '200px',
-        donutWidth: 20,
+        donutWidth: 50,
       }],
-      ['screen and (min-width: 499px) and (max-width: 768px)', {
+      ['screen and (min-width: 577px) and (max-width: 768px)', {
         height: '250px',
-        donutWidth: 40,
+        donutWidth: 60,
       }]
     ];
 

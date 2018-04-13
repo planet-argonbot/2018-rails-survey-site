@@ -8,6 +8,7 @@ class CodeQuality extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
+      donutWidth: 80,
       showLabel: false,
       height: '300px',
       plugins: [
@@ -17,18 +18,20 @@ class CodeQuality extends React.Component {
             return value + '%';
           }
         }),
-        ChartistPluginLegend(),
+        ChartistPluginLegend({
+          clickable: false
+        })
       ]
     };
 
     const pieResponsiveOptions = [
-      ['screen and (max-width: 498px)', {
+      ['screen and (max-width: 576px)', {
         height: '200px',
-        donutWidth: 20,
+        donutWidth: 50,
       }],
-      ['screen and (min-width: 499px) and (max-width: 768px)', {
+      ['screen and (min-width: 577px) and (max-width: 768px)', {
         height: '250px',
-        donutWidth: 40,
+        donutWidth: 60,
       }]
     ];
 
