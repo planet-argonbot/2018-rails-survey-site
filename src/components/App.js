@@ -104,8 +104,8 @@ class App extends Component {
 
         <div class="padding-xl background--light-gray row justify-content-center">
           <div class="col-md-8">
-            <p class="font--sub-headline font--yellow">&ldquo;</p>
-            <p class="h1 montserrat">75%</p>
+            <span class="quote-mark font--yellow">&ldquo;</span>
+            <p class="h1 montserrat quote">75%</p>
             <p>agree that the Rails core team is shepherding the project in the <span class="font--yellow">right direction</span>.</p>
             <div class="margin-lg">
               <p class="h1 montserrat">43%</p>

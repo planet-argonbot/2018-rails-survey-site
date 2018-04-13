@@ -179,12 +179,15 @@ $ct-series-colors:
       }
   }
 }
-
+.quote-mark {
+  font-size: 75px;
+}
+.quote {
+  margin-top: -30px;
+}
 // gauge chart styles
 .ct-gauge {
   margin-bottom: -170px;
-  position: relative;
-
 }
 .gauge-label {
   font-size: 75px;
@@ -229,6 +232,9 @@ $ct-series-colors:
   .ct-bar {
     stroke-width: 50px;
   }
+  .gauge-label {
+    font-size: 60px;
+  }
 }
 @media (max-width: 992px) {
   .nav-list {
@@ -241,6 +247,9 @@ $ct-series-colors:
     font-size: 41px;
     padding: 0 20px;
   }
+  .gauge-label {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -249,6 +258,12 @@ $ct-series-colors:
   }
   .ct-bar {
     stroke-width: 20px;
+  }
+  .ct-gauge {
+    margin-bottom: -150px;
+  }
+  .gauge-label {
+    font-size: 45px;
   }
 }
 

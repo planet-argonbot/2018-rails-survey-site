@@ -7526,9 +7526,14 @@ ol li {
     background-color: #865dab;
     border-color: #865dab; }
 
+.quote-mark {
+  font-size: 75px; }
+
+.quote {
+  margin-top: -30px; }
+
 .ct-gauge {
-  margin-bottom: -170px;
-  position: relative; }
+  margin-bottom: -170px; }
 
 .gauge-label {
   font-size: 75px; }
@@ -7558,7 +7563,9 @@ ol li {
   .nav-list {
     margin-left: 10px; }
   .ct-bar {
-    stroke-width: 50px; } }
+    stroke-width: 50px; }
+  .gauge-label {
+    font-size: 60px; } }
 
 @media (max-width: 992px) {
   .nav-list {
@@ -7567,13 +7574,19 @@ ol li {
     display: block; }
   .icon-pa-site-logo {
     font-size: 41px;
-    padding: 0 20px; } }
+    padding: 0 20px; }
+  .gauge-label {
+    font-size: 50px; } }
 
 @media (max-width: 768px) {
   .mobile-nav-trigger {
     padding: 40px 18px; }
   .ct-bar {
-    stroke-width: 20px; } }
+    stroke-width: 20px; }
+  .ct-gauge {
+    margin-bottom: -150px; }
+  .gauge-label {
+    font-size: 45px; } }
 
 @media (max-width: 489px) {
   .display--none__mobile {
