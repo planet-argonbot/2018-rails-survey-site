@@ -7438,6 +7438,11 @@ ol li {
 .ct-bar {
   stroke-width: 50px; }
 
+.pie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
 .ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
   stroke: #FFCB05; }
 

@@ -83,6 +83,12 @@ ol li {
   stroke-width: 50px;
 }
 
+.pie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 
 //setting the color series values for chart legends
@@ -179,12 +185,14 @@ $ct-series-colors:
       }
   }
 }
+
 .quote-mark {
   font-size: 75px;
 }
 .quote {
   margin-top: -30px;
 }
+
 // gauge chart styles
 .ct-gauge {
   margin-bottom: -170px;

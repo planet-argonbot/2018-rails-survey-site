@@ -67,7 +67,7 @@ class RailsUpdates extends React.Component {
 
     return (
       <div class="row margin-top-xl justify-content-center">
-        <div class="col-lg-6 margin-top-md">
+        <div class="pie col-lg-6 margin-top-md">
           <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
           <ChartistGraph
             data={releasesPieChartData}
@@ -75,7 +75,7 @@ class RailsUpdates extends React.Component {
             responsiveOptions={pieResponsiveOptions}
             type={'Pie'} />
         </div>
-        <div class="col-lg-6 margin-top-md">
+        <div class="pie col-lg-6 margin-top-md">
           <p class="h6">If not all, why not?</p>
           <br/>
           <ChartistGraph

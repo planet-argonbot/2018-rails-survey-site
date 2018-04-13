@@ -200,21 +200,21 @@ class App extends Component {
         <div class="padding-top-xl">
           <div class="h2 margin-bottom-md">Tools</div>
           <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="pie col-lg-6">
               <div class="h5 margin-lg">What code quality tools do you use?</div>
               <CodeQuality/>
             </div>
-            <div class="col-lg-6">
+            <div class="pie col-lg-6">
               <div class="h5 margin-lg">Of those apps how many have decent test coverage (80%)?</div>
               <TestCoverage/>
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="pie col-lg-6">
               <div class="h5 margin-lg">Which Active Job adapters do you use to use to process background jobs?</div>
               <ActiveJob/>
             </div>
-            <div class="col-lg-6">
+            <div class="pie col-lg-6">
               <div class="h5 margin-lg">Which Continuous Integration (CI) servers do you use?</div>
               <CIServers/>
             </div>
