@@ -68,17 +68,17 @@ class RailsUpdates extends React.Component {
     };
 
     return (
-      <div class="row margin-top-xl justify-content-center">
-        <div class="pie col-lg-6 margin-top-md">
-          <p class="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
+      <div className="row margin-top-xl justify-content-center">
+        <div className="pie col-lg-6 margin-top-md">
+          <p className="h6">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
           <ChartistGraph
             data={releasesPieChartData}
             options={pieOptions}
             responsiveOptions={pieResponsiveOptions}
             type={'Pie'} />
         </div>
-        <div class="pie col-lg-6 margin-top-md">
-          <p class="h6">If not all, why not?</p>
+        <div className="pie col-lg-6 margin-top-md">
+          <p className="h6">If not all, why not?</p>
           <br/>
           <ChartistGraph
             data={notUpdatedPieChartData}

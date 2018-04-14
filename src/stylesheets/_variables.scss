@@ -38,7 +38,7 @@ $large-screen: 1200px;
 // Fonts
 // =======================
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400italic);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400italic');
 
 // Google font "Lato" (Weights: regular - 400, bold - 700)
 $montserrat: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -80,12 +80,12 @@ $lato: "Lato", sans-serif;
 
 @font-face {
   font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot');
-  src:url('../fonts/icomoon.eot#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.woff2') format('woff2'),
-      url('../fonts/icomoon.ttf') format('truetype'),
-      url('../fonts/icomoon.woff') format('woff'),
-      url('../fonts/icomoon.svg#icomoon') format('svg');
+  src:url('fonts/icomoon.eot');
+  src:url('fonts/icomoon.eot#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.woff2') format('woff2'),
+      url('fonts/icomoon.ttf') format('truetype'),
+      url('fonts/icomoon.woff') format('woff'),
+      url('fonts/icomoon.svg#icomoon') format('svg');
 }
 
 [class^="icon-"], [class*=" icon-"] {

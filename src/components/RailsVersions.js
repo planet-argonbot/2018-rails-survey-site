@@ -71,9 +71,9 @@ class RailsVersions extends React.Component {
     const type = 'Bar';
 
     return (
-      <div class="row justify-content-center margin-top-xl">
-        <div class="col-md-10">
-          <div class="h6">Which versions of Rails are you using? </div>
+      <div className="row justify-content-center margin-top-xl">
+        <div className="col-md-10">
+          <div className="h6">Which versions of Rails are you using? </div>
           <ChartistGraph
             className={'ct-octave'}
             data={data}
