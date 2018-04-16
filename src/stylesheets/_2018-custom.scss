@@ -64,6 +64,9 @@ ol li {
 .quote {
   margin-top: -30px;
 }
+.wordcloud {
+  width: 60vw;
+}
 
 //general chart grid styles
 .ct-label {
@@ -305,5 +308,8 @@ $ct-series-colors:
   }
   .ct-bar {
     stroke-width: 10px;
+  }
+  .btn-yellow {
+    font-size: 14px;
   }
 }
