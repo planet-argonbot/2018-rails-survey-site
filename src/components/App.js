@@ -17,6 +17,8 @@ import Footer from './Footer';
 
 import love from '../assets/images/rails-love.png';
 import hate from '../assets/images/ruby-hate.png';
+import loveGem from '../assets/images/loved-gems.png';
+import hateGem from '../assets/images/frustrating-gems.png';
 
 
 class App extends Component {
@@ -154,9 +156,10 @@ class App extends Component {
             </div>
           </div>
           <div className="h4 margin-top-md">Most <span className="h2 font--yellow">Loved</span> Gems</div>
-          <p>WordCloud to go here</p>
+          <img src={loveGem} className="wordcloud" alt="word cloud of loved gem words" />
           <div className="h4 margin-top-md">Most <span className="h2 font--coral">Frustrating</span> Gems</div>
-          <p>WordCloud to go here</p>
+          <img src={hateGem} className="wordcloud" alt="word cloud of hated gem words" />
+
         </div>
 
         <div className="padding-top-xl">
@@ -168,7 +171,9 @@ class App extends Component {
             </div>
             <div className="col-8">
               <p>Airbrake (formerly Hoptoad) was at 53% back in 2012 and fell to 28% in 2014, 21% in 2016, and has continued to fall to 11% in 2018. One possible reason? The application exception tracking space has become more saturated over the years.</p>
-              <button className="btn-yellow">READ MORE ABOUT APPLICATION TRACKING</button>
+            </div>
+            <div className="margin-lg">
+              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Application Tracking" className="btn btn-yellow montserrat font--black">READ MORE ABOUT APPLICATION TRACKING</a>
             </div>
           </div>
         </div>
@@ -237,11 +242,12 @@ class App extends Component {
             <div className="col-8">
               <div className="h2 margin-bottom-md">Conclusion</div>
               <p>What overarching themes did we uncover through this survey? For one, there are a lot  more tools being used in the Rails community than during our original survey in 2009. There’s more parity and a wider range of options in areas like x, y, and z.</p>
-              <button href="/assets/rails-survey-results-2018.csv" className="btn-yellow montserrat h6 font--black margin-md">VIEW ALL RESPONSES FROM THE SURVEY</button>
+            </div>
+            <div className="col-12">
+              <a href="https://docs.google.com/spreadsheets/d/1IFRaS-t91ffto__Gxm0nwDNYtjXcg7EFCR7QXvae6HA/edit#gid=40255677" target="_blank" title="2018 Rails Survey Full Results" className="btn btn-yellow montserrat font--black">VIEW ALL SURVEY RESPONSES</a>
             </div>
           </div>
         </div>
-
         <Footer/>
       </div>
 
