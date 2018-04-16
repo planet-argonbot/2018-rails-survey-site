@@ -7470,7 +7470,8 @@ ol li {
   background: #4d4d4d;
   color: #fff;
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  top: 0; }
   .chartist-tooltip:before {
     border-top-color: #4d4d4d; }
 

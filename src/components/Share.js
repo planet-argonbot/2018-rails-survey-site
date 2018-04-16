@@ -6,8 +6,8 @@ function Share(){
     <div className="padding-top-lg padding-bottom-xl">
       <h4>Share the results with your community!</h4>
       <div className="padding-sm text-center">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://rails-survey.s3-website-us-west-2.amazonaws.com" className="btn-yellow margin-right-sm js-facebook-trigger" target="_blank" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://rails-survey.s3-website-us-west-2.amazonaws.com', 'Rails Hosting Survey 2018', 'status=1,top=500,left=500,width=400,height=400,position=fixed,');"><i className="fa fa-facebook-official margin-right-xs"></i>Facebook</a>
-        <a href="https://twitter.com/share?url=http://rails-survey.s3-website-us-west-2.amazonaws.com/" className="btn-yellow js-twitter-trigger" target="_blank"><i className="fa fa-twitter-square margin-right-xs"></i>Twitter</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://rails-survey.s3-website-us-west-2.amazonaws.com" className="btn-yellow margin-right-sm" target="_blank" onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://rails-survey.s3-website-us-west-2.amazonaws.com', 'Rails Hosting Survey 2018', 'status=1,top=500,left=500,width=400,height=400,position=fixed,');"><i className="fa fa-facebook-official margin-right-xs"></i>Facebook</a>
+        <a href="https://twitter.com/share?url=http://rails-survey.s3-website-us-west-2.amazonaws.com/" className=" btn-yellow" target="_blank"><i className="fa fa-twitter-square margin-right-xs"></i>Twitter</a>
       </div>
     </div>
   );
