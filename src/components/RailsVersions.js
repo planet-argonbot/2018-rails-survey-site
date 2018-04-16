@@ -22,13 +22,9 @@ class RailsVersions extends React.Component {
       ],
       series: [
         {
-          className: 'ct-series-a',
-          data: [16, 24, 15, 23, -1, -1, -1, -1, -1],
+          className: 'ct-series-c',
+          data: [16, 24, 15, 23, 6, 3, 7, 1, 3],
         },
-        {
-          className: 'ct-series-f',
-          data: [-1, -1, -1, -1, 6, 3, 7, 1, 3]
-        }
       ]
     };
 

@@ -26,12 +26,12 @@ class Containers extends React.Component {
 
     const pieChartData = {
       labels: [
-        {name: 'Using Containers: 56%', className: 'ct-gauge-1'},
-        {name: 'No Containers: 41%', className: 'ct-gauge-2'}
+        {name: 'Using Containers: 58%', className: 'ct-gauge-1'},
+        {name: 'No Containers: 42%', className: 'ct-gauge-2'}
       ],
       series: [
-        {meta: 'Using Containers', value: 56, className: 'ct-series-b'},
-        {meta: 'Not Using Containers', value: 44, className: 'ct-series-f'},
+        {meta: 'Using Containers', value: 58, className: 'ct-series-b'},
+        {meta: 'Not Using Containers', value: 42, className: 'ct-series-f'},
       ]
     };
 
@@ -54,7 +54,7 @@ class Containers extends React.Component {
           options={pieOptions}
           responsiveOptions={pieResponsiveOptions}
           type={'Pie'} />
-        <span className='gauge-label'>56%</span><p className="montserrat-lc small">of developers are using tools like Docker and Kubernetes now</p>
+        <span className='gauge-label'>58%</span><p className="montserrat-lc small">of developers are using tools like Docker and Kubernetes now</p>
       </div>
     );
   }

@@ -32,15 +32,15 @@ class App extends Component {
               <div className="row padding-top-lg padding-bottom-md position--relative z-index-1">
                 <div className="col-md-8 col-centered">
                   <h1 className="font--headline margin-bottom-xl">2018 Ruby on Rails Developer Community Survey</h1>
-                  <p className=" margin-bottom-xs h4 text-center">The Results are in!</p>
-                  <p className="margin-bottom-lg">2002 members of the rails community gave us their thoughts on tools, frameworks, and workflows in order to see how the environment has changed. </p>
+                  <p className="margin-bottom-xs padding-top-lg h4 text-center">The results are in!</p>
+                  <p className="margin-bottom-xl padding-bottom-lg">2002 members of the Rails community gave us their thoughts on tools, frameworks, and workflows in order to see how the environment has changed. </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="share-container background--white padding-md font--black text-center">
+        <div className="share-container background--white padding-lg font--black text-center">
           <Share/>
         </div>
 
