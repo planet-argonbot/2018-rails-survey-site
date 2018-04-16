@@ -61,11 +61,17 @@ ol li {
 .quote-mark {
   font-size: 75px;
 }
+
 .quote {
   margin-top: -30px;
 }
+
 .wordcloud {
-  width: 60vw;
+  width: 50vw;
+  border: solid 1px $yellow;
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 300px;
 }
 
 //general chart grid styles
@@ -178,8 +184,7 @@ $ct-series-colors:
 
     li {
       display: inline-block;
-
-      padding-left: 17px;
+      padding-left: 12px;
       margin: 7px 5px;
       color: $white;
       font-size: 12px;
@@ -187,7 +192,6 @@ $ct-series-colors:
     }
 
     li:before {
-
       left: -2px;
       margin-right: 5px;
       content: '';
@@ -266,6 +270,10 @@ $ct-series-colors:
   }
   .gauge-label {
     font-size: 45px;
+  }
+  .footer-logo {
+    width: 100px;
+    margin-bottom: 20px;
   }
 }
 

@@ -7239,7 +7239,7 @@ p, .p {
   line-height: 115%; }
 
 .font--sub-headline {
-  font-size: 54px; }
+  font-size: 60px; }
 
 .line-height-1 {
   line-height: 1; }
@@ -7432,7 +7432,11 @@ ol li {
   margin-top: -30px; }
 
 .wordcloud {
-  width: 60vw; }
+  width: 50vw;
+  border: solid 1px #FFCB05;
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 300px; }
 
 .ct-label {
   fill: #fff;
@@ -7518,7 +7522,7 @@ ol li {
   margin-bottom: 5px; }
   .ct-legend li {
     display: inline-block;
-    padding-left: 17px;
+    padding-left: 12px;
     margin: 7px 5px;
     color: #fff;
     font-size: 12px;
@@ -7592,7 +7596,10 @@ ol li {
   .ct-gauge {
     margin-bottom: -150px; }
   .gauge-label {
-    font-size: 45px; } }
+    font-size: 45px; }
+  .footer-logo {
+    width: 100px;
+    margin-bottom: 20px; } }
 
 @media (max-width: 576px) {
   .display--none__mobile {

@@ -8,7 +8,7 @@ function Footer(){
         <div className="container">
           <div className="row margin-top-lg">
             <div className="col-md-3">
-              <img src={palogo} className="align-middle" alt="Planet Argon logo"/>
+              <img src={palogo} className="align-middle footer-logo" alt="Planet Argon logo"/>
             </div>
             <div className="col-md-9 text-left">
               <p className="h3">About Planet Argon</p>

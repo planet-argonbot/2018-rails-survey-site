@@ -35,6 +35,7 @@ class RailsVersions extends React.Component {
         top: 20,
         right: 10,
       },
+      height: 300,
       high: 30,
       low: 0,
       axisY: {
@@ -71,7 +72,6 @@ class RailsVersions extends React.Component {
         <div className="col-md-10">
           <div className="h6">Which versions of Rails are you using? </div>
           <ChartistGraph
-            className={'ct-octave'}
             data={data}
             options={options}
             responsiveOptions={responsiveOptions}
