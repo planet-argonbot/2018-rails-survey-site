@@ -237,11 +237,12 @@ class App extends Component {
             <div class="col-8">
               <div class="h2 margin-bottom-md">Conclusion</div>
               <p>What overarching themes did we uncover through this survey? For one, there are a lot  more tools being used in the Rails community than during our original survey in 2009. There’s more parity and a wider range of options in areas like x, y, and z.</p>
-              <button href="/assets/rails-survey-results-2018.csv" class="btn-yellow montserrat h6 font--black margin-md">VIEW ALL RESPONSES FROM THE SURVEY</button>
+              <div class="margin-md">
+                <a href="https://docs.google.com/spreadsheets/d/1IFRaS-t91ffto__Gxm0nwDNYtjXcg7EFCR7QXvae6HA/edit#gid=40255677" target="_blank" title="2018 Rails Survey Full Results" class="btn-yellow montserrat h6 font--black margin-md">VIEW ALL RESPONSES FROM THE SURVEY</a>
+              </div>
             </div>
           </div>
         </div>
-
         <Footer/>
       </div>
 
