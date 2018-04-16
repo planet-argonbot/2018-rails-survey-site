@@ -168,7 +168,9 @@ class App extends Component {
             </div>
             <div class="col-8">
               <p>Airbrake (formerly Hoptoad) was at 53% back in 2012 and fell to 28% in 2014, 21% in 2016, and has continued to fall to 11% in 2018. One possible reason? The application exception tracking space has become more saturated over the years.</p>
-              <button class="btn-yellow">READ MORE ABOUT APPLICATION TRACKING</button>
+              <div class="margin-md">
+                <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Application Tracking" class="btn-yellow montserrat h6 font--black margin-md">READ MORE ABOUT APPLICATION TRACKING</a>
+              </div>
             </div>
           </div>
         </div>

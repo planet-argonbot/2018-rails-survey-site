@@ -10,10 +10,10 @@ function Header(){
         </div>
         <div class="row padding-top-md">
           <div class="col-6 text-left">
-            <a href="http://www.planetargon.com"><span class="icon-pa-site-logo pa-logo"></span></a>
+            <a href="http://www.planetargon.com" target="_blank"><span class="icon-pa-site-logo pa-logo"></span></a>
           </div>
           <div class="col-6 text-right">
-            <a href="http://www.planetargon.com/contact"><p class="montserrat-black">Contact</p></a>
+            <a href="http://www.planetargon.com/contact" target="_blank"><p class="montserrat-black">Contact</p></a>
           </div>
         </div>
       </div>
