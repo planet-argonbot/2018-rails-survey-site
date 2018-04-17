@@ -33,7 +33,7 @@ class App extends Component {
                 <div className="col-md-8 col-centered">
                   <h1 className="font--headline margin-bottom-xl">2018 Ruby on Rails Developer Community Survey</h1>
                   <p className="margin-bottom-xs padding-top-lg h4 text-center">The results are in!</p>
-                  <p className="margin-bottom-xl padding-bottom-lg">2002 members of the Rails community gave us their thoughts on tools, frameworks, and workflows in order to see how the environment has changed. </p>
+                  <p className="margin-bottom-xl padding-bottom-lg">Over 2,000 members of the Rails community contributed their thoughts on tools, frameworks, and workflows to show how the environment has changed since the last survey in 2016 – and how the community has evolved in the ten years since our original survey.</p>
                 </div>
               </div>
             </div>
@@ -113,19 +113,13 @@ class App extends Component {
         </div>
 
         <div className="padding-xl background--light-gray row justify-content-center">
-          <div className="col-md-6">
+          <div className="col-md-6 margin-bottom-lg">
             <span className="quote-mark font--yellow">&ldquo;</span>
-            <p className="h1 montserrat quote">75%</p>
-            <p className="h4">agree that the Rails core team is shepherding the project in the <span className="font--yellow">right direction</span>.</p>
-            <div className="margin-lg">
-              <p className="h1 montserrat">43%</p>
-              <p className="h4">responded <span className="font--yellow">time</span> was the only issue holding them back.</p>
+            <div className="margin-top-xs margin-bottom-lg">
+              <p className="h1 montserrat quote">75%</p>
+              <p className="h4">agree that the Rails core team is shepherding the project in the <span className="font--yellow">right direction</span>.</p>
             </div>
-            <div className="margin-lg">
-              <p className="h1 montserrat">45%</p>
-              <p className="h4">of respondents felt that most or all of their apps <span className="font--yellow">were updated</span> to the most recent version of Ruby in Rails.</p>
-            </div>
-            <a href='#' className="h4"><i className="fa fa-twitter-square font--yellow"></i></a>
+            <a href='https://twitter.com/share?url=http://rails-survey.s3-website-us-west-2.amazonaws.com/' className="h4"><i className="fa fa-twitter-square font--yellow"></i></a>
           </div>
         </div>
 
@@ -155,7 +149,7 @@ class App extends Component {
                 <p>2. devise</p>
                 <p>3. activeadmin</p>
                 <p>4. activerecord</p>
-                <p>5. rspect</p>
+                <p>5. rspec</p>
               </div>
             </div>
             <div class="col-8">
