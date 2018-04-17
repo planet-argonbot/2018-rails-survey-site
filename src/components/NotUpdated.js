@@ -38,6 +38,7 @@ class NotUpdated extends React.Component {
       },
       plugins: [
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

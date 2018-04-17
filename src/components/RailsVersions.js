@@ -22,7 +22,7 @@ class RailsVersions extends React.Component {
       ],
       series: [
         {
-          className: 'ct-series-c',
+          className: 'ct-series-b',
           data: [16, 24, 15, 23, 6, 3, 7, 1, 3],
         },
       ]
@@ -43,6 +43,7 @@ class RailsVersions extends React.Component {
       },
       plugins: [
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

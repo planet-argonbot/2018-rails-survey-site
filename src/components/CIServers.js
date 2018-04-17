@@ -18,7 +18,7 @@ class CIServers extends React.Component {
       ],
       series: [
         {
-          className: 'ct-series-a',
+          className: 'ct-series-e',
           data: [21, 17, 15, 13, 10, 8, 16]
         },
       ]
@@ -40,6 +40,7 @@ class CIServers extends React.Component {
       },
       plugins: [
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

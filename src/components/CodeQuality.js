@@ -17,7 +17,7 @@ class CodeQuality extends React.Component {
       ],
       series: [
         {
-          className: 'ct-series-b',
+          className: 'ct-series-c',
           data: [49, 25, 17, 4, 3, 2]
         },
       ]
@@ -39,6 +39,7 @@ class CodeQuality extends React.Component {
       },
       plugins: [
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

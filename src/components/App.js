@@ -130,22 +130,53 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="row margin-top-xl margin-bottom-md justify-content-center">
-            <div className="col-lg-10 margin-top-md">
-              <p className="h6 margin-bottom-md">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
-              <GreenfieldRails/>
-            </div>
-          </div>
         </div>
 
         <div className="padding-xl background--light-gray row justify-content-center">
           <div className="col-md-6 margin-bottom-lg">
             <span className="quote-mark font--yellow">&ldquo;</span>
-            <div className="margin-top-xs margin-bottom-lg">
-              <p className="h1 montserrat quote">75%</p>
+            <div className="margin-bottom-md">
+              <p className="quote font--sub-headline montserrat">75<span className="h3">%</span></p>
               <p className="h2">agree that the Rails core team is shepherding the project in the <span className="font--yellow">right direction</span>.</p>
             </div>
-            <a href='https://twitter.com/share?url=http://rails-survey.s3-website-us-west-2.amazonaws.com/' className="h4"><i className="fa fa-twitter-square font--yellow"></i></a>
+            <a href='https://twitter.com/intent/tweet?text=3/4+of+all%20%23Rails+survey+respondents+agree+the+@rails+core+team+is+shepherding+the+project+in+the+right+direction.+See+more+stats+at+rails-hosting.com/2018' target="_blank" className="h4"><i className="fa fa-twitter-square font--yellow"></i></a>
+          </div>
+        </div>
+
+        <div className="padding-top-xl margin-top-xxl">
+          <div className="h2 margin-bottom-md">Tools</div>
+          <div className="row justify-content-center padding-left-xs padding-right-xs">
+
+            <div className="pie col-8">
+              <div className="h5 margin-bottom-lg margin-top-xl">How many of your Rails apps have decent test coverage (80%)?</div>
+              <TestCoverage/>
+              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Test Coverage" className="btn btn-yellow montserrat font--black">READ MORE ABOUT TEST COVERAGE</a>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            <div className="pie col-8">
+              <div className="h5 margin-bottom-lg margin-top-xl">Which Active Job adapters do you use to use to process background jobs?</div>
+              <ActiveJob/>
+            </div>
+            <div className="pie col-8">
+              <div className="h5 margin-bottom-lg margin-top-xl">Which Continuous Integration (CI) servers do you use?</div>
+              <CIServers/>
+            </div>
+            <div className="pie col-8">
+              <div className="h5 margin-bottom-lg margin-top-xl">What code quality tools do you use?</div>
+              <CodeQuality/>
+              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Code Quality and Continuous Integration" className="btn btn-yellow montserrat font--black">READ MORE ABOUT CODE QUALITY AND CONTINUOUS INTEGRATION</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="padding-top-xl margin-top-xxl">
+          <div className="h2 margin-bottom-md">Containers</div>
+          <div className="row justify-content-center padding-bottom-xl">
+            <div className="col-6">
+              <Containers />
+              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Container Usage" className="btn btn-yellow montserrat font--black">READ MORE ABOUT CONTAINER USAGE</a>
+            </div>
           </div>
         </div>
 
@@ -180,15 +211,23 @@ class App extends Component {
             </div>
             <div class="col-8">
               <p className="h4 margin-top-xxl">Most <span className="h2 font--yellow">Loved</span> Gems</p>
-              <img src={loveGem} className="wordcloud" alt="word cloud of loved gem words" />
+              <img src={loveGem} className="wordcloud" alt="word cloud of most loved gems" />
             </div>
             <div class="col-8">
               <p className="h4 margin-top-lg">Most <span className="h2 font--coral">Frustrating</span> Gems</p>
-              <img src={hateGem} alt="word cloud of hated gem words" />
+              <img src={hateGem}  className="wordcloud" alt="word cloud of most frustrating gems" />
             </div>
             <div class="col-8">
               <p className="margin-top-sm">In the realm of polarizing gems, Devise takes the cake. The flexible authentication gem was named most frequently on the most loved and second most frequently on the most frustrating gem free form response field.</p>
             </div>
+          </div>
+        </div>
+
+        <div className="row margin-top-xl margin-bottom-md justify-content-center">
+          <div className="h2 margin-bottom-lg">Asset Management</div>
+          <div className="col-lg-10 margin-top-md">
+            <p className="h6 margin-bottom-md">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
+            <GreenfieldRails/>
           </div>
         </div>
 
@@ -234,38 +273,7 @@ class App extends Component {
           </div>
         </div>
 
-        <div className="padding-top-xl margin-top-xxl">
-          <div className="h2 margin-bottom-md">Tools</div>
-          <div className="row justify-content-center padding-left-xs padding-right-xs">
-            <div className="pie col-8">
-              <div className="h5 margin-bottom-lg margin-top-xl">What code quality tools do you use?</div>
-              <CodeQuality/>
-            </div>
-            <div className="pie col-8">
-              <div className="h5 margin-bottom-lg margin-top-xl">How many of your Rails apps have decent test coverage (80%)?</div>
-              <TestCoverage/>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="pie col-8">
-              <div className="h5 margin-bottom-lg margin-top-xl">Which Active Job adapters do you use to use to process background jobs?</div>
-              <ActiveJob/>
-            </div>
-            <div className="pie col-8">
-              <div className="h5 margin-bottom-lg margin-top-xl">Which Continuous Integration (CI) servers do you use?</div>
-              <CIServers/>
-            </div>
-          </div>
-        </div>
 
-        <div className="padding-top-xl margin-top-xxl">
-          <div className="h2 margin-bottom-md">Containers</div>
-          <div className="row justify-content-center padding-bottom-xl">
-            <div className="col-6">
-              <Containers />
-            </div>
-          </div>
-        </div>
 
         <div className="padding-xxl background--darkest-gray">
           <div className="row justify-content-center">
@@ -274,7 +282,7 @@ class App extends Component {
               <p>What overarching themes did we uncover through this survey? For one, there are a lot more tools being used in the Rails community than during our original survey in 2009. There’s more parity and a wider range of options in areas like x, y, and z.</p>
             </div>
             <div className="col-12">
-              <a href="https://docs.google.com/spreadsheets/d/1IFRaS-t91ffto__Gxm0nwDNYtjXcg7EFCR7QXvae6HA/edit#gid=40255677" target="_blank" title="2018 Rails Survey Full Results" className="btn btn-yellow montserrat font--black">VIEW ALL SURVEY RESPONSES</a>
+              <a href="https://docs.google.com/spreadsheets/d/1IFRaS-t91ffto__Gxm0nwDNYtjXcg7EFCR7QXvae6HA/edit#gid=40255677" target="_blank" title="2018 Rails Survey Full Results" className="btn btn--ghost montserrat font--black">VIEW ALL SURVEY RESPONSES</a>
             </div>
           </div>
         </div>

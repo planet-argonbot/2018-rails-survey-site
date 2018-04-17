@@ -41,6 +41,8 @@
     background-color: transparent;
     border-color: $yellow;
     color: $yellow;
+    outline-style: none;
+    box-shadow: none;
   }
 }
 .montserrat-text, %montserrat-text {
@@ -48,6 +50,18 @@
   font-size: 14px;
 }
 
+.btn--ghost {
+  background-color: transparent;
+  border: 2px solid $yellow;
+  color: $yellow;
+  &:hover, &:active, &:focus {
+    background-color: $yellow;
+    border-color: $black;
+    color: $black;
+    outline-style: none;
+    box-shadow: none;
+  }
+}
 //general use styles
 ol li {
   font-size: 22px;
@@ -67,10 +81,8 @@ ol li {
 }
 
 .wordcloud {
-  border: solid 1px $yellow;
-  border-radius: 10px;
-  padding: 5px;
   width: 100%;
+
 }
 
 //general chart grid styles
@@ -282,9 +294,7 @@ $ct-series-colors:
   .icon {
     width: 40px;
   }
-  .wordcloud {
 
-  }
 }
 
 @media (max-width: $xsmall-screen) {
@@ -330,7 +340,5 @@ $ct-series-colors:
   .btn-yellow {
     font-size: 14px;
   }
-  .wordcloud {
 
-  }
 }
