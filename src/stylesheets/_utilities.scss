@@ -265,8 +265,8 @@ $sm-margin:    20px;
 $md-margin:    30px;
 $lg-margin:    40px;
 $xl-margin:    50px;
-$xxl-margin:   60px;
-$grand-margin: 100px;
+$xxl-margin:   70px;
+$grand-margin: 120px;
 
 .margin-0           { margin: 0                       }
 .margin-xxs         { margin: $xxs-margin             }
@@ -304,6 +304,7 @@ $grand-margin: 100px;
 .margin-bottom-lg   { margin-bottom: $lg-margin       }
 .margin-bottom-xl   { margin-bottom: $xl-margin       }
 .margin-bottom-xxl  { margin-bottom: $xxl-margin      }
+.margin-bottom-grand  { margin-bottom: $grand-margin      }
 
 .margin-left-0      { margin-left: 0                  }
 .margin-left-xxs    { margin-left: $xxs-margin        }

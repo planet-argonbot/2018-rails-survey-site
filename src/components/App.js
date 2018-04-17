@@ -32,8 +32,8 @@ class App extends Component {
             <div className="container border--left">
               <div className="row padding-top-lg padding-bottom-md position--relative z-index-1">
                 <div className="col-md-8 col-centered">
-                  <h1 className="font--headline margin-bottom-xl">2018 Ruby on Rails Developer Community Survey</h1>
-                  <p className="margin-bottom-xs padding-top-lg h4 text-center">The results are in!</p>
+                  <h1 className="font--headline margin-top-lg margin-bottom-xl">2018 Ruby on Rails Developer Community Survey</h1>
+                  <p className="margin-bottom-sm padding-top-lg h2 text-center">The results are in!</p>
                   <p className="margin-bottom-xl padding-bottom-lg">Over 2,000 members of the Rails community contributed their thoughts on tools, frameworks, and workflows to show how the environment has changed since the last survey in 2016 – and how the community has evolved in the ten years since our original survey.</p>
                 </div>
               </div>
@@ -46,13 +46,13 @@ class App extends Component {
         </div>
 
         <div className="background--light-gray padding-top-xxl">
-          <div className="h2 margin-bottom-lg">Demographics</div>
-          <div className="row justify-content-center">
+          <div className="h1 margin-top-xl margin-bottom-xl">Demographics</div>
+          <div className="row justify-content-center margin-bottom-lg">
             <div className="col-8">
               <p>Who contributed to this survey of the Rails community? Here's a quick look at the demographics of the developers who completed this survey.</p>
             </div>
           </div>
-          <div className="row margin-top-md margin-bottom-xl justify-content-center">
+          <div className="row margin-top-md margin-bottom-grand justify-content-center">
             <div className="col-sm-10 col-md-3 margin-xs background--darkest-gray padding-md">
               <p className="font--sub-headline montserrat">72</p>
               <p className="montserrat-text">countries represented in the survey</p>
@@ -67,8 +67,8 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="container margin-top-xxl padding-bottom-xxl">
-            <div className="h2 margin-bottom-lg">In the Community</div>
+          <div className="container margin-top-grand padding-bottom-xxl">
+            <div className="h1 margin-bottom-lg">In the Community</div>
             <div className="row justify-content-center">
               <div className="col-8">
                 <p>Between developers in agencies, product shops, and freelancer/contractors, we noticed a few interesting trends.</p>
@@ -97,34 +97,34 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="padding-top-xxl padding-lg">
-          <div className="h2 margin-bottom-md">Keeping Rails Up-To-Date</div>
+        <div className="padding-lg">
+          <div className="h1 margin-top-xxl margin-bottom-lg">Keeping Rails Up-to-Date</div>
 
           <div className="row margin-top-xl justify-content-center">
-            <div className="col-8 margin-bottom-md ">
-              <p className="h5 margin-bottom-md">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
+            <div className="col-8 margin-bottom-xl">
+              <p className="h3 margin-bottom-sm">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
               <RailsUpdates/>
             </div>
           </div>
 
 
-          <div className="row margin-top-xl margin-bottom-md justify-content-center">
-            <div className="col-8 margin-bottom-md ">
-              <p className="h5 margin-bottom-md">If not all, why not?</p>
+          <div className="row margin-top-xxl justify-content-center">
+            <div className="col-8 margin-bottom-xl">
+              <p className="h5 margin-bottom-sm">If not all apps are kept updated, why not?</p>
               <NotUpdated/>
             </div>
           </div>
 
-          <div className="row justify-content-center margin-top-xl margin-bottom-md">
-            <div className="col-md-8 margin-bottom-md">
-              <p className="h5 margin-bottom-md">Which versions of Rails are you using? </p>
+          <div className="row justify-content-center margin-top-xl">
+            <div className="col-8 margin-bottom-xl">
+              <p className="h5 margin-bottom-sm">Which versions of Rails are you using? </p>
               <RailsVersions/>
             </div>
           </div>
 
-          <div className="row margin-top-md justify-content-center">
-            <div className="col-8">
-              <p className="margin-bottom-md">Around half of all respondents answered that most or all of the applications they work on are updated to the most recent version of Rails. For those not running all applications on the newest version, time was by far the most common issue holding developers back from updating.</p>
+          <div className="row justify-content-center">
+            <div className="col-8 margin-bottom-grand">
+              <p className="margin-bottom-sm">Around half of all respondents answered that most or all of the applications they work on are updated to the most recent version of Rails. For those not running all applications on the newest version, time was by far the most common issue holding developers back from updating.</p>
 
               <p>We think it’s particularly promising that such a high percentage of responses indicated they are using Rails 4.2 or higher in their applications. This is the oldest version of Rails that is receiving ongoing security patches from the community, so any versions below may be more prone to security threats – as a developer working on these older versions, you're on your own.</p>
             </div>
@@ -132,10 +132,10 @@ class App extends Component {
 
         </div>
 
-        <div className="padding-xl background--light-gray row justify-content-center">
-          <div className="col-md-6 margin-bottom-lg">
+        <div className="padding-lg background--light-gray row justify-content-center">
+          <div className="col-md-6 margin-bottom-md">
             <span className="quote-mark font--yellow">&ldquo;</span>
-            <div className="margin-bottom-md">
+            <div className="margin-bottom-lg">
               <p className="quote font--sub-headline montserrat">75<span className="h3">%</span></p>
               <p className="h2">agree that the Rails core team is shepherding the project in the <span className="font--yellow">right direction</span>.</p>
             </div>
@@ -143,35 +143,34 @@ class App extends Component {
           </div>
         </div>
 
-        <div className="padding-top-xl margin-top-xxl">
-          <div className="h2 margin-bottom-md">Tools</div>
-          <div className="row justify-content-center padding-left-xs padding-right-xs">
-
+        <div className="padding-top-xxl">
+          <div className="h1 margin-top-xxl">Tools</div>
+          <div className="row justify-content-center">
             <div className="pie col-8">
-              <div className="h5 margin-bottom-lg margin-top-xl">How many of your Rails apps have decent test coverage (80%)?</div>
+              <div className="h3 margin-bottom-sm margin-top-lg">How many of your Rails apps have decent test coverage (80%)?</div>
               <TestCoverage/>
               <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Test Coverage" className="btn btn-yellow montserrat font--black">READ MORE ABOUT TEST COVERAGE</a>
             </div>
           </div>
           <div className="row justify-content-center">
             <div className="pie col-8">
-              <div className="h5 margin-bottom-lg margin-top-xl">Which Active Job adapters do you use to use to process background jobs?</div>
+              <div className="h3 margin-bottom-sm margin-top-xl">Which Active Job adapters do you use to use to process background jobs?</div>
               <ActiveJob/>
             </div>
-            <div className="pie col-8">
-              <div className="h5 margin-bottom-lg margin-top-xl">Which Continuous Integration (CI) servers do you use?</div>
+            <div className="col-8">
+              <div className="h3 margin-bottom-sm margin-top-xl">Which Continuous Integration (CI) servers do you use?</div>
               <CIServers/>
             </div>
-            <div className="pie col-8">
-              <div className="h5 margin-bottom-lg margin-top-xl">What code quality tools do you use?</div>
+            <div className="col-8">
+              <div className="h3 margin-bottom-sm margin-top-xl">What code quality tools do you use?</div>
               <CodeQuality/>
-              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Code Quality and Continuous Integration" className="btn btn-yellow montserrat font--black">READ MORE ABOUT CODE QUALITY AND CONTINUOUS INTEGRATION</a>
             </div>
+            <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Code Quality and Continuous Integration" className="btn btn-yellow montserrat font--black">READ MORE ABOUT CODE QUALITY AND CONTINUOUS INTEGRATION</a>
           </div>
         </div>
 
         <div className="padding-top-xl margin-top-xxl">
-          <div className="h2 margin-bottom-md">Containers</div>
+          <div className="h1 margin-bottom-md">Containers</div>
           <div className="row justify-content-center padding-bottom-xl">
             <div className="col-6">
               <Containers />
@@ -181,7 +180,7 @@ class App extends Component {
         </div>
 
         <div className="container padding-top-xl">
-          <p className="h2 margin-md">Ruby Gems</p>
+          <p className="h1 margin-md">Ruby Gems</p>
           <div className="row justify-content-center">
             <div className="col-8">
               <p className="h5 margin-md">Which Rubygems do you love? And which frustrate you the most?</p>
@@ -224,7 +223,7 @@ class App extends Component {
         </div>
 
         <div className="row margin-top-xl margin-bottom-md justify-content-center">
-          <div className="h2 margin-bottom-lg">Asset Management</div>
+          <div className="h1 margin-bottom-lg">Asset Management</div>
           <div className="col-lg-10 margin-top-md">
             <p className="h6 margin-bottom-md">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
             <GreenfieldRails/>
@@ -232,7 +231,7 @@ class App extends Component {
         </div>
 
         <div className="padding-top-xl margin-top-xxl">
-          <div className="h2 margin-bottom-lg">Application Exceptions</div>
+          <div className="h1 margin-bottom-lg">Application Exceptions</div>
           <div className="h5 margin-bottom-md">Which Application Exception tracking tools do you use in production?</div>
           <div className="row justify-content-center">
             <div className="col-10">
@@ -248,7 +247,7 @@ class App extends Component {
         </div>
 
         <div className="padding-top-xxl">
-          <div className="h2 margin-bottom-lg">Ruby Web Servers</div>
+          <div className="h1 margin-bottom-lg">Ruby Web Servers</div>
           <div className="h5 margin-bottom-md">Which Rails Servers are you using in production?</div>
           <div className="row justify-content-center">
             <div className="col-10">
@@ -261,7 +260,7 @@ class App extends Component {
         </div>
 
         <div className="padding-top-xl margin-top-xxl">
-          <div className="h2 margin-bottom-lg">Databases</div>
+          <div className="h1 margin-bottom-lg">Databases</div>
           <div className="h5 margin-bottom-md">Which databases do you prefer to use in production?</div>
           <div className="row justify-content-center">
             <div className="col-10">
@@ -278,7 +277,7 @@ class App extends Component {
         <div className="padding-xxl background--darkest-gray">
           <div className="row justify-content-center">
             <div className="col-8">
-              <div className="h2 margin-bottom-md">Conclusion</div>
+              <div className="h1 margin-bottom-md">Conclusion</div>
               <p>What overarching themes did we uncover through this survey? For one, there are a lot more tools being used in the Rails community than during our original survey in 2009. There’s more parity and a wider range of options in areas like x, y, and z.</p>
             </div>
             <div className="col-12">
