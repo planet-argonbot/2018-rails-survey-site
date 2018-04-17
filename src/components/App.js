@@ -34,7 +34,7 @@ class App extends Component {
                 <div className="col-md-8 col-centered">
                   <h1 className="font--headline margin-bottom-xl">2018 Ruby on Rails Developer Community Survey</h1>
                   <p className="margin-bottom-xs padding-top-lg h4 text-center">The results are in!</p>
-                  <p className="margin-bottom-xl padding-bottom-lg">2002 members of the Rails community gave us their thoughts on tools, frameworks, and workflows in order to see how the environment has changed. </p>
+                  <p className="margin-bottom-xl padding-bottom-lg">Over 2,000 members of the Rails community contributed their thoughts on tools, frameworks, and workflows to show how the environment has changed since the last survey in 2016 – and how the community has evolved in the ten years since our original survey.</p>
                 </div>
               </div>
             </div>
