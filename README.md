@@ -34,3 +34,23 @@ Staging:
 
 Production:
 `#`
+
+## Deployment
+This app utilizes `s3cmd` to deploy the application.
+
+You should install it for your command line:
+```
+brew install s3cmd
+```
+
+Then you will need to configure s3cmd - only parts we need to worry about are the s3 keys here.
+Configure with S3 keys (find secure keys from PA team member):
+```
+s3cmd --configure
+```
+
+Then you should be able to deploy with this command:
+
+```
+npm run build-and-deploy
+```
