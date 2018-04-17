@@ -2,28 +2,22 @@ import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
-import 'chartist-plugin-axistitle';
 
 
-class RailsVersions extends React.Component {
+class NotUpdated extends React.Component {
   render() {
 
     const data = {
       labels: [
-        '5.2',
-        '5.1',
-        '5.0',
-        '4.2',
-        '4.1',
-        '4.0',
-        '3.2',
-        '3.1',
-        '3.0 or earlier'
-      ],
+        'TIME: 47%',
+        'BUDGET: 20%',
+        'GEM DEPENDENCIES: 12%',
+        'MANAGEMENT: 10%',
+        'OTHER: 20%'],
       series: [
         {
-          className: 'ct-series-c',
-          data: [16, 24, 15, 23, 6, 3, 7, 1, 3],
+          className: 'ct-series-a',
+          data: [47, 20, 12, 10, 20]
         },
       ]
     };
@@ -34,9 +28,10 @@ class RailsVersions extends React.Component {
         left: 10,
         top: 20,
         right: 10,
+        bottom: 10,
       },
       height: 300,
-      high: 30,
+      high: 50,
       low: 0,
       axisY: {
         onlyInteger: true,
@@ -65,18 +60,16 @@ class RailsVersions extends React.Component {
       ]
     ];
 
-    const type = 'Bar';
-
     return (
       <div>
         <ChartistGraph
           data={data}
           options={options}
           responsiveOptions={responsiveOptions}
-          type={type} />
+          type={'Bar'} />
       </div>
     );
   }
 }
 
-export default RailsVersions;
+export default NotUpdated;

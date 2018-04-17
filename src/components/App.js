@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Share from './Share';
 import Header from './Header';
 import RailsUpdates from './RailsUpdates';
+import NotUpdated from './NotUpdated';
 import RailsVersions from './RailsVersions';
 import Airbrake from './Airbrake';
 import RailsServers from './RailsServers';
@@ -92,11 +93,30 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="background--dark-gray padding-top-xxl padding-lg">
+        <div className="padding-top-xxl padding-lg">
           <div className="h2 margin-bottom-md">Keeping Rails Up-To-Date</div>
 
-          <RailsUpdates/>
-          <RailsVersions/>
+          <div className="row margin-top-xl margin-bottom-md justify-content-center">
+            <div className="col-8">
+              <p className="h5 margin-bottom-md">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
+              <RailsUpdates/>
+            </div>
+          </div>
+
+
+          <div className="row margin-top-xl margin-bottom-md justify-content-center">
+            <div className="col-8">
+              <p className="h5 margin-bottom-md">If not all, why not?</p>
+              <NotUpdated/>
+            </div>
+          </div>
+
+          <div className="row justify-content-center margin-top-xl margin-bottom-md">
+            <div className="col-md-8">
+              <p className="h5 margin-bottom-md">Which versions of Rails are you using? </p>
+              <RailsVersions/>
+            </div>
+          </div>
 
           <div className="row margin-top-md justify-content-center">
             <div className="col-8">

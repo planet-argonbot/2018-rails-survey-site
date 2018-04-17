@@ -15,8 +15,8 @@ function Footer(){
               <p className="margin-top-md">Based in Portland, Oregon USA, our team of developers and designers specialize in rebuilding and reimagining complex web applications for established companies. Some of the tools and strategies we use to bring ideas to life include Ruby on Rails, React.js, Angular.js, design sprints, and agile development. Whether it's a customer-facing website that needs an update, an internal tool that could benefit from a workflow redesign, or an existing app that needs ongoing maintenance – we make it happen.</p>
             </div>
           </div>
-          <div className="col-4 col-centered">
-            <a className="btn btn-yellow font--black" href="http://www.planetargon.com/" target="_blank" title="Planet Argon">GET IN TOUCH</a>
+          <div className="col-6 col-centered">
+            <a className="btn btn-yellow font--black full-width" href="http://www.planetargon.com/" target="_blank" title="Planet Argon">GET IN TOUCH</a>
           </div>
         </div>
       </div>
