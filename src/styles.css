@@ -7423,7 +7423,7 @@ ol li {
   list-style-type: none; }
 
 .icon {
-  width: 100px; }
+  width: 60px; }
 
 .quote-mark {
   font-size: 75px; }
@@ -7432,11 +7432,10 @@ ol li {
   margin-top: -30px; }
 
 .wordcloud {
-  width: 50vw;
   border: solid 1px #FFCB05;
   border-radius: 10px;
   padding: 5px;
-  min-width: 300px; }
+  width: 100%; }
 
 .ct-label {
   fill: #fff;
@@ -7587,20 +7586,24 @@ ol li {
     font-size: 41px;
     padding: 0 20px; }
   .gauge-label {
-    font-size: 50px; } }
+    font-size: 50px; }
+  .ct-bar {
+    stroke-width: 20px; }
+  .icon {
+    width: 50px; } }
 
 @media (max-width: 768px) {
   .mobile-nav-trigger {
     padding: 40px 18px; }
-  .ct-bar {
-    stroke-width: 20px; }
   .ct-gauge {
     margin-bottom: -150px; }
   .gauge-label {
     font-size: 45px; }
   .footer-logo {
     width: 100px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .icon {
+    width: 40px; } }
 
 @media (max-width: 576px) {
   .display--none__mobile {

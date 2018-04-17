@@ -1,67 +1,65 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import ChartistPluginLegend from 'chartist-plugin-legend';
 import 'chartist-plugin-tooltips';
 
 class CodeQuality extends React.Component {
   render() {
-    const pieOptions = {
-      donut: true,
-      donutWidth: 80,
-      showLabel: false,
-      height: '300px',
+
+    const data = {
+      labels: [
+        'RUBOCOP',
+        'SIMPLECOV',
+        'CODE CLIMATE',
+        'RUBYCRITIC',
+        'COVERALLS',
+        'OTHER',
+      ],
+      series: [
+        {
+          className: 'ct-series-b',
+          data: [49, 25, 17, 4, 3, 2]
+        },
+      ]
+    };
+
+    const options = {
+      fullWidth: true,
+      chartPadding: {
+        left: 10,
+        top: 20,
+        right: 10,
+        bottom: 10,
+      },
+      height: 300,
+      high: 50,
+      low: 0,
+      axisY: {
+        onlyInteger: true,
+      },
       plugins: [
         Chartist.plugins.tooltip({
-          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
         }),
-        ChartistPluginLegend({
-          clickable: false
+        Chartist.plugins.ctAxisTitle({
+          axisY: {
+            axisTitle: 'Percent',
+            axisClass: 'ct-axis-title',
+            textAnchor: 'middle',
+            flipTitle: false,
+          }
         })
-      ]
-    };
-
-    const pieResponsiveOptions = [
-      ['screen and (max-width: 576px)', {
-        height: '200px',
-        donutWidth: 50,
-      }],
-      ['screen and (min-width: 577px) and (max-width: 768px)', {
-        height: '250px',
-        donutWidth: 60,
-      }]
-    ];
-
-    const pieChartData = {
-      labels: [
-        'RUBOCOP: 49%',
-        'SIMPLECOV: 25%',
-        'CODE CLIMATE: 17%',
-        'RUBYCRITIC: 4%',
-        'COVERALLS: 3%',
-        'OTHER: 2%'
-      ],
-      series: [
-        {meta: 'RUBOCOP', value: 49},
-        {meta: 'SIMPLECOV', value: 25},
-        {meta: 'CODE CLIMATE', value: 17},
-        {meta: 'RUBYCRITIC', value: 4},
-        {meta: 'COVERALLS', value: 3},
-        {meta: 'OTHER', value: 2},
       ]
     };
 
     return (
       <div>
         <ChartistGraph
-          className={'ct-custom-donut'}
-          data={pieChartData}
-          options={pieOptions}
-          responsiveOptions={pieResponsiveOptions}
-          type={'Pie'} />
+          data={data}
+          options={options}
+          type={'Bar'} />
       </div>
 
     );

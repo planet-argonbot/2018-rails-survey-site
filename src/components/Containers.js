@@ -54,7 +54,7 @@ class Containers extends React.Component {
           options={pieOptions}
           responsiveOptions={pieResponsiveOptions}
           type={'Pie'} />
-        <span className='gauge-label'>58%</span><p className="montserrat-lc small">of developers are using tools like Docker and Kubernetes now</p>
+        <span className='gauge-label'>58%</span><p className="montserrat-lc small"> of responses indicated they are using container tools like Docker and Kubernetes.</p>
       </div>
     );
   }

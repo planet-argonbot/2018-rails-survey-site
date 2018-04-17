@@ -59,7 +59,7 @@ class RailsVersions extends React.Component {
     };
 
     const responsiveOptions = [
-      ['screen and (max-width: 544px)', {
+      ['screen and (max-width: 992px)', {
         seriesBarDistance: 10,
       }
       ]

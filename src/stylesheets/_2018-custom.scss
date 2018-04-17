@@ -55,7 +55,7 @@ ol li {
 }
 
 .icon {
-  width: 100px;
+  width: 60px;
 }
 
 .quote-mark {
@@ -67,11 +67,10 @@ ol li {
 }
 
 .wordcloud {
-  width: 50vw;
   border: solid 1px $yellow;
   border-radius: 10px;
   padding: 5px;
-  min-width: 300px;
+  width: 100%;
 }
 
 //general chart grid styles
@@ -257,15 +256,19 @@ $ct-series-colors:
   .gauge-label {
     font-size: 50px;
   }
+  .ct-bar {
+    stroke-width: 20px;
+  }
+  .icon {
+    width: 50px;
+  }
 }
 
 @media (max-width: $small-screen) {
   .mobile-nav-trigger {
     padding:40px 18px;
   }
-  .ct-bar {
-    stroke-width: 20px;
-  }
+
   .ct-gauge {
     margin-bottom: -150px;
   }
@@ -275,6 +278,12 @@ $ct-series-colors:
   .footer-logo {
     width: 100px;
     margin-bottom: 20px;
+  }
+  .icon {
+    width: 40px;
+  }
+  .wordcloud {
+
   }
 }
 
@@ -320,5 +329,8 @@ $ct-series-colors:
   }
   .btn-yellow {
     font-size: 14px;
+  }
+  .wordcloud {
+
   }
 }

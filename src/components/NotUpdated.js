@@ -9,11 +9,11 @@ class NotUpdated extends React.Component {
 
     const data = {
       labels: [
-        'TIME: 47%',
-        'BUDGET: 20%',
-        'GEM DEPENDENCIES: 12%',
-        'MANAGEMENT: 10%',
-        'OTHER: 20%'],
+        'TIME',
+        'BUDGET',
+        'GEM DEPENDENCIES',
+        'MANAGEMENT',
+        'OTHER'],
       series: [
         {
           className: 'ct-series-a',
