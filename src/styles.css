@@ -7495,7 +7495,8 @@ ol li {
   display: inline-block;
   min-width: 5em;
   padding: .5em;
-  margin-top: -13px;
+  margin-left: 15px;
+  margin-top: -16px;
   background: #4d4d4d;
   color: #fff;
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

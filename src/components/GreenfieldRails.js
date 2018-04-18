@@ -16,7 +16,7 @@ class GreenfieldRails extends React.Component {
           clickable: false
         }),
         Chartist.plugins.tooltip({
-          appendToBody: true,
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

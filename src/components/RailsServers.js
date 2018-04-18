@@ -35,7 +35,7 @@ class RailsServers extends React.Component {
           clickable: true,
         }),
         Chartist.plugins.tooltip({
-          appendToBody: true,
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

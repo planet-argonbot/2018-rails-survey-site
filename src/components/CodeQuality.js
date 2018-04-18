@@ -46,7 +46,7 @@ class CodeQuality extends React.Component {
       },
       plugins: [
         Chartist.plugins.tooltip({
-          appendToBody: true,
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

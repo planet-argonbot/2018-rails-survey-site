@@ -29,7 +29,7 @@ class Databases extends React.Component {
           legendNames: ['PostgreSQL', 'MySQL', 'Other'],
         }),
         Chartist.plugins.tooltip({
-          appendToBody: true,
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }

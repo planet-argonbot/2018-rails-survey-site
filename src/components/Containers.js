@@ -15,7 +15,7 @@ class Containers extends React.Component {
       height: '300px',
       plugins: [
         Chartist.plugins.tooltip({
-          appendToBody: true,
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
