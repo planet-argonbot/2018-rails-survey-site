@@ -10,7 +10,7 @@ class CIServers extends React.Component {
       labels: [
         'CIRCLE CI',
         'JENKINS',
-        'TRAVIS',
+        'TRAVIS CI',
         'NONE',
         'GITLAB',
         'CODESHIP',
@@ -19,7 +19,15 @@ class CIServers extends React.Component {
       series: [
         {
           className: 'ct-series-e',
-          data: [21, 17, 15, 13, 10, 8, 16]
+          data: [
+            {'meta': 'CIRCLE CI', 'value': 21},
+            {'meta': 'JENKINS', 'value': 17},
+            {'meta': 'TRAVIS CI', 'value': 15},
+            {'meta': 'NONE', 'value': 13},
+            {'meta': 'GITLAB', 'value': 10},
+            {'meta': 'CODESHIP', 'value': 8},
+            {'meta': 'OTHER', 'value': 16},
+          ]
         },
       ]
     };

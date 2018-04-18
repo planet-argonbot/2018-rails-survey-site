@@ -17,10 +17,17 @@ class NotUpdated extends React.Component {
       series: [
         {
           className: 'ct-series-a',
-          data: [47, 20, 12, 10, 20]
-        },
+          data: [
+            {'meta': 'TIME', 'value': 46},
+            {'meta': 'BUDGET', 'value': 19},
+            {'meta': 'GEM DEPENDENCIES', 'value': 16},
+            {'meta': 'MANAGEMENT', 'value': 15},
+            {'meta': 'OTHER', 'value': 3}
+          ]
+        }
       ]
     };
+
 
     const options = {
       fullWidth: true,

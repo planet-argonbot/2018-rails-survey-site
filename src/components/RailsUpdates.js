@@ -39,15 +39,15 @@ class RailsUpdates extends React.Component {
     const releasesPieChartData = {
       labels: [
         'ALL: 13%',
-        'MOST: 37%',
+        'MOST: 38%',
         'SOME: 35%',
-        'NONE: 13%'
+        'NONE: 14%'
       ],
       series: [
         {meta: 'ALL', value: 13},
-        {meta: 'MOST', value: 37},
+        {meta: 'MOST', value: 38},
         {meta: 'SOME', value: 35},
-        {meta: 'NONE', value: 13}
+        {meta: 'NONE', value: 14}
       ]
     };
 
