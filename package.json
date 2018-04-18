@@ -114,5 +114,6 @@
     "url": "git+ssh://git@bitbucket.org/planetargon/2018-rails-survey-site.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "http://rails-survey.s3-website-us-west-2.amazonaws.com/2018/"
 }
