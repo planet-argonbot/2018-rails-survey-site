@@ -50,11 +50,23 @@ class Databases extends React.Component {
 
     };
 
+    const responsiveOptions = {
+      height: '250px',
+      chartPadding: {
+        right: 10,
+      },
+    };
+
+
     const type = 'Line';
 
     return (
       <div>
-        <ChartistGraph data={data} type={type} options={options} />
+        <ChartistGraph
+          data={data}
+          type={type}
+          options={options}
+          responsiveOptions={responsiveOptions}/>
       </div>
     );
   }

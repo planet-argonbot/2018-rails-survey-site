@@ -59,7 +59,7 @@ class RailsServers extends React.Component {
       ['screen and (max-width: 600px)', {
         height: '250px',
         chartPadding: {
-          right: 30,
+          right: 20,
         },
       }
       ]
