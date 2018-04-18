@@ -102,7 +102,7 @@ class App extends Component {
 
           <div className="row margin-top-lg justify-content-center padding-md margin-bottom-xxl">
             <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-sm">
-              <p className="h3 margin-bottom-sm">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
+              <p className="h3 margin-bottom-sm">How many apps are kept updated to the most recent (Rails/Ruby) releases?</p>
             </div>
             <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-sm">
               <RailsUpdates/>
