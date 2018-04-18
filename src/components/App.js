@@ -283,7 +283,7 @@ class App extends Component {
           <div className="row justify-content-center">
             <div className="col-8">
               <div className="h1 margin-bottom-md">Conclusion</div>
-              <p className="margin-bottom-md">It’s no secret that Rails isn’t the new kid on the block any more. But we’re seeing that the majority of developers who are using the framework recommend building applications with it and feel that it’s headed in the right direction. The Rails core team is adapting the framework to work with with new tools such as webpack and containerized environments like docker. Rails is also integrating with the growing popularity of modern JavaScript frameworks such as React, Vue, and Angular.</p>
+              <p className="margin-bottom-md">It’s no secret that Rails isn’t the new kid on the block any more. But we’re seeing that the majority of developers who are using the framework recommend building applications with it and feel that it’s headed in the right direction. The Rails core team is adapting the framework to work with with new tools such as webpack and containerized environments like Docker. Rails is also integrating with the growing popularity of modern JavaScript frameworks such as React, Vue, and Angular.</p>
 
               <p>Our team here at Planet Argon has been passionate about Rails for years and continues to be excited about the future of the framework and community. We appreciate every single Rails developer that took the time to complete our survey - we hope to see you next time for a recap of the next two years of working with Rails.</p>
             </div>
