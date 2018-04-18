@@ -27,7 +27,7 @@ class CodeQuality extends React.Component {
       fullWidth: true,
       chartPadding: {
         left: 10,
-        top: 20,
+        top: 10,
         right: 10,
         bottom: 10,
       },
@@ -58,6 +58,10 @@ class CodeQuality extends React.Component {
     const responsiveOptions = [
       ['screen and (max-width: 992px)', {
         seriesBarDistance: 10,
+      }
+      ],
+      ['screen and (max-width: 600px)', {
+        height: '250px',
       }
       ]
     ];

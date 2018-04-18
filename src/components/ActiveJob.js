@@ -11,6 +11,9 @@ class ActiveJob extends React.Component {
       donut: true,
       donutWidth: 80,
       showLabel: false,
+      padding: {
+        bottom: 20,
+      },
       height: '300px',
       plugins: [
         Chartist.plugins.tooltip({

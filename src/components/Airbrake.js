@@ -21,7 +21,7 @@ class Airbrake extends React.Component {
     const options = {
       fullWidth: true,
       chartPadding: {
-        right: 60
+        right: 40
       },
       height: '400px',
       plugins: [
@@ -48,6 +48,12 @@ class Airbrake extends React.Component {
       ]
     };
 
+    const responsiveOptions = [
+      ['screen and (max-width: 600px)', {
+        height: '250px',
+      }
+      ]
+    ];
 
     const type = 'Line';
 
@@ -56,6 +62,7 @@ class Airbrake extends React.Component {
         <ChartistGraph
           data={data}
           options={options}
+          responsiveOptions={responsiveOptions}
           type={type} />
       </div>
     );
