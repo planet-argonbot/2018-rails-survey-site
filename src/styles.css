@@ -7457,7 +7457,8 @@ ol li {
   margin-top: -30px; }
 
 .wordcloud {
-  width: 100%; }
+  width: 100%;
+  max-width: 600px; }
 
 .ct-label {
   fill: #fff;
@@ -7595,7 +7596,7 @@ ol li {
   .nav-list {
     margin-left: 10px; }
   .ct-bar {
-    stroke-width: 50px; }
+    stroke-width: 30px; }
   .gauge-label {
     font-size: 60px; } }
 
@@ -7610,7 +7611,7 @@ ol li {
   .gauge-label {
     font-size: 50px; }
   .ct-bar {
-    stroke-width: 20px; } }
+    stroke-width: 30px; } }
 
 @media (max-width: 768px) {
   .mobile-nav-trigger {
@@ -7621,7 +7622,9 @@ ol li {
     font-size: 45px; }
   .footer-logo {
     width: 100px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .ct-bar {
+    stroke-width: 18px; } }
 
 @media (max-width: 576px) {
   .display--none__mobile {

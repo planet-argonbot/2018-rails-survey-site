@@ -93,6 +93,7 @@ ol li {
 
 .wordcloud {
   width: 100%;
+  max-width: 600px;
 
 }
 
@@ -259,7 +260,7 @@ $ct-series-colors:
     margin-left: 10px;
   }
   .ct-bar {
-    stroke-width: 50px;
+    stroke-width: 30px;
   }
   .gauge-label {
     font-size: 60px;
@@ -280,7 +281,7 @@ $ct-series-colors:
     font-size: 50px;
   }
   .ct-bar {
-    stroke-width: 20px;
+    stroke-width: 30px;
   }
 
 }
@@ -299,6 +300,10 @@ $ct-series-colors:
   .footer-logo {
     width: 100px;
     margin-bottom: 20px;
+  }
+
+  .ct-bar {
+    stroke-width: 18px;
   }
 
 }
