@@ -105,9 +105,6 @@ class App extends Component {
               <p className="h3 margin-bottom-sm">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
               <RailsUpdates/>
             </div>
-            <div className="col-xs-12 col-sm-10 col-md-6">
-              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Rails updates" className="btn btn-yellow montserrat font--black">READ MORE ABOUT RAILS UPDATES</a>
-            </div>
           </div>
 
 
@@ -154,7 +151,7 @@ class App extends Component {
               <TestCoverage/>
             </div>
             <div className="col-xs-12 col-sm-10 col-md-6 margin-bottom-sm">
-              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Test Coverage" className="btn btn-yellow montserrat font--black">READ MORE ABOUT TEST COVERAGE</a>
+              <a href="https://blog.planetargon.com/entries/the-state-of-test-coverage-in-rails" target="_blank" title="2018 Rails Survey Blog Post on Test Coverage" className="btn btn-yellow montserrat font--black">READ MORE ABOUT TEST COVERAGE</a>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -171,7 +168,7 @@ class App extends Component {
               <CodeQuality/>
             </div>
             <div className="col-xs-12 col-sm-10 col-md-6">
-              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Code Quality and Continuous Integration" className="btn btn-yellow montserrat font--black">READ MORE ABOUT CI AND CODE QUALITY </a>
+              <a href="https://blog.planetargon.com/entries/code-quality-matters-in-rails" target="_blank" title="2018 Rails Survey Blog Post on Code Quality and Continuous Integration" className="btn btn-yellow montserrat font--black">READ MORE ABOUT CI AND CODE QUALITY </a>
             </div>
           </div>
         </div>
@@ -183,7 +180,7 @@ class App extends Component {
               <Containers />
             </div>
             <div className="col-xs-12 col-sm-10 col-md-6">
-              <a href="#" target="_blank" title="2018 Rails Survey Blog Post on Container Usage" className="btn btn-yellow montserrat font--black">READ MORE ABOUT CONTAINER USAGE</a>
+              <a href="https://blog.planetargon.com/entries/keeping-ruby-on-rails-on-track-with-containers" target="_blank" title="2018 Rails Survey Blog Post on Container Usage" className="btn btn-yellow montserrat font--black">READ MORE ABOUT CONTAINER USAGE</a>
             </div>
           </div>
         </div>
