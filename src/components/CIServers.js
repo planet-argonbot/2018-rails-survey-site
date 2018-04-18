@@ -28,7 +28,7 @@ class CIServers extends React.Component {
       fullWidth: true,
       chartPadding: {
         left: 10,
-        top: 20,
+        top: 10,
         right: 10,
         bottom: 10,
       },
@@ -60,7 +60,12 @@ class CIServers extends React.Component {
       ['screen and (max-width: 992px)', {
         seriesBarDistance: 10,
       }
+      ],
+      ['screen and (max-width: 600px)', {
+        height: '250px',
+      }
       ]
+
     ];
 
     return (

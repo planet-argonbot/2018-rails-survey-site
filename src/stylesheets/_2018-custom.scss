@@ -271,9 +271,7 @@ $ct-series-colors:
   .ct-bar {
     stroke-width: 20px;
   }
-  .icon {
-    width: 50px;
-  }
+
 }
 
 @media (max-width: $small-screen) {
@@ -290,9 +288,6 @@ $ct-series-colors:
   .footer-logo {
     width: 100px;
     margin-bottom: 20px;
-  }
-  .icon {
-    width: 40px;
   }
 
 }
@@ -334,6 +329,7 @@ $ct-series-colors:
   .xtra-large {
     font-size: 20px;
   }
+
   .ct-bar {
     stroke-width: 10px;
   }
@@ -342,4 +338,30 @@ $ct-series-colors:
     padding: 5px;
   }
 
+  h1, .h1 {
+    font-size: 40px;
+  }
+
+  h2, .h2 {
+    font-size: 32px;
+  }
+  h3, .h3 {
+    font-size: 20px;
+  }
+
+  .font--headline {
+    font-size: 45px;
+  }
+
+  .margin-bottom-grand {
+    margin-bottom: 100px;
+  }
+
+  .margin-top-grand {
+    margin-top: 100px;
+  }
+
+  .ct-label {
+    font-size: 0.55em;
+  }
 }

@@ -23,7 +23,7 @@ class RailsServers extends React.Component {
       height: '300px',
       low: 0,
       chartPadding: {
-        right: 60,
+        right: 40,
       },
       plugins: [
         ChartistPluginLegend({
@@ -54,6 +54,17 @@ class RailsServers extends React.Component {
       ]
     };
 
+    const responsiveOptions = [
+      ['screen and (max-width: 600px)', {
+        height: '250px',
+        chartPadding: {
+          right: 30,
+        },
+      }
+      ]
+
+    ];
+
     const type = 'Line';
 
     return (
@@ -61,6 +72,7 @@ class RailsServers extends React.Component {
         <ChartistGraph
           data={data}
           type={type}
+          responsiveOptions={responsiveOptions}
           options={options} />
       </div>
     );

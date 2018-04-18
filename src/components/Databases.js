@@ -22,7 +22,7 @@ class Databases extends React.Component {
       fullWidth: true,
       height: '300px',
       chartPadding: {
-        right: 60,
+        right: 40,
       },
       plugins: [
         ChartistPluginLegend({
