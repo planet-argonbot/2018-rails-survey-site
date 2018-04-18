@@ -23,8 +23,18 @@ class RailsVersions extends React.Component {
       series: [
         {
           className: 'ct-series-b',
-          data: [16, 24, 15, 23, 6, 3, 7, 1, 3],
-        },
+          data: [
+            {'meta': 'v5.2', 'value': 16},
+            {'meta': 'v5.1', 'value': 24},
+            {'meta': 'v5.0', 'value': 15},
+            {'meta': 'v4.2', 'value': 23},
+            {'meta': 'v4.1', 'value': 6},
+            {'meta': 'v4.0', 'value': 3},
+            {'meta': 'v3.2', 'value': 7},
+            {'meta': 'v3.1', 'value': 1},
+            {'meta': 'v3.0 or earlier', 'value': 3}
+          ]
+        }
       ]
     };
 

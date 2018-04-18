@@ -15,13 +15,16 @@ class NotUpdated extends React.Component {
         'MANAGEMENT',
         'OTHER'],
       series: [
-        [
-          {'meta': 'TIME', 'value': 46},
-          {'meta': 'BUDGET', 'value': 19},
-          {'meta': 'GEM DEPENDENCIES', 'value': 16},
-          {'meta': 'MANAGEMENT', 'value': 15},
-          {'meta': 'OTHER', 'value': 3}
-        ]
+        {
+          className: 'ct-series-a',
+          data: [
+            {'meta': 'TIME', 'value': 46},
+            {'meta': 'BUDGET', 'value': 19},
+            {'meta': 'GEM DEPENDENCIES', 'value': 16},
+            {'meta': 'MANAGEMENT', 'value': 15},
+            {'meta': 'OTHER', 'value': 3}
+          ]
+        }
       ]
     };
 
