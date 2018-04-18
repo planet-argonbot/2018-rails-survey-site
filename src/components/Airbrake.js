@@ -48,6 +48,7 @@ class Airbrake extends React.Component {
       ]
     };
 
+
     const type = 'Line';
 
     return (

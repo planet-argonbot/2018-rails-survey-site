@@ -56,11 +56,19 @@ class CIServers extends React.Component {
       ]
     };
 
+    const responsiveOptions = [
+      ['screen and (max-width: 992px)', {
+        seriesBarDistance: 10,
+      }
+      ]
+    ];
+
     return (
       <div>
         <ChartistGraph
           data={data}
           options={options}
+          responsiveOptions={responsiveOptions}
           type={'Bar'} />
       </div>
     );

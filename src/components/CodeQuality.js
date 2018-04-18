@@ -55,10 +55,18 @@ class CodeQuality extends React.Component {
       ]
     };
 
+    const responsiveOptions = [
+      ['screen and (max-width: 992px)', {
+        seriesBarDistance: 10,
+      }
+      ]
+    ];
+
     return (
       <div>
         <ChartistGraph
           data={data}
+          responsiveOptions={responsiveOptions}
           options={options}
           type={'Bar'} />
       </div>

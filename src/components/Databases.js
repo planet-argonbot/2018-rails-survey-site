@@ -22,7 +22,7 @@ class Databases extends React.Component {
       fullWidth: true,
       height: '300px',
       chartPadding: {
-        right: 60
+        right: 60,
       },
       plugins: [
         ChartistPluginLegend({
@@ -38,6 +38,10 @@ class Databases extends React.Component {
             axisTitle: 'Percent',
             axisClass: 'ct-axis-title',
             textAnchor: 'middle',
+            offset: {
+              x: 0,
+              y: -1
+            },
             flipTitle: false,
           }
         })
