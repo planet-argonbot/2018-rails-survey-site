@@ -7378,6 +7378,10 @@ a {
 .results-chart__2009 {
   padding: 10px 5px; }
 
+.montserrat-text {
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 14px; }
+
 .border--yellow {
   border: #FFCB05 solid 2px; }
 
@@ -7428,10 +7432,6 @@ a {
     margin: 20px 5px;
     padding: 5px 10px; }
 
-.montserrat-text {
-  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 14px; }
-
 .btn--ghost {
   background-color: transparent;
   border: 2px solid #FFCB05;
@@ -7450,15 +7450,15 @@ ol li {
 .icon {
   width: 30px; }
 
+.wordcloud {
+  width: 100%;
+  max-width: 600px; }
+
 .quote-mark {
   font-size: 75px; }
 
 .quote {
   margin-top: -30px; }
-
-.wordcloud {
-  width: 100%;
-  max-width: 600px; }
 
 .ct-label {
   fill: #fff;
@@ -7478,15 +7478,15 @@ ol li {
   flex-direction: column;
   justify-content: space-between; }
 
+.ct-axis-title {
+  fill: #fff;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
 .ct-gauge {
   margin-bottom: -170px; }
 
 .gauge-label {
   font-size: 75px; }
-
-.ct-axis-title {
-  fill: #fff;
-  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
 .chartist-tooltip {
   position: absolute;
