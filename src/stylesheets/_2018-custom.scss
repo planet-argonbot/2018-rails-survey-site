@@ -37,14 +37,25 @@
   margin: 20px 5px;
   padding: 5px 10px;
   @include transition(all, 0.1s, linear);
-  &:hover, &:focus, &:active {
+  &:hover, &:active {
     background-color: transparent;
     border-color: $yellow;
     color: $yellow;
     outline-style: none;
     box-shadow: none;
   }
+  &:focus {
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    border-radius: 3px;
+    color: $black;
+    font-size: 16px;
+    font-family: $montserrat;
+    margin: 20px 5px;
+    padding: 5px 10px;
+  }
 }
+
 .montserrat-text, %montserrat-text {
   font-family: $montserrat;
   font-size: 14px;

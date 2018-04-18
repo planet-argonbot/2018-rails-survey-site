@@ -7412,12 +7412,21 @@ a {
   -moz-transition: all 0.1s linear ;
   -o-transition: all 0.1s linear ;
   transition: all 0.1s linear ; }
-  .btn-yellow:hover, .btn-yellow:focus, .btn-yellow:active {
+  .btn-yellow:hover, .btn-yellow:active {
     background-color: transparent;
     border-color: #FFCB05;
     color: #FFCB05;
     outline-style: none;
     box-shadow: none; }
+  .btn-yellow:focus {
+    background-color: #FFCB05;
+    border: 2px solid #FFCB05;
+    border-radius: 3px;
+    color: #000;
+    font-size: 16px;
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    margin: 20px 5px;
+    padding: 5px 10px; }
 
 .montserrat-text {
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
