@@ -29,6 +29,7 @@ class Airbrake extends React.Component {
           clickable: true,
         }),
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
