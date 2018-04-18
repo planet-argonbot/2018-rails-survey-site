@@ -17,9 +17,9 @@ import Containers from './Containers';
 import Footer from './Footer';
 
 import loveGem from '../assets/images/loved-gems.png';
-import hateGem from '../assets/images/frustrating-gems.png';
+import frustratingGem from '../assets/images/frustrating-gems.png';
 import love from '../assets/images/rails-love.png';
-import hate from '../assets/images/ruby-hate.png';
+import frustration from '../assets/images/ruby-frustrating.png';
 
 
 class App extends Component {
@@ -100,9 +100,9 @@ class App extends Component {
         <div className="padding-lg">
           <div className="h1 margin-top-xxl margin-bottom-lg">Keeping Rails Up-to-Date</div>
 
-          <div className="row margin-top-lg justify-content-center padding-md margin-bottom-xxl">
+          <div className="row margin-top-lg justify-content-center margin-bottom-xxl padding-md">
             <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-sm">
-              <p className="h3 margin-bottom-sm">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
+              <p className="h3">How many apps are kept updated to the most recent (Rails/Ruby) release?</p>
             </div>
             <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-sm">
               <RailsUpdates/>
@@ -110,16 +110,20 @@ class App extends Component {
           </div>
 
 
-          <div className="row margin-top-xl justify-content-center padding-md">
-            <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-xl">
-              <p className="h3 margin-bottom-sm">If not all apps are kept updated, why not?</p>
+          <div className="row margin-top-xl justify-content-center">
+            <div className="col-xs-12 col-sm-10 col-md-8 margin-bottom-sm">
+              <p className="h3">If not all apps are kept updated, why not?</p>
+            </div>
+            <div className="col-xs-12 col-sm-10 col-md-8 margin-bottom-xl">
               <NotUpdated/>
             </div>
           </div>
 
-          <div className="row justify-content-center margin-top-xl padding-md">
-            <div className="col-sm-12 col-md-8 col-lg-8 margin-bottom-xl">
-              <p className="h3 margin-bottom-sm">Which versions of Rails are you using? </p>
+          <div className="row justify-content-center margin-top-xl">
+            <div className="col-xs-12 col-sm-10 col-md-8 margin-bottom-sm">
+              <p className="h3">Which versions of Rails are you using? </p>
+            </div>
+            <div className="col-xs-12 col-sm-10 col-md-8 margin-bottom-xl">
               <RailsVersions/>
             </div>
           </div>
@@ -147,26 +151,34 @@ class App extends Component {
 
         <div className="padding-top-xxl padding-lg">
           <div className="h1 margin-top-xxl">Tools</div>
-          <div className="row justify-content-center">
-            <div className="pie col-sm-12 col-md-10 col-lg-8">
-              <div className="h3 margin-bottom-sm margin-top-lg">How many of your Rails apps have decent test coverage (80%)?</div>
+          <div className="row justify-content-center padding-md margin-top-xl">
+            <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-sm">
+              <p className="h3">How many of your Rails apps have decent test coverage (80%)?</p>
+            </div>
+            <div className="pie col-sm-12 col-md-10 col-lg-8 margin-bottom-md">
               <TestCoverage/>
             </div>
-            <div className="col-xs-12 col-sm-10 col-md-6 margin-bottom-sm">
+            <div className="col-xs-12 col-sm-10 col-md-6">
               <a href="https://blog.planetargon.com/entries/the-state-of-test-coverage-in-rails" target="_blank" title="2018 Rails Survey Blog Post on Test Coverage" className="btn btn-yellow montserrat font--black">READ MORE ABOUT TEST COVERAGE</a>
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="pie ccol-sm-12 col-md-10 col-lg-8 padding-bottom-md margin-top-grand">
-              <div className="h3 margin-bottom-md">Which Active Job adapters do you use to use to process background jobs?</div>
+            <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-sm margin-top-grand">
+              <p className="h3">Which Active Job adapters do you use to use to process background jobs?</p>
+            </div>
+            <div className="pie col-sm-12 col-md-10 col-lg-8 padding-bottom-md">
               <ActiveJob/>
             </div>
-            <div className="col-sm-12 col-md-10 col-lg-8 margin-top-grand">
-              <div className="h3 margin-bottom-sm">Which Continuous Integration (CI) servers do you use?</div>
+            <div className="col-sm-12 col-md-10 col-lg-8 margin-top-grand margin-bottom-xs">
+              <p className="h3">Which Continuous Integration (CI) servers do you use?</p>
+            </div>
+            <div className="col-sm-12 col-md-10 col-lg-8">
               <CIServers/>
             </div>
-            <div className="col-sm-12 col-md-10 col-lg-8 margin-top-grand">
-              <div className="h3 margin-bottom-sm">What code quality tools do you use?</div>
+            <div className="col-sm-12 col-md-10 col-lg-8 margin-top-grand margin-bottom-xs">
+              <p className="h3">What code quality tools do you use?</p>
+            </div>
+            <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-md">
               <CodeQuality/>
             </div>
             <div className="col-xs-12 col-sm-10 col-md-6">
@@ -178,7 +190,7 @@ class App extends Component {
         <div className="margin-top-grand">
           <div className="h1">Containers</div>
           <div className="row justify-content-center margin-top-xl padding-bottom-xl">
-            <div className="col-8">
+            <div className="col-8 margin-bottom-md">
               <Containers />
             </div>
             <div className="col-xs-12 col-sm-10 col-md-6">
@@ -197,7 +209,7 @@ class App extends Component {
           </div>
           <div className="row justify-content-center padding-md">
             <div className="col-sm-6 col-md-4 col-lg-2 margin-md">
-              <img src={love} className="icon" alt="word cloud of most loved gems" />
+              <img src={love} className="icon" alt="thumbs up symbol" />
               <p className="h5 font--yellow">Top 5 Loved Gems</p>
               <ol className="margin-top-sm text-left padding-left-sm">
                 <li>1. devise</li>
@@ -208,7 +220,7 @@ class App extends Component {
               </ol>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-2 margin-md">
-              <img src={hate} className="icon" alt="word cloud of most loved gems" />
+              <img src={frustration} className="icon" alt="thumbs down symbol" />
               <p className="h5 font--coral">Top 5 Frustrating Gems</p>
               <ol className="margin-top-sm text-left padding-left-sm">
                 <li>1. nokogiri</li>
@@ -224,7 +236,7 @@ class App extends Component {
             </div>
             <div class="col-8 margin-top-xxl">
               <p className="h4 margin-bottom-sm">Most <span className="h2 font--coral">Frustrating</span> Gems</p>
-              <img src={hateGem}  className="wordcloud" alt="word cloud of most frustrating gems" />
+              <img src={frustratingGem}  className="wordcloud" alt="word cloud of most frustrating gems" />
             </div>
             <div class="col-sm-12 col-md-10 col-lg-6">
               <p className="margin-top-md">In the realm of polarizing gems, Devise takes the cake. The flexible authentication gem was named most frequently on the most loved and second most frequently on the most frustrating gem free form response field.</p>
@@ -234,8 +246,10 @@ class App extends Component {
 
         <div className="row margin-top-grand padding-md justify-content-center">
           <div className="h1 col-10">Asset Management</div>
-          <div className="col-sm-12 col-md-10 col-lg-8 margin-top-xl">
-            <p className="h3 margin-bottom-sm">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
+          <div className="col-sm-12 col-md-10 col-lg-8 margin-top-xl margin-bottom-sm">
+            <p className="h3">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
+          </div>
+          <div className="col-sm-12 col-md-10 col-lg-8">
             <GreenfieldRails/>
           </div>
           <div className="col-sm-12 col-md-10 col-lg-6 margin-top-md">
@@ -245,11 +259,13 @@ class App extends Component {
 
         <div className="row justify-content-center padding-top-xl margin-top-grand padding-md">
           <div className="h1 col-10">Application Exceptions</div>
-          <div className="col-sm-12 col-md-10 col-lg-8 margin-top-xl">
-            <div className="h3 margin-bottom-sm">Which Application Exception tracking tools do you use in production?</div>
+          <div className="col-sm-12 col-md-10 col-lg-8 margin-top-xl margin-bottom-sm">
+            <p className="h3">Which Application Exception tracking tools do you use in production?</p>
+          </div>
+          <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-md">
             <Airbrake />
           </div>
-          <div className="col-sm-12 col-md-10 col-lg-6 margin-top-md">
+          <div className="col-sm-12 col-md-10 col-lg-6">
             <p>Airbrake (formerly Hoptoad) accounted for 53% of responses back in 2012 and fell to 28% in 2014, 21% in 2016, and has continued to fall to 11% in 2018. One possible reason? The application exception tracking space has become more saturated over the years.</p>
           </div>
         </div>
@@ -257,8 +273,8 @@ class App extends Component {
         <div className="margin-top-grand padding-top-xl">
           <div className="h1 margin-bottom-lg">Ruby Web Servers</div>
           <div className="row justify-content-center padding-md">
-            <div className="col-sm-12 col-md-10 col-lg-8">
-              <div className="h3 margin-bottom-sm">Which Rails Servers are you using in production?</div>
+            <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-sm">
+              <p className="h3">Which Rails Servers are you using in production?</p>
             </div>
             <div className="col-sm-12 col-md-10 col-lg-8">
               <RailsServers/>
@@ -272,11 +288,13 @@ class App extends Component {
         <div className="margin-top-grand padding-top-xl">
           <div className="h1 margin-bottom-lg">Databases</div>
           <div className="row justify-content-center padding-md">
-            <div className="col-sm-12 col-lg-8 ">
-              <div className="h5 margin-bottom-md">Which databases do you prefer to use in production?</div>
+            <div className="col-sm-12 col-lg-8 margin-bottom-sm">
+              <p className="h5">Which databases do you prefer to use in production?</p>
+            </div>
+            <div className="col-sm-12 col-md-10 col-lg-8 margin-bottom-md">
               <Databases/>
             </div>
-            <div className="col-sm-12 col-md-10 col-lg-6 margin-top-sm margin-bottom-xl">
+            <div className="col-sm-12 col-md-10 col-lg-6 margin-bottom-xl">
               <p>The trends we’ve seen in previous years continue with PostgreSQL leading the database pack in terms of developer preference (and overall usage, with 60% of responses indicating use of PostgreSQL in production).</p>
             </div>
           </div>

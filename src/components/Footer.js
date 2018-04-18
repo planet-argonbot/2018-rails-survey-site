@@ -16,12 +16,12 @@ function Footer(){
             </div>
           </div>
           <div className="col-xs-12 col-sm-10 col-md-6 col-centered">
-            <a className="btn btn-yellow font--black full-width" href="http://www.planetargon.com/" target="_blank" title="Planet Argon">GET IN TOUCH</a>
+            <a className="btn btn-yellow font--black full-width" href="http://www.planetargon.com/contact" target="_blank" title="Planet Argon">GET IN TOUCH</a>
           </div>
         </div>
       </div>
       <div className="pa-stripe background--off-white padding-xs">
-        <p className="text-center font--black">Brought to you by <a href="http://www.planetargon.com/skills/ruby-on-rails-development" target="_blank" title="Ruby on Rails development company" className="btn-small btn-small--white btn-small--inline">Planet Argon</a></p>
+        <p className="text-center font--black">Brought to you by <a href="http://www.planetargon.com/" target="_blank" title="Ruby on Rails development company" className="btn-small btn-small--white btn-small--inline">Planet Argon</a></p>
       </div>
     </div>
   );

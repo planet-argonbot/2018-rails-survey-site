@@ -27,7 +27,7 @@ class CodeQuality extends React.Component {
       fullWidth: true,
       chartPadding: {
         left: 10,
-        top: 10,
+        top: 20,
         right: 10,
         bottom: 10,
       },

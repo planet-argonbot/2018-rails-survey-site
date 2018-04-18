@@ -29,6 +29,7 @@ class Airbrake extends React.Component {
           clickable: true,
         }),
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
@@ -51,8 +52,12 @@ class Airbrake extends React.Component {
     const responsiveOptions = [
       ['screen and (max-width: 600px)', {
         height: '250px',
+        chartPadding: {
+          right: 20,
+        },
       }
-      ]
+      ],
+
     ];
 
     const type = 'Line';

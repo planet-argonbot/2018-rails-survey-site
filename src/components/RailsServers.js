@@ -35,6 +35,7 @@ class RailsServers extends React.Component {
           clickable: true,
         }),
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
@@ -58,7 +59,7 @@ class RailsServers extends React.Component {
       ['screen and (max-width: 600px)', {
         height: '250px',
         chartPadding: {
-          right: 30,
+          right: 20,
         },
       }
       ]

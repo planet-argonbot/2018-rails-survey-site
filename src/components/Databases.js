@@ -29,6 +29,7 @@ class Databases extends React.Component {
           legendNames: ['PostgreSQL', 'MySQL', 'Other'],
         }),
         Chartist.plugins.tooltip({
+          appendToBody: true,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
@@ -49,11 +50,23 @@ class Databases extends React.Component {
 
     };
 
+    const responsiveOptions = {
+      height: '250px',
+      chartPadding: {
+        right: 10,
+      },
+    };
+
+
     const type = 'Line';
 
     return (
       <div>
-        <ChartistGraph data={data} type={type} options={options} />
+        <ChartistGraph
+          data={data}
+          type={type}
+          options={options}
+          responsiveOptions={responsiveOptions}/>
       </div>
     );
   }
