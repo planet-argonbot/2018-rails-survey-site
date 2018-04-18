@@ -232,6 +232,9 @@ class App extends Component {
             <p className="h3 margin-bottom-sm">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
             <GreenfieldRails/>
           </div>
+          <div className="col-8 margin-top-md">
+            <p>With the release of Rails 5.1, the Rails community has upped its game as far as its relationship with the JavaScript community. Alongside the gem webpacker, developers now have the ability to write es6 and integrate with yarn and npm tools to manage javascript dependencies via webpack. Although Rails 5.1 was released only a year ago - we’re seeing 44% of developers are already using webpack to manage their JavaScript dependencies for greenfield applications.</p>
+          </div>
         </div>
 
         <div className="row justify-content-center padding-top-xl margin-top-grand padding-md">
