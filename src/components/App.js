@@ -17,9 +17,9 @@ import Containers from './Containers';
 import Footer from './Footer';
 
 import loveGem from '../assets/images/loved-gems.png';
-import hateGem from '../assets/images/frustrating-gems.png';
+import frustratingGem from '../assets/images/frustrating-gems.png';
 import love from '../assets/images/rails-love.png';
-import hate from '../assets/images/ruby-hate.png';
+import frustration from '../assets/images/ruby-frustrating.png';
 
 
 class App extends Component {
@@ -197,7 +197,7 @@ class App extends Component {
           </div>
           <div className="row justify-content-center padding-md">
             <div className="col-sm-6 col-md-4 col-lg-2 margin-md">
-              <img src={love} className="icon" alt="word cloud of most loved gems" />
+              <img src={love} className="icon" alt="thumbs up symbol" />
               <p className="h5 font--yellow">Top 5 Loved Gems</p>
               <ol className="margin-top-sm text-left padding-left-sm">
                 <li>1. devise</li>
@@ -208,7 +208,7 @@ class App extends Component {
               </ol>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-2 margin-md">
-              <img src={hate} className="icon" alt="word cloud of most loved gems" />
+              <img src={frustration} className="icon" alt="thumbs down symbol" />
               <p className="h5 font--coral">Top 5 Frustrating Gems</p>
               <ol className="margin-top-sm text-left padding-left-sm">
                 <li>1. nokogiri</li>
@@ -224,7 +224,7 @@ class App extends Component {
             </div>
             <div class="col-8 margin-top-xxl">
               <p className="h4 margin-bottom-sm">Most <span className="h2 font--coral">Frustrating</span> Gems</p>
-              <img src={hateGem}  className="wordcloud" alt="word cloud of most frustrating gems" />
+              <img src={frustratingGem}  className="wordcloud" alt="word cloud of most frustrating gems" />
             </div>
             <div class="col-sm-12 col-md-10 col-lg-6">
               <p className="margin-top-md">In the realm of polarizing gems, Devise takes the cake. The flexible authentication gem was named most frequently on the most loved and second most frequently on the most frustrating gem free form response field.</p>

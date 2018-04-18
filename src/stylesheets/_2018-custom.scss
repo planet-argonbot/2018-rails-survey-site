@@ -136,14 +136,27 @@ ol li {
 
 //tooltip styles
 .chartist-tooltip {
-  background: $lighter-gray;
-  color: $white;
-  font-family: $montserrat;
-  font-weight: 400;
-  top: 0;
-  &:before {
-    border-top-color: $lighter-gray;
-  }
+   position: absolute;
+   display: inline-block;
+   min-width: 5em;
+   padding: .5em;
+   margin-top: -13px;
+   background: $lighter-gray;
+   color: $white;
+   font-family: $montserrat;
+   font-weight: 400;
+   text-align: center;
+   pointer-events: none;
+   &:before {
+     content: "";
+     position: absolute;
+     top: 100%;
+     left: 50%;
+     width: 0;
+     height: 0;
+     margin-left: -15px;
+     border-top-color: $lighter-gray;
+   }
 }
 
 //setting the color series values for chart legends
@@ -290,7 +303,6 @@ $ct-series-colors:
   .mobile-nav-trigger {
     padding:40px 18px;
   }
-
   .ct-gauge {
     margin-bottom: -150px;
   }
