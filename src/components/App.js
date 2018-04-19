@@ -210,10 +210,10 @@ class App extends Component {
             </div>
           </div>
           <div className="row justify-content-center padding-md">
-            <div className="col-sm-6 col-md-4 col-lg-2 margin-md">
+            <div className="col-xs-8 col-sm-6 col-lg-3 margin-left-xs margin-right-xs margin-top-md">
               <img src={love} className="icon" alt="thumbs up symbol" />
               <p className="h5 font--yellow">Top 5 Loved Gems</p>
-              <ol className="margin-top-sm text-left padding-left-sm">
+              <ol className="margin-top-sm text-left">
                 <li>1. devise</li>
                 <li>2. sidekiq</li>
                 <li>3. pry</li>
@@ -221,10 +221,10 @@ class App extends Component {
                 <li>5. rubocop</li>
               </ol>
             </div>
-            <div className="col-sm-6 col-md-4 col-lg-2 margin-md">
+            <div className="col-xs-8 col-sm-6 col-lg-3 margin-left-xs margin-right-xs margin-top-md">
               <img src={frustration} className="icon" alt="thumbs down symbol" />
               <p className="h5 font--coral">Top 5 Frustrating Gems</p>
-              <ol className="margin-top-sm text-left padding-left-sm">
+              <ol className="margin-top-sm text-left">
                 <li>1. nokogiri</li>
                 <li>2. devise</li>
                 <li>3. activeadmin</li>
