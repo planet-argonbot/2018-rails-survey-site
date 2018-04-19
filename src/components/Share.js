@@ -6,7 +6,7 @@ function Share(){
   function openShareFb(event) {
     event.preventDefault();
     window.open(
-      'https://www.facebook.com/sharer/sharer.php?u=http://rails-survey.s3-website-us-west-2.amazonaws.com',
+      'https://www.facebook.com/sharer/sharer.php?u=http://rails-survey.com/2018/',
       'Rails Hosting Survey 2018',
       'height=400,width=500,toolbar=0,location=0,menubar=0,'
     );
@@ -14,7 +14,7 @@ function Share(){
   function openShareTw(event) {
     event.preventDefault();
     window.open(
-      'https://twitter.com/share?url=http://rails-survey.s3-website-us-west-2.amazonaws.com/',
+      'https://twitter.com/share?url=http://rails-survey.com/2018/',
       'Rails Hosting Survey 2018',
       'height=400,width=500,toolbar=0,location=0,menubar=0,'
     );
