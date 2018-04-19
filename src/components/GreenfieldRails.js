@@ -8,14 +8,15 @@ class GreenfieldRails extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 50,
-      chartPadding: 5,
-      donutSolid: true,
       showLabel: false,
+      donutWidth: 80,
       height: '300px',
       plugins: [
-        ChartistPluginLegend(),
+        ChartistPluginLegend({
+          clickable: false
+        }),
         Chartist.plugins.tooltip({
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
@@ -24,33 +25,37 @@ class GreenfieldRails extends React.Component {
     };
 
     const pieResponsiveOptions = [
-      ['screen and (max-width: 544px)', {
+      ['screen and (max-width: 576px)', {
         height: '200px',
-        donutWidth: 20,
+        donutWidth: 50,
       }],
-
-      ['screen and (min-width: 545px)', {
+      ['screen and (min-width: 577px) and (max-width: 768px)', {
         height: '250px',
-        donutWidth: 30,
+        donutWidth: 60,
       }]
     ];
 
     const pieChartData = {
-      labels: ['ASSET PIPELINE: 55%', 'YARN/WEBPACK: 44%', 'OTHER: 2%'],
-      series: [55.5, 44.5, 2]
+      labels: [
+        'ASSET PIPELINE: 55%',
+        'YARN/WEBPACK: 44%',
+        'OTHER: 2%'
+      ],
+      series: [
+        {meta: 'ASSET PIPELINE', value: 55},
+        {meta: 'YARN/WEBPACK', value: 44},
+        {meta: 'OTHER', value: 2},
+      ]
     };
 
     return (
-      <div class="row margin-top-xl justify-content-center">
-        <div class="col-lg-10 margin-top-md">
-          <p class="h6">For greenfield Rails projects, what are you using to manage Javascript libraries?</p>
-          <ChartistGraph
-            className={'ct-custom-donut'}
-            data={pieChartData}
-            options={pieOptions}
-            responsiveOptions={pieResponsiveOptions}
-            type={'Pie'} />
-        </div>
+      <div>
+        <ChartistGraph
+          className={'ct-custom-donut'}
+          responsiveOptions={pieResponsiveOptions}
+          data={pieChartData}
+          options={pieOptions}
+          type={'Pie'} />
       </div>
     );
   }

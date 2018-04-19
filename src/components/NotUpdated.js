@@ -3,34 +3,31 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 
-class CIServers extends React.Component {
+
+class NotUpdated extends React.Component {
   render() {
 
     const data = {
       labels: [
-        'CIRCLE CI',
-        'JENKINS',
-        'TRAVIS CI',
-        'NONE',
-        'GITLAB',
-        'CODESHIP',
-        'OTHER'
-      ],
+        'TIME',
+        'BUDGET',
+        'GEM DEPENDENCIES',
+        'MANAGEMENT',
+        'OTHER'],
       series: [
         {
-          className: 'ct-series-e',
+          className: 'ct-series-a',
           data: [
-            {'meta': 'CIRCLE CI', 'value': 21},
-            {'meta': 'JENKINS', 'value': 17},
-            {'meta': 'TRAVIS CI', 'value': 15},
-            {'meta': 'NONE', 'value': 13},
-            {'meta': 'GITLAB', 'value': 10},
-            {'meta': 'CODESHIP', 'value': 8},
-            {'meta': 'OTHER', 'value': 16},
+            {'meta': 'TIME', 'value': 46},
+            {'meta': 'BUDGET', 'value': 19},
+            {'meta': 'GEM DEPENDENCIES', 'value': 16},
+            {'meta': 'MANAGEMENT', 'value': 15},
+            {'meta': 'OTHER', 'value': 3}
           ]
-        },
+        }
       ]
     };
+
 
     const options = {
       fullWidth: true,
@@ -65,15 +62,10 @@ class CIServers extends React.Component {
     };
 
     const responsiveOptions = [
-      ['screen and (max-width: 992px)', {
+      ['screen and (max-width: 544px)', {
         seriesBarDistance: 10,
       }
-      ],
-      ['screen and (max-width: 600px)', {
-        height: '250px',
-      }
       ]
-
     ];
 
     return (
@@ -88,4 +80,4 @@ class CIServers extends React.Component {
   }
 }
 
-export default CIServers;
+export default NotUpdated;

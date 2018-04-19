@@ -3,7 +3,7 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 import ChartistPluginLegend from 'chartist-plugin-legend';
-import 'chartist-plugin-axistitle';
+// import 'chartist-plugin-axistitle';
 
 
 class Databases extends React.Component {
@@ -22,13 +22,14 @@ class Databases extends React.Component {
       fullWidth: true,
       height: '300px',
       chartPadding: {
-        right: 60
+        right: 40,
       },
       plugins: [
         ChartistPluginLegend({
           legendNames: ['PostgreSQL', 'MySQL', 'Other'],
         }),
         Chartist.plugins.tooltip({
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
@@ -46,13 +47,26 @@ class Databases extends React.Component {
           }
         })
       ]
+
     };
+
+    const responsiveOptions = {
+      height: '250px',
+      chartPadding: {
+        right: 10,
+      },
+    };
+
 
     const type = 'Line';
 
     return (
       <div>
-        <ChartistGraph data={data} type={type} options={options} />
+        <ChartistGraph
+          data={data}
+          type={type}
+          options={options}
+          responsiveOptions={responsiveOptions}/>
       </div>
     );
   }

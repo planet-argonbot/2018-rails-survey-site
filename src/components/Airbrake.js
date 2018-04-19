@@ -21,15 +21,15 @@ class Airbrake extends React.Component {
     const options = {
       fullWidth: true,
       chartPadding: {
-        right: 60
+        right: 40
       },
       height: '400px',
       plugins: [
         ChartistPluginLegend({
-          legendNames: ['Airbrake', 'ExceptionNotifier', 'NewRelic', 'Rollbar', 'Honeybadger'],
           clickable: true,
         }),
         Chartist.plugins.tooltip({
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
@@ -49,17 +49,17 @@ class Airbrake extends React.Component {
       ]
     };
 
-    // const responsiveOptions = [
-    //   ['screen and (max-width: 544px)', {
-    //     height: '200px',
-    //     donutWidth: 20,
-    //   }],
-    //
-    //   ['screen and (min-width: 545px)', {
-    //     height: '250px',
-    //     donutWidth: 30,
-    //   }]
-    // ];
+    const responsiveOptions = [
+      ['screen and (max-width: 600px)', {
+        height: '250px',
+        chartPadding: {
+          right: 20,
+        },
+      }
+      ],
+
+    ];
+
     const type = 'Line';
 
     return (
@@ -67,6 +67,7 @@ class Airbrake extends React.Component {
         <ChartistGraph
           data={data}
           options={options}
+          responsiveOptions={responsiveOptions}
           type={type} />
       </div>
     );

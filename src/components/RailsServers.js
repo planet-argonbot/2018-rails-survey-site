@@ -23,14 +23,19 @@ class RailsServers extends React.Component {
       height: '300px',
       low: 0,
       chartPadding: {
-        right: 60,
+        right: 40,
       },
       plugins: [
         ChartistPluginLegend({
-          legendNames: ['Puma', 'Unicorn', 'Passenger'],
+          legendNames: [
+            'Puma',
+            'Unicorn',
+            'Passenger'
+          ],
           clickable: true,
         }),
         Chartist.plugins.tooltip({
+          appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
@@ -50,6 +55,17 @@ class RailsServers extends React.Component {
       ]
     };
 
+    const responsiveOptions = [
+      ['screen and (max-width: 600px)', {
+        height: '250px',
+        chartPadding: {
+          right: 20,
+        },
+      }
+      ]
+
+    ];
+
     const type = 'Line';
 
     return (
@@ -57,6 +73,7 @@ class RailsServers extends React.Component {
         <ChartistGraph
           data={data}
           type={type}
+          responsiveOptions={responsiveOptions}
           options={options} />
       </div>
     );

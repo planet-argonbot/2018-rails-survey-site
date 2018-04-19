@@ -1,36 +1,55 @@
 import React from 'react';
+import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
+import 'chartist-plugin-tooltips';
 
 class TestCoverage extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 50,
-      chartPadding: 5,
-      donutSolid: true,
+      donutWidth: 80,
       showLabel: false,
       height: '300px',
       plugins: [
-        ChartistPluginLegend()
+        ChartistPluginLegend({
+          clickable: false
+        }),
+        Chartist.plugins.tooltip({
+          appendToBody: false,
+          transformTooltipTextFnc: function(value) {
+            return value + '%';
+          }
+        }),
       ]
     };
 
     const pieResponsiveOptions = [
-      ['screen and (max-width: 544px)', {
+      ['screen and (max-width: 576px)', {
         height: '200px',
-        donutWidth: 20,
+        donutWidth: 50,
       }],
-
-      ['screen and (min-width: 545px)', {
+      ['screen and (min-width: 577px) and (max-width: 768px)', {
         height: '250px',
-        donutWidth: 30,
+        donutWidth: 60,
       }]
     ];
 
     const pieChartData = {
-      labels: ['ALL', 'MOST', 'SOME', 'NONE', 'HALF'],
-      series: [29, 25, 18, 18, 11]
+      labels: [
+        'ALL: 29%',
+        'MOST: 25%',
+        'SOME: 18%',
+        'NONE: 18%',
+        'HALF: 11%'
+      ],
+      series: [
+        {meta: 'ALL', value: 29},
+        {meta: 'MOST', value: 25},
+        {meta: 'SOME', value: 18},
+        {meta: 'NONE', value: 18},
+        {meta: 'HALF', value: 11},
+      ]
     };
 
     return (

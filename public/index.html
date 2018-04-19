@@ -4,8 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="%PUBLIC_URL%/stylesheets/styles.css">
-
+    <title>Results from the 2018 Rails Hosting Survey | Planet Argon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta property="og:title" content="Rails Hosting Survey 2018">
+    <meta property="og:image" content="%PUBLIC_URL%/social/rails-fb-open-graph.jpg">
+    <meta property="og:site_name" content="Rails Hosting Survey 2018">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://rails-hosting.com/2018">
+    <meta property="og:description" content="The Rails Hosting Survey collects responses about the state of hosting Ruby on Rails applications every few years. We have the results for 2018 to share with the community.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@planetargon">
+    <meta name="twitter:creator" content="@planetargon">
+    <meta name="twitter:title" content="Rails Hosting Survey">
+    <meta name="twitter:description" content="The Rails Hosting Survey collects responses about the state of hosting Ruby on Rails applications every few years. We have the results for 2018 to share with the community.">
+    <meta name="twitter:image" content="%PUBLIC_URL%/social/rails-twitter-open-graph.jpg">
+    <meta name="description" content="The Rails Hosting Survey collects responses about the state of hosting Ruby on Rails applications every few years. We have the results for 2018 to share with the community.">
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -21,22 +34,55 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
   </head>
   <body>
+
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- Google Analytics -->
+    <script>
+      // Google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-254228-8', 'auto');
+      ga('send', 'pageview');
+
+      /* Hubspot Async Analytics Code */
+      (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/1810204.js';
+      e.parentNode.insertBefore(n, e);
+      })(document,"script","hs-analytics",300000);
+
+      // Adroll
+      adroll_adv_id = "WULMPY2EEBE23N5MXTTUML";
+      adroll_pix_id = "TPEFDKD7UZD7FKLP6UG6BN";
+      /* OPTIONAL: provide email to improve user identification */
+      /* adroll_email = "username@example.com"; */
+      (function () {
+        var _onload = function(){
+          if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+          if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+          var scr = document.createElement("script");
+          var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+          scr.setAttribute('async', 'true');
+          scr.type = "text/javascript";
+          scr.src = host + "/j/roundtrip.js";
+          ((document.getElementsByTagName('head') || [null])[0] ||
+              document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+      }());
+    </script>
+
   </body>
 </html>
