@@ -18,12 +18,14 @@ In the project directory, run these commands to launch the app:
 
 ### `npm run watch-css`
 
-Builds the CSS/SCSS styles for the app for production.<br>
+Builds the CSS/SCSS styles for the app for production.
+
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in the development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Hosting Info
