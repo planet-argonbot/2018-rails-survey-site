@@ -14,15 +14,15 @@ In terminal, run $`git clone git@bitbucket.org:planetargon/2018-rails-survey-sit
 
 In the project directory, run these commands to launch the app:
 
-### `npm install`
+`npm install`
 
-### `npm run watch-css`
+`npm run watch-css`
 
 Builds the CSS/SCSS styles for the app for production.
 
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `npm start`
+`npm start`
 
 Runs the app in the development mode.
 
