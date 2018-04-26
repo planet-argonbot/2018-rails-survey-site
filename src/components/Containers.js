@@ -7,7 +7,7 @@ class Containers extends React.Component {
   render() {
     const pieOptions = {
       donut: true,
-      donutWidth: 40,
+      donutWidth: 50,
       startAngle: 270,
       total: 200,
       showLabel: false,
@@ -35,13 +35,13 @@ class Containers extends React.Component {
     };
 
     const pieResponsiveOptions = [
-      ['screen and (max-width: 498px)', {
+      ['screen and (max-width: 576px)', {
         height: '200px',
         donutWidth: 20,
       }],
-      ['screen and (min-width: 499px) and (max-width: 768px)', {
+      ['screen and (min-width: 577px) and (max-width: 768px)', {
         height: '250px',
-        donutWidth: 30,
+        donutWidth: 40,
       }]
     ];
 

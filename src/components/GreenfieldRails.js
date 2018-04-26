@@ -1,6 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import pieResponsiveOptions from '../helpers/ChartOptions';
 
 class GreenfieldRails extends React.Component {
   render() {
@@ -22,16 +23,6 @@ class GreenfieldRails extends React.Component {
       ]
     };
 
-    const pieResponsiveOptions = [
-      ['screen and (max-width: 576px)', {
-        height: '200px',
-        donutWidth: 50,
-      }],
-      ['screen and (min-width: 577px) and (max-width: 768px)', {
-        height: '250px',
-        donutWidth: 60,
-      }]
-    ];
 
     const pieChartData = {
       labels: [
