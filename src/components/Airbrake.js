@@ -1,9 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import 'chartist-plugin-tooltips';
-import ChartistPluginLegend from 'chartist-plugin-legend';
-import 'chartist-plugin-axistitle';
+
 
 class Airbrake extends React.Component {
   render() {
@@ -25,7 +23,7 @@ class Airbrake extends React.Component {
       },
       height: '400px',
       plugins: [
-        ChartistPluginLegend({
+        Chartist.plugins.legend({
           clickable: false,
         }),
         Chartist.plugins.tooltip({

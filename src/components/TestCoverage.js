@@ -1,7 +1,6 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import ChartistPluginLegend from 'chartist-plugin-legend';
 
 class TestCoverage extends React.Component {
   render() {
@@ -11,7 +10,7 @@ class TestCoverage extends React.Component {
       showLabel: false,
       height: '300px',
       plugins: [
-        ChartistPluginLegend({
+        Chartist.plugins.legend({
           clickable: false
         }),
         Chartist.plugins.tooltip({

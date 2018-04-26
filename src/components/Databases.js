@@ -1,9 +1,6 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import ChartistPluginLegend from 'chartist-plugin-legend';
-
-
 
 class Databases extends React.Component {
   render() {
@@ -24,7 +21,7 @@ class Databases extends React.Component {
         right: 40,
       },
       plugins: [
-        ChartistPluginLegend({
+        Chartist.plugins.legend({
           legendNames: ['PostgreSQL', 'MySQL', 'Other'],
         }),
         Chartist.plugins.tooltip({

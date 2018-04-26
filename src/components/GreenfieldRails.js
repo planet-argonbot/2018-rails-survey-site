@@ -1,7 +1,6 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import ChartistPluginLegend from 'chartist-plugin-legend';
 
 class GreenfieldRails extends React.Component {
   render() {
@@ -11,14 +10,14 @@ class GreenfieldRails extends React.Component {
       donutWidth: 80,
       height: '300px',
       plugins: [
-        ChartistPluginLegend({
-          clickable: false
-        }),
         Chartist.plugins.tooltip({
           appendToBody: false,
           transformTooltipTextFnc: function(value) {
             return value + '%';
           }
+        }),
+        Chartist.plugins.legend({
+          clickable: false
         }),
       ]
     };

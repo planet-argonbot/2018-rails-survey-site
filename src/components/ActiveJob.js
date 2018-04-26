@@ -1,11 +1,10 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import ChartistPluginLegend from 'chartist-plugin-legend';
-
 
 class ActiveJob extends React.Component {
   render() {
+
     const options = {
       donut: true,
       donutWidth: 80,
@@ -21,7 +20,7 @@ class ActiveJob extends React.Component {
             return value + '%';
           }
         }),
-        ChartistPluginLegend({
+        Chartist.plugins.legend({
           clickable: false
         })
       ]
@@ -30,7 +29,7 @@ class ActiveJob extends React.Component {
     const pieResponsiveOptions = [
       ['screen and (max-width: 576px)', {
         height: '200px',
-        donutWidth: 50,
+        donutWidth: 10,
       }],
       ['screen and (min-width: 577px) and (max-width: 768px)', {
         height: '250px',
