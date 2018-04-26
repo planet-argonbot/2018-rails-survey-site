@@ -1,28 +1,9 @@
 import React from 'react';
-import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import chartOptions from '../helpers/ChartOptions';
 
 class GreenfieldRails extends React.Component {
   render() {
-    const pieOptions = {
-      donut: true,
-      showLabel: false,
-      donutWidth: 80,
-      height: '300px',
-      plugins: [
-        Chartist.plugins.tooltip({
-          appendToBody: false,
-          transformTooltipTextFnc: function(value) {
-            return value + '%';
-          }
-        }),
-        Chartist.plugins.legend({
-          clickable: false
-        }),
-      ]
-    };
-
 
     const pieChartData = {
       labels: [
@@ -41,9 +22,9 @@ class GreenfieldRails extends React.Component {
       <div>
         <ChartistGraph
           className={'ct-custom-donut'}
+          options={chartOptions.pieOptions}
           responsiveOptions={chartOptions.pieResponsiveOptions}
           data={pieChartData}
-          options={pieOptions}
           type={'Pie'} />
       </div>
     );

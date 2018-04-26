@@ -1,3 +1,8 @@
+import Chartist from 'chartist';
+import 'chartist-plugin-legend';
+import 'chartist-plugin-tooltips';
+import 'chartist-plugin-axistitle';
+
 // BREAKPOINTS
 const breakpoints = {
   xsScreen: '576',
@@ -7,6 +12,23 @@ const breakpoints = {
 };
 
 const chartOptions = {
+  pieOptions: {
+    donut: true,
+    showLabel: false,
+    donutWidth: 80,
+    height: '300px',
+    plugins: [
+      Chartist.plugins.legend({
+        clickable: false
+      }),
+      Chartist.plugins.tooltip({
+        appendToBody: false,
+        transformTooltipTextFnc: function(value) {
+          return value + '%';
+        }
+      }),
+    ]
+  },
   pieResponsiveOptions: [
     [`screen and (max-width: ${breakpoints.xsScreen}px)`, {
       height: '200px',
@@ -17,6 +39,22 @@ const chartOptions = {
       donutWidth: 60,
     }]
   ],
+  gaugeOptions: {
+    donut: true,
+    donutWidth: 50,
+    startAngle: 270,
+    total: 200,
+    showLabel: false,
+    height: '300px',
+    plugins: [
+      Chartist.plugins.tooltip({
+        appendToBody: false,
+        transformTooltipTextFnc: function(value) {
+          return value + '%';
+        }
+      }),
+    ]
+  },
   gaugeResponsiveOptions: [
     [`screen and (max-width: ${breakpoints.xsScreen}px)`, {
       height: '200px',
