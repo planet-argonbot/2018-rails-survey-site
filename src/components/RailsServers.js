@@ -2,9 +2,6 @@ import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
-import 'chartist-plugin-tooltips';
-import 'chartist-plugin-axistitle';
-
 
 class RailsServers extends React.Component {
   render() {
@@ -32,7 +29,7 @@ class RailsServers extends React.Component {
             'Unicorn',
             'Passenger'
           ],
-          clickable: true,
+          clickable: false,
         }),
         Chartist.plugins.tooltip({
           appendToBody: false,

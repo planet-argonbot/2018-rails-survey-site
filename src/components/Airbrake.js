@@ -26,7 +26,7 @@ class Airbrake extends React.Component {
       height: '400px',
       plugins: [
         ChartistPluginLegend({
-          clickable: true,
+          clickable: false,
         }),
         Chartist.plugins.tooltip({
           appendToBody: false,

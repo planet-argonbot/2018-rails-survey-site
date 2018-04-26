@@ -1,8 +1,6 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import 'chartist-plugin-tooltips';
-import 'chartist-plugin-axistitle';
 
 
 class RailsVersions extends React.Component {

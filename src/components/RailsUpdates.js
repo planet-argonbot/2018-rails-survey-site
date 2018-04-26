@@ -2,8 +2,6 @@ import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
-import 'chartist-plugin-tooltips';
-
 
 class RailsUpdates extends React.Component {
   render() {
