@@ -104,6 +104,37 @@ const chartOptions = {
       seriesBarDistance: 10,
     }],
   ],
+  lineOptions: {
+    fullWidth: true,
+    chartPadding: {
+      right: 40,
+      left: 20
+    },
+    height: '350px',
+    plugins: [
+      Chartist.plugins.legend({
+        clickable: false,
+      }),
+      Chartist.plugins.tooltip({
+        appendToBody: false,
+        transformTooltipTextFnc: function(value) {
+          return value + '%';
+        }
+      }),
+      Chartist.plugins.ctAxisTitle({
+        axisY: {
+          axisTitle: 'Percent',
+          axisClass: 'ct-axis-title',
+          textAnchor: 'middle',
+          offset: {
+            x: 0,
+            y: -1
+          },
+          flipTitle: false,
+        }
+      })
+    ]
+  },
   lineResponsiveOptions: [
     [`screen and (max-width: ${breakpoints.smScreen}px)`, {
       height: '250px',

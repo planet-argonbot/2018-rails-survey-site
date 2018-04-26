@@ -1,5 +1,4 @@
 import React from 'react';
-import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import chartOptions from '../helpers/ChartOptions';
 
@@ -17,43 +16,12 @@ class Airbrake extends React.Component {
         {'name': 'Honeybadger', 'data': [0, 0, 13, 12, 8] }
       ]
     };
-    const options = {
-      fullWidth: true,
-      chartPadding: {
-        right: 40,
-        left: 20
-      },
-      height: '400px',
-      plugins: [
-        Chartist.plugins.legend({
-          clickable: false,
-        }),
-        Chartist.plugins.tooltip({
-          appendToBody: false,
-          transformTooltipTextFnc: function(value) {
-            return value + '%';
-          }
-        }),
-        Chartist.plugins.ctAxisTitle({
-          axisY: {
-            axisTitle: 'Percent',
-            axisClass: 'ct-axis-title',
-            textAnchor: 'middle',
-            offset: {
-              x: 0,
-              y: -1
-            },
-            flipTitle: false,
-          }
-        })
-      ]
-    };
 
     return (
       <div>
         <ChartistGraph
           data={data}
-          options={options}
+          options={chartOptions.lineOptions}
           responsiveOptions={chartOptions.lineResponsiveOptions}
           type={'Line'} />
       </div>
