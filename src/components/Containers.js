@@ -1,6 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import chartOptions from '../helpers/ChartOptions';
 
 
 class Containers extends React.Component {
@@ -34,16 +35,6 @@ class Containers extends React.Component {
       ]
     };
 
-    const pieResponsiveOptions = [
-      ['screen and (max-width: 576px)', {
-        height: '200px',
-        donutWidth: 20,
-      }],
-      ['screen and (min-width: 577px) and (max-width: 768px)', {
-        height: '250px',
-        donutWidth: 40,
-      }]
-    ];
 
     return (
       <div>
@@ -51,7 +42,7 @@ class Containers extends React.Component {
           className={'ct-gauge'}
           data={pieChartData}
           options={pieOptions}
-          responsiveOptions={pieResponsiveOptions}
+          responsiveOptions={chartOptions.gaugeResponsiveOptions}
           type={'Pie'} />
         <span className='gauge-label'>58%</span><p className="montserrat-lc small"> of responses indicated they are using container tools like Docker and Kubernetes.</p>
       </div>

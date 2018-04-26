@@ -6,7 +6,6 @@ const breakpoints = {
   lgScreen: '1200'
 };
 
-
 const chartOptions = {
   pieResponsiveOptions: [
     [`screen and (max-width: ${breakpoints.xsScreen}px)`, {
@@ -16,6 +15,16 @@ const chartOptions = {
     [`screen and (min-width: ${breakpoints.xsScreen}px) and (max-width: ${breakpoints.smScreen}px)`, {
       height: '250px',
       donutWidth: 60,
+    }]
+  ],
+  gaugeResponsiveOptions: [
+    [`screen and (max-width: ${breakpoints.xsScreen}px)`, {
+      height: '200px',
+      donutWidth: 20,
+    }],
+    [`screen and (min-width: ${breakpoints.xsScreen}px) and (max-width: ${breakpoints.smScreen}px)`, {
+      height: '250px',
+      donutWidth: 40,
     }]
   ]
 
