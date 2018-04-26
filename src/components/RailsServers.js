@@ -1,6 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import chartOptions from '../helpers/ChartOptions';
 
 class RailsServers extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class RailsServers extends React.Component {
       low: 0,
       chartPadding: {
         right: 40,
+        left: 20
       },
       plugins: [
         Chartist.plugins.legend({
@@ -51,25 +53,13 @@ class RailsServers extends React.Component {
       ]
     };
 
-    const responsiveOptions = [
-      ['screen and (max-width: 600px)', {
-        height: '250px',
-        chartPadding: {
-          right: 20,
-        },
-      }
-      ]
-
-    ];
-
-    const type = 'Line';
 
     return (
       <div>
         <ChartistGraph
           data={data}
-          type={type}
-          responsiveOptions={responsiveOptions}
+          type={'Line'}
+          responsiveOptions={chartOptions.lineResponsiveOptions}
           options={options} />
       </div>
     );

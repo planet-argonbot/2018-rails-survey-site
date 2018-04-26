@@ -26,6 +26,23 @@ const chartOptions = {
       height: '250px',
       donutWidth: 40,
     }]
+  ],
+  barResponsiveOptions: [
+    [`screen and (max-width: ${breakpoints.xsScreen}px)`, {
+      height: '250px',
+    }],
+    [`screen and (max-width: ${breakpoints.mdScreen}px)`, {
+      seriesBarDistance: 10,
+    }],
+  ],
+  lineResponsiveOptions: [
+    [`screen and (max-width: ${breakpoints.smScreen}px)`, {
+      height: '250px',
+      chartPadding: {
+        left: 20,
+        right: 30,
+      },
+    }],
   ]
 
 };

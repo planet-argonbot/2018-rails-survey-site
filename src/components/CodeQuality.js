@@ -1,7 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-
+import chartOptions from '../helpers/ChartOptions';
 
 class CodeQuality extends React.Component {
   render() {
@@ -62,22 +62,11 @@ class CodeQuality extends React.Component {
       ]
     };
 
-    const responsiveOptions = [
-      ['screen and (max-width: 992px)', {
-        seriesBarDistance: 10,
-      }
-      ],
-      ['screen and (max-width: 600px)', {
-        height: '250px',
-      }
-      ]
-    ];
-
     return (
       <div>
         <ChartistGraph
           data={data}
-          responsiveOptions={responsiveOptions}
+          responsiveOptions={chartOptions.barResponsiveOptions}
           options={options}
           type={'Bar'} />
       </div>

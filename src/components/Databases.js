@@ -1,6 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import chartOptions from '../helpers/ChartOptions';
 
 class Databases extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class Databases extends React.Component {
       height: '300px',
       chartPadding: {
         right: 40,
+        left: 20
       },
       plugins: [
         Chartist.plugins.legend({
@@ -43,26 +45,17 @@ class Databases extends React.Component {
           }
         })
       ]
-
-    };
-
-    const responsiveOptions = {
-      height: '250px',
-      chartPadding: {
-        right: 10,
-      },
     };
 
 
-    const type = 'Line';
 
     return (
       <div>
         <ChartistGraph
           data={data}
-          type={type}
+          type={'Line'}
           options={options}
-          responsiveOptions={responsiveOptions}/>
+          responsiveOptions={chartOptions.lineResponsiveOptions}/>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import chartOptions from '../helpers/ChartOptions';
 
 
 class RailsVersions extends React.Component {
@@ -67,22 +68,13 @@ class RailsVersions extends React.Component {
       ]
     };
 
-    const responsiveOptions = [
-      ['screen and (max-width: 992px)', {
-        seriesBarDistance: 10,
-      }
-      ]
-    ];
-
-    const type = 'Bar';
-
     return (
       <div>
         <ChartistGraph
           data={data}
           options={options}
-          responsiveOptions={responsiveOptions}
-          type={type} />
+          responsiveOptions={chartOptions.barResponsiveOptions}
+          type={'Bar'} />
       </div>
     );
   }

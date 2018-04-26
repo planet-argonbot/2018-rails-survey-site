@@ -3,7 +3,7 @@ import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import 'chartist-plugin-tooltips';
 import 'chartist-plugin-axistitle';
-
+import chartOptions from '../helpers/ChartOptions';
 
 class NotUpdated extends React.Component {
   render() {
@@ -62,19 +62,13 @@ class NotUpdated extends React.Component {
       ]
     };
 
-    const responsiveOptions = [
-      ['screen and (max-width: 544px)', {
-        seriesBarDistance: 10,
-      }
-      ]
-    ];
 
     return (
       <div>
         <ChartistGraph
           data={data}
           options={options}
-          responsiveOptions={responsiveOptions}
+          responsiveOptions={chartOptions.barResponsiveOptions}
           type={'Bar'} />
       </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
+import chartOptions from '../helpers/ChartOptions';
 
 
 class Airbrake extends React.Component {
@@ -19,7 +20,8 @@ class Airbrake extends React.Component {
     const options = {
       fullWidth: true,
       chartPadding: {
-        right: 40
+        right: 40,
+        left: 20
       },
       height: '400px',
       plugins: [
@@ -47,26 +49,13 @@ class Airbrake extends React.Component {
       ]
     };
 
-    const responsiveOptions = [
-      ['screen and (max-width: 600px)', {
-        height: '250px',
-        chartPadding: {
-          right: 20,
-        },
-      }
-      ],
-
-    ];
-
-    const type = 'Line';
-
     return (
       <div>
         <ChartistGraph
           data={data}
           options={options}
-          responsiveOptions={responsiveOptions}
-          type={type} />
+          responsiveOptions={chartOptions.lineResponsiveOptions}
+          type={'Line'} />
       </div>
     );
   }
