@@ -18,9 +18,9 @@ class Databases extends React.Component {
       <div>
         <ChartistGraph
           data={data}
-          type={'Line'}
           options={chartOptions.lineOptions}
-          responsiveOptions={chartOptions.lineResponsiveOptions}/>
+          responsiveOptions={chartOptions.lineResponsiveOptions}
+          type={'Line'} />
       </div>
     );
   }

@@ -22,9 +22,9 @@ class GreenfieldRails extends React.Component {
       <div>
         <ChartistGraph
           className={'ct-custom-donut'}
+          data={pieChartData}
           options={chartOptions.pieOptions}
           responsiveOptions={chartOptions.pieResponsiveOptions}
-          data={pieChartData}
           type={'Pie'} />
       </div>
     );

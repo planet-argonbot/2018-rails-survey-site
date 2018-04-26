@@ -18,9 +18,9 @@ class RailsServers extends React.Component {
       <div>
         <ChartistGraph
           data={data}
-          type={'Line'}
+          options={chartOptions.lineOptions}
           responsiveOptions={chartOptions.lineResponsiveOptions}
-          options={chartOptions.lineOptions} />
+          type={'Line'} />
       </div>
     );
   }
