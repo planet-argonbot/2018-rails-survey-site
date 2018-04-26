@@ -1,6 +1,5 @@
-//======================
+
 // Typography
-// =======================
 
 .font-weight--light {
   font-weight: 400;
@@ -11,66 +10,22 @@
 .font-weight--medium {
   font-weight: 600;
 }
-.font-weight--bold,
-strong,
-b {
-  // font-weight: 700;
+.font-weight--bold, strong, b {
   font-weight: bold;
 }
 .font--black {
   color: $black;
 }
-.link--underline {
-  text-decoration: underline;
-}
-.display--inline {
-  display: inline;
-}
-.display--inline-block {
-  display: inline-block;
-}
-.display--block {
-  display: block;
-}
-
 .display--none {
   display: none;
-}
-.position--fixed {
-  position: fixed;
 }
 .position--relative {
   position: relative;
 }
-.hide-text {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.cursor--pointer {
-  cursor: pointer;
-}
-.line-height--reset {
-  line-height: 1;
-}
-.list--unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-.list--inline {
-  padding-left: 0;
-  margin-left: -5px;
-  list-style: none;
-}
-.list--inline > li {
-  display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-}
 
-// =======================
+
 // Mixins
-// =======================
+
 
 @mixin transition($prop, $duration, $timing, $opt-delay:"") {
   -webkit-transition: $prop $duration $timing unquote($opt-delay);
@@ -92,9 +47,8 @@ b {
   box-shadow: $horizontal $vertical $blur $color;
 }
 
-// =======================
+
 // Utilities
-// =======================
 
 .clearfix:before,
 .clearfix:after {
@@ -212,7 +166,6 @@ $md-padding:    30px;
 $lg-padding:    40px;
 $xl-padding:    50px;
 $xxl-padding:   60px;
-
 
 .padding-0          { padding: 0                      }
 .padding-xxs        { padding: $xxs-padding           }

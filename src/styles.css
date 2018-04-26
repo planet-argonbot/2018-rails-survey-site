@@ -6713,7 +6713,6 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
@@ -6765,7 +6764,6 @@ table {
   src: url("fonts/icomoon.eot#iefix") format("embedded-opentype"), url("fonts/icomoon.woff2") format("woff2"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.svg#icomoon") format("svg"); }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -6773,7 +6771,6 @@ table {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Enable Ligatures ================ */
   letter-spacing: 0;
   -webkit-font-feature-settings: "liga";
   -moz-font-feature-settings: "liga=1";
@@ -6781,7 +6778,6 @@ table {
   -ms-font-feature-settings: "liga" 1;
   -o-font-feature-settings: "liga";
   font-feature-settings: "liga";
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -6806,59 +6802,17 @@ table {
 .font-weight--medium {
   font-weight: 600; }
 
-.font-weight--bold,
-strong,
-b {
+.font-weight--bold, strong, b {
   font-weight: bold; }
 
 .font--black {
   color: #000; }
 
-.link--underline {
-  text-decoration: underline; }
-
-.display--inline {
-  display: inline; }
-
-.display--inline-block {
-  display: inline-block; }
-
-.display--block {
-  display: block; }
-
 .display--none {
   display: none; }
 
-.position--fixed {
-  position: fixed; }
-
 .position--relative {
   position: relative; }
-
-.hide-text {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.cursor--pointer {
-  cursor: pointer; }
-
-.line-height--reset {
-  line-height: 1; }
-
-.list--unstyled {
-  padding-left: 0;
-  list-style: none; }
-
-.list--inline {
-  padding-left: 0;
-  margin-left: -5px;
-  list-style: none; }
-
-.list--inline > li {
-  display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px; }
 
 .clearfix:before,
 .clearfix:after {
@@ -7290,18 +7244,6 @@ a {
     border-color: #000;
     color: #000; }
 
-.btn-small--gray {
-  background-color: #605e5e;
-  border-top: 1px solid #605e5e;
-  border-left: 1px solid #605e5e;
-  border-right: 1px solid #605e5e;
-  border-bottom: 1px solid #000;
-  color: #fff; }
-  .btn-small--gray:hover, .btn-small--gray:active, .btn-small--gray:focus {
-    background-color: transparent;
-    border-color: #000;
-    color: #fff; }
-
 .pa-logo {
   font-size: 40px; }
 
@@ -7314,69 +7256,6 @@ a {
   .proudly-presents p {
     font-size: 14px;
     line-height: 1.2; }
-
-.sliced-background {
-  position: relative; }
-  .sliced-background:after {
-    background-color: #232323;
-    height: 450px;
-    width: 120%;
-    content: "";
-    -ms-transform: rotate(-5deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-5deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(-5deg);
-    position: absolute;
-    bottom: -135px;
-    left: -63px;
-    z-index: 0; }
-
-.absolute-results {
-  position: absolute;
-  background-color: #FFCB05;
-  top: 0;
-  right: 0;
-  color: #000;
-  height: 100%;
-  padding: 25px; }
-
-.absolute-results--text {
-  position: relative;
-  top: 50%;
-  margin-top: -42px;
-  text-align: center; }
-
-.absolute-results--2014 {
-  right: 30px; }
-
-.absolute-results--2012 {
-  right: 50px; }
-
-.absolute-results--2009 {
-  right: 80px; }
-
-.absolute-photo {
-  position: absolute;
-  left: 0; }
-
-.results-chart__bar {
-  display: inline-block;
-  background-color: #FFCB05;
-  color: #000;
-  text-align: center;
-  margin: 1px 1px;
-  padding: 25px 5px;
-  vertical-align: bottom; }
-
-.results-chart__2014 {
-  padding: 20px 5px; }
-
-.results-chart__2012 {
-  padding: 15px 5px; }
-
-.results-chart__2009 {
-  padding: 10px 5px; }
 
 .montserrat-text {
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -7534,7 +7413,7 @@ ol li {
 .ct-series-d .ct-point, .ct-series-d .ct-line, .ct-series-d .ct-bar, .ct-series-d .ct-slice-donut {
   stroke: #00695C; }
 
-.ct-series-d .ct-slice-pie, .ct-series-d .ct-slice-donut-solid {
+.ct-series-d .ct-slice-pie, .ct-series-d .ct-slice-donut-solid, .ct-series-d .ct-area {
   fill: #00695C; }
 
 .ct-series-e .ct-point, .ct-series-e .ct-line, .ct-series-e .ct-bar, .ct-series-e .ct-slice-donut {
@@ -7566,17 +7445,17 @@ ol li {
     color: #fff;
     font-size: 12px;
     font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-  .ct-legend li:before {
-    left: -2px;
-    margin-right: 5px;
-    content: '';
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 0px;
-    border-top: 0px;
-    border-radius: 50%; }
-  .ct-legend li.inactive:before {
-    background: transparent; }
+    .ct-legend li:before {
+      left: -2px;
+      margin-right: 5px;
+      content: '';
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 0px;
+      border-top: 0px;
+      border-radius: 50%; }
+    .ct-legend li.inactive:before {
+      background: transparent; }
   .ct-legend .ct-series-0:before {
     background-color: #FFCB05;
     border-color: #FFCB05; }
@@ -7607,8 +7486,6 @@ ol li {
     font-size: 17px; }
   .navigation .padding-md {
     padding: 30px 15px; }
-  .xtra-large {
-    font-size: 50px; }
   .nav-list {
     margin-left: 10px; }
   .ct-bar {
@@ -7666,8 +7543,6 @@ ol li {
       font-size: 12px; }
     .navigation .padding-md {
       padding: 10px; }
-  .xtra-large {
-    font-size: 20px; }
   .ct-bar {
     stroke-width: 12px; }
   .btn-yellow {

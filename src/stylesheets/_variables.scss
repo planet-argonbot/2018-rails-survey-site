@@ -1,11 +1,8 @@
-// =======================
-// Colors
-// =======================
 
+// Colors
 $white: #fff;
 $off-white: #F6F6F6;
 $black: #000;
-
 $darkest-gray: #232323;
 $dark-gray: #2b2b2b;
 $mid-dark-gray: #292929;
@@ -13,11 +10,9 @@ $mid-gray: #323333;
 $light-gray: #393939;
 $lighter-gray: #4d4d4d;
 $lightest-gray: #605e5e;
-
 $yellow: #FFCB05;
 
-// 2018 Colors
-
+// New colors for 2018
 $blue: #56C0EE;
 $coral: #FF6B6B;
 $teal: #009C89;
@@ -26,18 +21,14 @@ $washed-gray: #A0ADB4;
 $purple: #865dab;
 
 
-// =======================
 // BREAKPOINTS
-// =======================
 $xsmall-screen: 576px;
 $small-screen: 768px;
 $medium-screen: 992px;
 $large-screen: 1200px;
 
-// =======================
-// Fonts
-// =======================
 
+// Fonts
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400italic');
 
 // Google font "Lato" (Weights: regular - 400, bold - 700)
@@ -74,9 +65,8 @@ $lato: "Lato", sans-serif;
   font-weight: 400;
 }
 
-// =======================
+
 // Icons
-// =======================
 
 @font-face {
   font-family: 'icomoon';
@@ -89,7 +79,7 @@ $lato: "Lato", sans-serif;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
+    // use !important to prevent issues with browser extensions that change fonts
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -98,7 +88,7 @@ $lato: "Lato", sans-serif;
   text-transform: none;
   line-height: 1;
 
-  /* Enable Ligatures ================ */
+  // Enable Ligatures 
   letter-spacing: 0;
   -webkit-font-feature-settings: "liga";
   -moz-font-feature-settings: "liga=1";
@@ -107,7 +97,7 @@ $lato: "Lato", sans-serif;
   -o-font-feature-settings: "liga";
   font-feature-settings: "liga";
 
-  /* Better Font Rendering =========== */
+  // Better Font Rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
