@@ -65,6 +65,37 @@ const chartOptions = {
       donutWidth: 40,
     }]
   ],
+  barOptions: {
+    fullWidth: true,
+    chartPadding: {
+      left: 10,
+      top: 20,
+      right: 10,
+      bottom: 10,
+    },
+    height: 300,
+    high: 50,
+    low: 0,
+    axisY: {
+      onlyInteger: true,
+    },
+    plugins: [
+      Chartist.plugins.tooltip({
+        appendToBody: false,
+        transformTooltipTextFnc: function(value) {
+          return value + '%';
+        }
+      }),
+      Chartist.plugins.ctAxisTitle({
+        axisY: {
+          axisTitle: 'Percent',
+          axisClass: 'ct-axis-title',
+          textAnchor: 'middle',
+          flipTitle: false,
+        }
+      })
+    ]
+  },
   barResponsiveOptions: [
     [`screen and (max-width: ${breakpoints.xsScreen}px)`, {
       height: '250px',
