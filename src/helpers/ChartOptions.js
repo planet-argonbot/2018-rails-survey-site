@@ -7,15 +7,18 @@ const breakpoints = {
 };
 
 
-const pieResponsiveOptions = [
-  [`screen and (max-width: ${breakpoints.xsScreen}px)`, {
-    height: '200px',
-    donutWidth: 50,
-  }],
-  [`screen and (min-width: ${breakpoints.xsScreen}px) and (max-width: ${breakpoints.smScreen}px)`, {
-    height: '250px',
-    donutWidth: 60,
-  }]
-];
+const chartOptions = {
+  pieResponsiveOptions: [
+    [`screen and (max-width: ${breakpoints.xsScreen}px)`, {
+      height: '200px',
+      donutWidth: 50,
+    }],
+    [`screen and (min-width: ${breakpoints.xsScreen}px) and (max-width: ${breakpoints.smScreen}px)`, {
+      height: '250px',
+      donutWidth: 60,
+    }]
+  ]
 
-export default pieResponsiveOptions;
+};
+
+export default chartOptions;

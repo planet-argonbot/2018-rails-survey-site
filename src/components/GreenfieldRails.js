@@ -1,7 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import pieResponsiveOptions from '../helpers/ChartOptions';
+import chartOptions from '../helpers/ChartOptions';
 
 class GreenfieldRails extends React.Component {
   render() {
@@ -41,7 +41,7 @@ class GreenfieldRails extends React.Component {
       <div>
         <ChartistGraph
           className={'ct-custom-donut'}
-          responsiveOptions={pieResponsiveOptions}
+          responsiveOptions={chartOptions.pieResponsiveOptions}
           data={pieChartData}
           options={pieOptions}
           type={'Pie'} />

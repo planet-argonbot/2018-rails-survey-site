@@ -1,7 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import pieResponsiveOptions from '../helpers/ChartOptions';
+import chartOptions from '../helpers/ChartOptions';
 
 
 class ActiveJob extends React.Component {
@@ -53,7 +53,7 @@ class ActiveJob extends React.Component {
           className={'ct-custom-donut'}
           data={data}
           options={options}
-          responsiveOptions={pieResponsiveOptions}
+          responsiveOptions={chartOptions.pieResponsiveOptions}
           type={'Pie'} />
       </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import pieResponsiveOptions from '../helpers/ChartOptions';
+import chartOptions from '../helpers/ChartOptions';
 
 class TestCoverage extends React.Component {
   render() {
@@ -47,7 +47,7 @@ class TestCoverage extends React.Component {
           className={'ct-custom-donut'}
           data={pieChartData}
           options={pieOptions}
-          responsiveOptions={pieResponsiveOptions}
+          responsiveOptions={chartOptions.pieResponsiveOptions}
           type={'Pie'} />
       </div>
     );

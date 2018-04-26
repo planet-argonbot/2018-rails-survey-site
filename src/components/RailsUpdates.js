@@ -2,7 +2,7 @@ import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
 import ChartistPluginLegend from 'chartist-plugin-legend';
-import pieResponsiveOptions from '../helpers/ChartOptions';
+import chartOptions from '../helpers/ChartOptions';
 
 
 class RailsUpdates extends React.Component {
@@ -46,7 +46,7 @@ class RailsUpdates extends React.Component {
         <ChartistGraph
           data={releasesPieChartData}
           options={pieOptions}
-          responsiveOptions={pieResponsiveOptions}
+          responsiveOptions={chartOptions.pieResponsiveOptions}
           type={'Pie'} />
       </div>
     );
