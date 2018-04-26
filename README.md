@@ -10,7 +10,7 @@ The 2018 Survey is a snapshot of the highlights from this year's results, and al
 
 ### Clone Repository
 
-In terminal, run $`git clone git@bitbucket.org:planetargon/2018-rails-survey-site.git` to clone repository to your local machine.
+In terminal, run $`https://github.com/planetargon/2018-rails-survey-site.git` to clone repository to your local machine.
 
 In the project directory, run these commands to launch the app:
 
