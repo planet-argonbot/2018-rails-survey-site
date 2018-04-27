@@ -1,5 +1,5 @@
 # 2018 Rails Survey
-Rebuilt this year in React.
+Rebuilt this year in React. Check out the live site here http://rails-hosting.com/2018/
 
 ## Description
 Almost ten years ago, Planet Argon invited the Rails community to participate in a survey about the state of hosting Ruby on Rails applications. Over the years, it has evolved to include questions about tools, frameworks, and workflows in order to see how the environment is changing.
