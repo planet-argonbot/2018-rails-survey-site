@@ -18,9 +18,8 @@ body {
   width: 1400px;
   max-width: 95%;
 }
-// =====================
+
 // Typography
-// =====================
 
 h1, .h1 {
   font-size: 48px;
@@ -67,9 +66,8 @@ p, .p {
   line-height: 1;
 }
 
-// =====================
+
 // Links + Buttons
-// =====================
 
 a {
   color: #FFF;
@@ -89,7 +87,6 @@ a {
   padding: 5px 40px;
 }
 
-
 .btn-small {
   @include transition(all, 0.1s, linear);
   border-radius: 3px;
@@ -102,7 +99,6 @@ a {
 .btn-small--inline {
   padding: 5px;
 }
-
 
 .btn-small--white {
   background-color: $white;
@@ -118,23 +114,7 @@ a {
   }
 }
 
-.btn-small--gray {
-  background-color: $lightest-gray;
-  border-top: 1px solid $lightest-gray;
-  border-left: 1px solid $lightest-gray;
-  border-right: 1px solid $lightest-gray;
-  border-bottom: 1px solid $black;
-  color: $white;
-  &:hover, &:active, &:focus {
-    background-color: transparent;
-    border-color: $black;
-    color: $white;
-  }
-}
-
-// =====================
 // Custom Styles
-// =====================
 
 .pa-logo {
   font-size: 40px;
@@ -144,81 +124,11 @@ a {
   background-color: $mid-dark-gray;
   padding: 0 10px;
   position: absolute;
-    bottom: -16px;
-    left: 50px;
+  bottom: -16px;
+  left: 50px;
+
   p {
     font-size: 14px;
     line-height: 1.2;
   }
-}
-
-.sliced-background {
-  position: relative;
-  &:after {
-    background-color: $darkest-gray;
-    height: 450px;
-    width: 120%;
-    content: "";
-    -ms-transform: rotate(-5deg); /* IE 9 */
-    -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
-    transform: rotate(-5deg);
-    position: absolute;
-      bottom: -135px;
-      left: -63px;
-    z-index: 0;
-  }
-}
-
-.absolute-results {
-  position: absolute;
-  background-color: $yellow;
-  top: 0;
-  right: 0;
-  color: $black;
-  height: 100%;
-  padding: 25px;
-}
-
-.absolute-results--text {
-  position: relative;
-  top: 50%;
-  margin-top: -42px;
-  text-align: center;
-}
-.absolute-results--2014 {
-  right: 30px;
-}
-.absolute-results--2012 {
-  right: 50px;
-}
-
-.absolute-results--2009 {
-  right: 80px;
-}
-
-.absolute-photo {
-  position: absolute;
-  left: 0;
-}
-
-.results-chart__bar {
-  display: inline-block;
-  background-color: $yellow;
-  color: $black;
-  text-align: center;
-  margin: 1px 1px;
-  padding: 25px 5px;
-  vertical-align: bottom;
-}
-
-.results-chart__2014 {
-  padding: 20px 5px;
-}
-
-.results-chart__2012 {
-  padding: 15px 5px;
-}
-
-.results-chart__2009 {
-  padding: 10px 5px;
 }

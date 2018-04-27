@@ -1,10 +1,6 @@
 import React from 'react';
-import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import 'chartist-plugin-tooltips';
-import ChartistPluginLegend from 'chartist-plugin-legend';
-// import 'chartist-plugin-axistitle';
-
+import chartOptions from '../helpers/ChartOptions';
 
 class Databases extends React.Component {
   render() {
@@ -18,55 +14,13 @@ class Databases extends React.Component {
       ]
     };
 
-    const options = {
-      fullWidth: true,
-      height: '300px',
-      chartPadding: {
-        right: 40,
-      },
-      plugins: [
-        ChartistPluginLegend({
-          legendNames: ['PostgreSQL', 'MySQL', 'Other'],
-        }),
-        Chartist.plugins.tooltip({
-          appendToBody: false,
-          transformTooltipTextFnc: function(value) {
-            return value + '%';
-          }
-        }),
-        Chartist.plugins.ctAxisTitle({
-          axisY: {
-            axisTitle: 'Percent',
-            axisClass: 'ct-axis-title',
-            textAnchor: 'middle',
-            offset: {
-              x: 0,
-              y: -1
-            },
-            flipTitle: false,
-          }
-        })
-      ]
-
-    };
-
-    const responsiveOptions = {
-      height: '250px',
-      chartPadding: {
-        right: 10,
-      },
-    };
-
-
-    const type = 'Line';
-
     return (
       <div>
         <ChartistGraph
           data={data}
-          type={type}
-          options={options}
-          responsiveOptions={responsiveOptions}/>
+          options={chartOptions.lineOptions}
+          responsiveOptions={chartOptions.lineResponsiveOptions}
+          type={'Line'} />
       </div>
     );
   }

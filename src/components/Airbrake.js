@@ -1,9 +1,7 @@
 import React from 'react';
-import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import 'chartist-plugin-tooltips';
-import ChartistPluginLegend from 'chartist-plugin-legend';
-import 'chartist-plugin-axistitle';
+import chartOptions from '../helpers/ChartOptions';
+
 
 class Airbrake extends React.Component {
   render() {
@@ -18,57 +16,14 @@ class Airbrake extends React.Component {
         {'name': 'Honeybadger', 'data': [0, 0, 13, 12, 8] }
       ]
     };
-    const options = {
-      fullWidth: true,
-      chartPadding: {
-        right: 40
-      },
-      height: '400px',
-      plugins: [
-        ChartistPluginLegend({
-          clickable: true,
-        }),
-        Chartist.plugins.tooltip({
-          appendToBody: false,
-          transformTooltipTextFnc: function(value) {
-            return value + '%';
-          }
-        }),
-        Chartist.plugins.ctAxisTitle({
-          axisY: {
-            axisTitle: 'Percent',
-            axisClass: 'ct-axis-title',
-            textAnchor: 'middle',
-            offset: {
-              x: 0,
-              y: -1
-            },
-            flipTitle: false,
-          }
-        })
-      ]
-    };
-
-    const responsiveOptions = [
-      ['screen and (max-width: 600px)', {
-        height: '250px',
-        chartPadding: {
-          right: 20,
-        },
-      }
-      ],
-
-    ];
-
-    const type = 'Line';
 
     return (
       <div>
         <ChartistGraph
           data={data}
-          options={options}
-          responsiveOptions={responsiveOptions}
-          type={type} />
+          options={chartOptions.lineOptions}
+          responsiveOptions={chartOptions.lineResponsiveOptions}
+          type={'Line'} />
       </div>
     );
   }

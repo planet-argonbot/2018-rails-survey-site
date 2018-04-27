@@ -1,43 +1,9 @@
 import React from 'react';
-import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import 'chartist-plugin-tooltips';
-import ChartistPluginLegend from 'chartist-plugin-legend';
-
+import chartOptions from '../helpers/ChartOptions';
 
 class ActiveJob extends React.Component {
   render() {
-    const options = {
-      donut: true,
-      donutWidth: 80,
-      showLabel: false,
-      padding: {
-        bottom: 20,
-      },
-      height: '300px',
-      plugins: [
-        Chartist.plugins.tooltip({
-          appendToBody: false,
-          transformTooltipTextFnc: function(value) {
-            return value + '%';
-          }
-        }),
-        ChartistPluginLegend({
-          clickable: false
-        })
-      ]
-    };
-
-    const pieResponsiveOptions = [
-      ['screen and (max-width: 576px)', {
-        height: '200px',
-        donutWidth: 50,
-      }],
-      ['screen and (min-width: 577px) and (max-width: 768px)', {
-        height: '250px',
-        donutWidth: 60,
-      }]
-    ];
 
     const data = {
       labels: [
@@ -62,8 +28,8 @@ class ActiveJob extends React.Component {
         <ChartistGraph
           className={'ct-custom-donut'}
           data={data}
-          options={options}
-          responsiveOptions={pieResponsiveOptions}
+          options={chartOptions.pieOptions}
+          responsiveOptions={chartOptions.pieResponsiveOptions}
           type={'Pie'} />
       </div>
     );

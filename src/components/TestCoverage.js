@@ -1,39 +1,9 @@
 import React from 'react';
-import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import ChartistPluginLegend from 'chartist-plugin-legend';
-import 'chartist-plugin-tooltips';
+import chartOptions from '../helpers/ChartOptions';
 
 class TestCoverage extends React.Component {
   render() {
-    const pieOptions = {
-      donut: true,
-      donutWidth: 80,
-      showLabel: false,
-      height: '300px',
-      plugins: [
-        ChartistPluginLegend({
-          clickable: false
-        }),
-        Chartist.plugins.tooltip({
-          appendToBody: false,
-          transformTooltipTextFnc: function(value) {
-            return value + '%';
-          }
-        }),
-      ]
-    };
-
-    const pieResponsiveOptions = [
-      ['screen and (max-width: 576px)', {
-        height: '200px',
-        donutWidth: 50,
-      }],
-      ['screen and (min-width: 577px) and (max-width: 768px)', {
-        height: '250px',
-        donutWidth: 60,
-      }]
-    ];
 
     const pieChartData = {
       labels: [
@@ -57,8 +27,8 @@ class TestCoverage extends React.Component {
         <ChartistGraph
           className={'ct-custom-donut'}
           data={pieChartData}
-          options={pieOptions}
-          responsiveOptions={pieResponsiveOptions}
+          options={chartOptions.pieOptions}
+          responsiveOptions={chartOptions.pieResponsiveOptions}
           type={'Pie'} />
       </div>
     );

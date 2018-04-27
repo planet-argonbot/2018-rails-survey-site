@@ -1,10 +1,6 @@
 import React from 'react';
-import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import ChartistPluginLegend from 'chartist-plugin-legend';
-import 'chartist-plugin-tooltips';
-import 'chartist-plugin-axistitle';
-
+import chartOptions from '../helpers/ChartOptions';
 
 class RailsServers extends React.Component {
   render() {
@@ -18,63 +14,13 @@ class RailsServers extends React.Component {
       ]
     };
 
-    const options = {
-      fullWidth: true,
-      height: '300px',
-      low: 0,
-      chartPadding: {
-        right: 40,
-      },
-      plugins: [
-        ChartistPluginLegend({
-          legendNames: [
-            'Puma',
-            'Unicorn',
-            'Passenger'
-          ],
-          clickable: true,
-        }),
-        Chartist.plugins.tooltip({
-          appendToBody: false,
-          transformTooltipTextFnc: function(value) {
-            return value + '%';
-          }
-        }),
-        Chartist.plugins.ctAxisTitle({
-          axisY: {
-            axisTitle: 'Percent',
-            axisClass: 'ct-axis-title',
-            textAnchor: 'middle',
-            offset: {
-              x: 0,
-              y: -1
-            },
-            flipTitle: false,
-          }
-        })
-      ]
-    };
-
-    const responsiveOptions = [
-      ['screen and (max-width: 600px)', {
-        height: '250px',
-        chartPadding: {
-          right: 20,
-        },
-      }
-      ]
-
-    ];
-
-    const type = 'Line';
-
     return (
       <div>
         <ChartistGraph
           data={data}
-          type={type}
-          responsiveOptions={responsiveOptions}
-          options={options} />
+          options={chartOptions.lineOptions}
+          responsiveOptions={chartOptions.lineResponsiveOptions}
+          type={'Line'} />
       </div>
     );
   }
